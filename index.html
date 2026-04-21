@@ -21,36 +21,87 @@
             background-position: center;
             z-index: -2;
         }
+ <style>       
+    /* ΤΟ PREMIMUM SMARTPHONE (S26 / iPhone 17 style) */
+    .phone-cloud {
+        position: fixed;
+        top: 110px; /* Κάτω από το menu */
+        right: 50px;
+        width: 150px; /* Ελαφρώς μεγαλύτερο για να φαίνονται οι λεπτομέρειες */
+        height: 300px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 40px; /* Στρογγυλεμένες άκρες "σύννεφου" */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+        box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+        transition: transform 0.3s ease;
+    }
 
-        /* ΤΟ "ΣΥΝΝΕΦΟ" ΜΕ ΤΟ ΚΙΝΗΤΟ ΣΤΑ ΔΕΞΙΑ */
-        .phone-cloud {
-            position: fixed;
-            top: 100px; /* Κάτω από το menu */
-            right: 40px;
-            width: 120px;
-            height: 220px;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 30px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 40;
-            padding: 10px;
-        }
+    .phone-cloud:hover {
+        transform: translateY(-5px) scale(1.05);
+    }
 
-        .mini-phone {
-            width: 100%;
-            height: 100%;
-            background: #000;
-            border: 4px solid #334155;
-            border-radius: 20px;
-            background-image: url('./img_home_background.png');
-            background-size: cover;
-            background-position: center;
-        }
+    /* Το σώμα της συσκευής */
+    .device-body {
+        width: 120px;
+        height: 250px;
+        background: #0f172a; /* Midnight Blue/Black frame */
+        border: 3px solid #334155; /* Μεταλλικό frame */
+        border-radius: 28px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
+    }
+
+    /* Η οθόνη μέσα στο κινητό */
+    .device-screen {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        background: #000;
+        border-radius: 22px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Η εικόνα/logo μέσα στην οθόνη */
+    .app-logo-screen {
+        width: 80%; /* Πιο μικρή και ξακρισμένη όπως ζήτησες */
+        height: auto;
+        object-fit: contain;
+        filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.5));
+    }
+
+    /* Notch / Dynamic Island */
+    .device-island {
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 12px;
+        background: #000;
+        border-radius: 10px;
+        z-index: 5;
+    }
+</style>
+
+<div class="phone-cloud hidden md:flex">
+    <div class="device-body">
+        <div class="device-island"></div>
+        <div class="device-screen">
+            <img src="./img_home_background.png" alt="App Logo" class="app-logo-screen">
+        </div>
+    </div>
+</div>
 
         /* ΔΙΑΦΑΝΕΙΕΣ ΤΟΜΕΩΝ (Glassmorphism) */
         .glass-section {
