@@ -3,84 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vehicle Man - Διαχείριση Οχημάτων</title>
+    <title>Vehicle Man | Official Site</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        .hero-bg {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img_home_background.jpg');
+        html { scroll-behavior: smooth; }
+        .hero-gradient {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
+                        url('img_home_background.jpg');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
         }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 text-slate-900 font-sans">
 
-    <nav class="bg-white shadow-md fixed w-full z-10">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-blue-600 flex items-center">
-                <i class="fas fa-car-side mr-2"></i> VEHICLE <span class="text-gray-700 ml-1">MAN</span>
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-lg border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-black tracking-tighter text-blue-600">
+                VEHICLE <span class="text-slate-800">MAN</span>
             </div>
-            <div class="hidden md:flex space-x-8 font-medium">
+            <div class="hidden md:flex space-x-8 font-bold text-sm uppercase tracking-wide">
                 <a href="#home" class="hover:text-blue-600 transition">Αρχική</a>
                 <a href="#features" class="hover:text-blue-600 transition">Λειτουργίες</a>
                 <a href="#charts" class="hover:text-blue-600 transition">Στατιστικά</a>
-                <a href="#download" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Λήψη Εφαρμογής</a>
+                <a href="#about" class="hover:text-blue-600 transition">Σχετικά</a>
             </div>
+            <a href="#download" class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-bold hover:shadow-lg transition">ΛΗΨΗ</a>
         </div>
     </nav>
 
-    <section id="home" class="hero-bg h-screen flex items-center justify-center text-center text-white pt-20">
-        <div class="px-4">
-            <img src="img_home_background.jpg" alt="Logo" class="w-32 mx-auto mb-6 rounded-full border-4 border-blue-500 shadow-xl">
-            <h1 class="text-5xl md:text-6xl font-bold mb-4">Διαχείριση Οχημάτων με ένα Tap</h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto text-gray-200">
-                Οργανώστε τα έξοδα, τα καύσιμα και τη συντήρηση των οχημάτων σας σε μια εύχρηστη εφαρμογή.
+    <section id="home" class="hero-gradient min-h-screen flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-3xl">
+            <div class="mb-6 inline-block p-3 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
+                <img src="img_home_background.jpg" alt="Logo" class="w-20 h-20 object-cover rounded-xl shadow-2xl">
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">Όλα για το όχημά σου, σε <span class="text-blue-400">ένα app.</span></h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed">
+                Η πιο ολοκληρωμένη λύση για τον έλεγχο εξόδων, καυσίμων και συντήρησης. Σχεδιασμένο για οδηγούς που θέλουν σοβαρή οργάνωση.
             </p>
             <div class="flex flex-wrap justify-center gap-4">
-                <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg font-semibold flex items-center transition">
-                    <i class="fab fa-google-play mr-2"></i> Play Store
-                </button>
-                <button class="bg-gray-800 hover:bg-gray-900 text-white px-8 py-3 rounded-full text-lg font-semibold flex items-center transition">
-                    <i class="fab fa-apple mr-2"></i> App Store
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <section id="features" class="py-20 bg-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-12">Γιατί να επιλέξετε το Vehicle Man;</h2>
-            <div class="grid md:grid-cols-3 gap-12">
-                <div class="p-8 border rounded-xl hover:shadow-lg transition">
-                    <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-chart-line"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Αναλυτικά Charts</h3>
-                    <p class="text-gray-600">Δείτε την κατανάλωση και τα έξοδα σε πανέμορφα γραφήματα.</p>
+                <div class="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-lg">
+                    <i class="fas fa-check-circle text-blue-400"></i>
+                    <span class="text-sm font-medium">Εύκολος Χειρισμός</span>
                 </div>
-                <div class="p-8 border rounded-xl hover:shadow-lg transition">
-                    <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-hand-pointer"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Εύκολος Χειρισμός</h3>
-                    <p class="text-gray-600">Σχεδιασμένο για ταχύτητα. Καταχωρήστε δεδομένα σε δευτερόλεπτα.</p>
-                </div>
-                <div class="p-8 border rounded-xl hover:shadow-lg transition">
-                    <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-bolt"></i></div>
-                    <h3 class="text-xl font-bold mb-2">2 Tap Entry</h3>
-                    <p class="text-gray-600">Η πιο γρήγορη μέθοδος εισαγωγής εξόδων στην αγορά.</p>
+                <div class="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-lg">
+                    <i class="fas fa-bolt text-blue-400"></i>
+                    <span class="text-sm font-medium">2 Tap Entry</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-white py-10">
-        <div class="container mx-auto px-6 text-center">
-            <p class="mb-4">© 2024 Vehicle Man. Με την εγγύηση της Vehicle Manager Team.</p>
-            <div class="flex justify-center space-x-6">
-                <a href="#" class="hover:text-blue-400"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="hover:text-blue-400"><i class="fab fa-twitter"></i></a>
-                <a href="https://github.com/VehicleManagerApp" class="hover:text-blue-400"><i class="fab fa-github"></i></a>
+    <section id="features" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Λειτουργίες που ξεχωρίζουν</h2>
+                <div class="h-1 w-20 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:border-blue-200 transition group">
+                    <i class="fas fa-gas-pump text-3xl text-blue-600 mb-6 transition-transform group-hover:scale-110"></i>
+                    <h3 class="text-xl font-bold mb-3">Διαχείριση Καυσίμων</h3>
+                    <p class="text-gray-600">Καταγράψτε κάθε γέμισμα και παρακολουθήστε την κατανάλωση ανά χιλιόμετρο.</p>
+                </div>
+                <div id="charts" class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:border-blue-200 transition group">
+                    <i class="fas fa-chart-pie text-3xl text-blue-600 mb-6 transition-transform group-hover:scale-110"></i>
+                    <h3 class="text-xl font-bold mb-3">Αναλυτικά Charts</h3>
+                    <p class="text-gray-600">Δείτε πού ξοδεύετε τα χρήματά σας με δυναμικά γραφήματα και μηνιαίες αναφορές.</p>
+                </div>
+                <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:border-blue-200 transition group">
+                    <i class="fas fa-tools text-3xl text-blue-600 mb-6 transition-transform group-hover:scale-110"></i>
+                    <h3 class="text-xl font-bold mb-3">Υπενθυμίσεις Service</h3>
+                    <p class="text-gray-600">Μην ξεχάσετε ποτέ ξανά την αλλαγή λαδιών ή το ΚΤΕΟ σας.</p>
+                </div>
             </div>
         </div>
+    </section>
+
+    <section id="about" class="py-24 bg-slate-900 text-white">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-8">Σχετικά με το Vehicle Man</h2>
+            <p class="text-xl text-gray-400 leading-relaxed mb-10">
+                Το Vehicle Man ξεκίνησε με έναν στόχο: Να απλοποιήσει τη ζωή του οδηγού. Πιστεύουμε ότι η διαχείριση ενός οχήματος δεν πρέπει να είναι αγγαρεία, αλλά μια γρήγορη και ευχάριστη διαδικασία.
+            </p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div><p class="text-3xl font-bold text-blue-500">100%</p><p class="text-sm text-gray-500 uppercase">Δωρεάν</p></div>
+                <div><p class="text-3xl font-bold text-blue-500">Dark</p><p class="text-sm text-gray-500 uppercase">Mode</p></div>
+                <div><p class="text-3xl font-bold text-blue-500">Fast</p><p class="text-sm text-gray-500 uppercase">Sync</p></div>
+                <div><p class="text-3xl font-bold text-blue-500">Privacy</p><p class="text-sm text-gray-500 uppercase">First</p></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-gray-200 text-center">
+        <p class="text-gray-500 text-sm">© 2026 Vehicle Man. Αναπτύχθηκε με πάθος για την οδήγηση.</p>
     </footer>
 
 </body>
