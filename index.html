@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vehicle Man | Professional Manager</title>
+    <title>Vehicle Man | Professional Vehicle Management</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -16,178 +16,192 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./img_home_background.png');
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('./img_home_background.png');
             background-size: cover;
             background-position: center;
             z-index: -2;
         }
- <style>       
-    /* ΤΟ PREMIMUM SMARTPHONE (S26 / iPhone 17 style) */
-    .phone-cloud {
-        position: fixed;
-        top: 110px; /* Κάτω από το menu */
-        right: 50px;
-        width: 150px; /* Ελαφρώς μεγαλύτερο για να φαίνονται οι λεπτομέρειες */
-        height: 300px;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(20px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 40px; /* Στρογγυλεμένες άκρες "σύννεφου" */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 100;
-        box-shadow: 0 25px 50px rgba(0,0,0,0.4);
-        transition: transform 0.3s ease;
-    }
 
-    .phone-cloud:hover {
-        transform: translateY(-5px) scale(1.05);
-    }
-
-    /* Το σώμα της συσκευής */
-    .device-body {
-        width: 120px;
-        height: 250px;
-        background: #0f172a; /* Midnight Blue/Black frame */
-        border: 3px solid #334155; /* Μεταλλικό frame */
-        border-radius: 28px;
-        position: relative;
-        overflow: hidden;
-        box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
-    }
-
-    /* Η οθόνη μέσα στο κινητό */
-    .device-screen {
-        position: absolute;
-        top: 5px;
-        left: 5px;
-        right: 5px;
-        bottom: 5px;
-        background: #000;
-        border-radius: 22px;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    /* Η εικόνα/logo μέσα στην οθόνη */
-    .app-logo-screen {
-        width: 80%; /* Πιο μικρή και ξακρισμένη όπως ζήτησες */
-        height: auto;
-        object-fit: contain;
-        filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.5));
-    }
-
-    /* Notch / Dynamic Island */
-    .device-island {
-        position: absolute;
-        top: 8px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 40px;
-        height: 12px;
-        background: #000;
-        border-radius: 10px;
-        z-index: 5;
-    }
-</style>
-
-<div class="phone-cloud hidden md:flex">
-    <div class="device-body">
-        <div class="device-island"></div>
-        <div class="device-screen">
-            <img src="./img_home_background.png" alt="App Logo" class="app-logo-screen">
-        </div>
-    </div>
-</div>
-
-        /* ΔΙΑΦΑΝΕΙΕΣ ΤΟΜΕΩΝ (Glassmorphism) */
-        .glass-section {
+        /* PREMIUM SMARTPHONE CLOUD (S26 / iPhone 17 style) */
+        .phone-cloud {
+            position: fixed;
+            top: 100px; 
+            right: 40px;
+            width: 160px;
+            height: 310px;
             background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .phone-cloud:hover {
+            transform: translateY(-10px) rotate(2deg);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        /* Device Body */
+        .device-body {
+            width: 130px;
+            height: 270px;
+            background: #0f172a; 
+            border: 4px solid #334155;
+            border-radius: 32px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: inset 0 0 15px rgba(0,0,0,1);
+        }
+
+        /* Notch / Dynamic Island */
+        .device-island {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 45px;
+            height: 14px;
+            background: #000;
+            border-radius: 10px;
+            z-index: 20;
+        }
+
+        /* Screen & Logo */
+        .device-screen {
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            right: 6px;
+            bottom: 6px;
+            background: #000;
+            border-radius: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .app-logo-screen {
+            width: 75%; /* Μικρό και ξακρισμένο */
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.6));
+            animation: pulse 3s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.9; }
+            50% { transform: scale(1.05); opacity: 1; }
+        }
+
+        /* GLASS SECTIONS */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            margin: 40px 0;
             border-radius: 40px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            margin-bottom: 60px;
+            transition: transform 0.3s ease;
+        }
+
+        .glass-card:hover {
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .nav-glass {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(15, 23, 42, 0.3);
             backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Typography Improvements */
+        .hero-title {
+            letter-spacing: -0.05em;
+            line-height: 0.9;
         }
     </style>
 </head>
-<body class="text-white font-sans">
+<body class="text-white font-sans antialiased">
 
     <div class="main-bg"></div>
 
-    <div class="phone-cloud hidden md:flex">
-        <div class="mini-phone shadow-inner"></div>
+    <div class="phone-cloud hidden lg:flex">
+        <div class="device-body">
+            <div class="device-island"></div>
+            <div class="device-screen">
+                <img src="./img_home_background.png" alt="Vehicle Man Logo" class="app-logo-screen">
+            </div>
+        </div>
     </div>
 
-    <nav class="nav-glass fixed w-full z-50">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-black tracking-tighter text-blue-400">
-                VEHICLE <span class="text-white">MAN</span>
+    <nav class="nav-glass fixed w-full z-[150]">
+        <div class="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
+            <div class="text-2xl font-black tracking-tighter">
+                <span class="text-blue-500">VEHICLE</span> MAN
             </div>
-            <div class="hidden md:flex space-x-10 font-bold text-xs uppercase tracking-[0.2em]">
+            <div class="hidden md:flex space-x-12 text-xs font-bold uppercase tracking-[0.3em]">
                 <a href="#home" class="hover:text-blue-400 transition">Αρχική</a>
                 <a href="#features" class="hover:text-blue-400 transition">Λειτουργίες</a>
                 <a href="#about" class="hover:text-blue-400 transition">Σχετικά</a>
             </div>
+            <div>
+                <button class="bg-blue-600 hover:bg-blue-500 text-white px-6 py-2 rounded-full text-xs font-bold transition shadow-lg shadow-blue-900/20">
+                    GET STARTED
+                </button>
+            </div>
         </div>
     </nav>
 
-    <main class="relative z-10 max-w-5xl mx-auto px-6">
+    <main class="relative z-10 max-w-6xl mx-auto px-6">
         
-        <section id="home" class="min-h-screen flex flex-col justify-center pt-20">
-            <div class="glass-section p-10 md:p-20">
-                <h1 class="text-5xl md:text-8xl font-black mb-6 leading-tight uppercase tracking-tighter">
-                    Drive <span class="text-blue-400 italic">Smarter.</span>
+        <section id="home" class="min-h-screen flex items-center pt-24">
+            <div class="glass-card p-12 md:p-24 w-full md:w-3/4">
+                <span class="text-blue-400 font-bold tracking-[0.4em] uppercase text-xs mb-4 block">New Generation App</span>
+                <h1 class="hero-title text-6xl md:text-9xl font-black mb-8 uppercase">
+                    Drive <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">Expert.</span>
                 </h1>
-                <p class="text-xl text-gray-200 mb-10 max-w-2xl leading-relaxed">
-                    Η διαχείριση του οχήματος δεν ήταν ποτέ τόσο σοβαρή και εύκολη. Καταγράψτε τα πάντα με δύο κινήσεις.
+                <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-xl leading-relaxed font-light">
+                    Η απόλυτη εμπειρία διαχείρισης οχημάτων. Οργανώστε έξοδα, καύσιμα και service με την ταχύτητα ενός tap.
                 </p>
-                <a href="#features" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-10 rounded-full transition shadow-xl">
-                    ΕΞΕΡΕΥΝΗΣΤΕ
-                </a>
+                <div class="flex gap-6">
+                    <a href="#features" class="bg-white text-slate-900 px-10 py-4 rounded-2xl font-bold hover:bg-blue-400 hover:text-white transition-all transform hover:scale-105">
+                        Δείτε Περισσότερα
+                    </a>
+                </div>
             </div>
         </section>
 
         <section id="features" class="py-20">
-            <div class="glass-section p-10 md:p-20">
-                <h2 class="text-4xl font-bold mb-12">Λειτουργίες</h2>
-                <div class="grid md:grid-cols-2 gap-12">
-                    <div class="border-l-4 border-blue-400 pl-6">
-                        <h3 class="text-2xl font-bold mb-4 italic uppercase tracking-wider">Στατιστικά</h3>
-                        <p class="text-gray-300">Πλήρης έλεγχος των εξόδων σας με γραφικά που μιλάνε από μόνα τους.</p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass-card p-12">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-8">
+                        <i class="fas fa-gas-pump text-blue-400 text-xl"></i>
                     </div>
-                    <div class="border-l-4 border-blue-400 pl-6">
-                        <h3 class="text-2xl font-bold mb-4 italic uppercase tracking-wider">Ταχύτητα</h3>
-                        <p class="text-gray-300">Σχεδιασμένο για να καταχωρείτε δεδομένα ενώ βρίσκεστε καθ' οδόν.</p>
+                    <h3 class="text-3xl font-bold mb-4 uppercase italic">Fuel Control</h3>
+                    <p class="text-gray-400 leading-relaxed">Καταγράψτε κάθε λίτρο. Μάθετε την ακριβή κατανάλωση και εξοικονομήστε χρήματα με έξυπνες αναφορές.</p>
+                </div>
+                <div class="glass-card p-12">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-8">
+                        <i class="fas fa-chart-line text-blue-400 text-xl"></i>
                     </div>
+                    <h3 class="text-3xl font-bold mb-4 uppercase italic">Analytics</h3>
+                    <p class="text-gray-400 leading-relaxed">Δυναμικά γραφήματα που σας δείχνουν την πλήρη εικόνα της συντήρησης των οχημάτων σας ανά πάσα στιγμή.</p>
                 </div>
             </div>
         </section>
 
         <section id="about" class="py-20 mb-40">
-            <div class="glass-section p-10 md:p-20 bg-blue-900/20">
-                <h2 class="text-4xl font-bold mb-8 uppercase tracking-widest text-blue-400">Σχετικά</h2>
-                <p class="text-xl text-gray-200 leading-relaxed italic">
-                    "Η αποστολή μας είναι να προσφέρουμε στον οδηγό ένα εργαλείο που δεν θα τον καθυστερεί, αλλά θα του δίνει την πληροφορία που χρειάζεται για να εξοικονομεί χρήματα."
-                </p>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="py-10 text-center text-gray-400 text-xs uppercase tracking-widest">
-        © 2024 Vehicle Manager • All rights reserved
-    </footer>
-
-</body>
-</html>
+            <div class="glass-card p-12 md:p-24 border-none bg-blue-600/10">
+                <div class="max-w-2xl">
+                    <h2 class="text-4xl font-black mb-8 uppercase tracking-widest text-blue-400 italic">Η Φιλοσοφία μας</h2>
+                    <p class="text-2xl text-gray-200 leading-relaxed font-light">
+                        "Πιστεύουμε ότι η τεχνολογία πρέπει να υπηρετεί τον άνθρωπο, όχι να τον καθυστερεί. Το Vehicle Man δημιουργήθηκε για να κάνει την καθημερινότητα κάθε
