@@ -3,102 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vehicle Man | Official Site</title>
+    <title>Vehicle Man | Professional Manager</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         html { scroll-behavior: smooth; }
-        .hero-gradient {
-            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
-                        url('img_home_background.jpg');
+
+        /* ΣΤΑΘΕΡΟ BACKGROUND ΣΕ ΟΛΗ ΤΗΝ ΟΘΟΝΗ */
+        .main-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./img_home_background.png');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
+            z-index: -2;
+        }
+
+        /* ΤΟ "ΣΥΝΝΕΦΟ" ΜΕ ΤΟ ΚΙΝΗΤΟ ΣΤΑ ΔΕΞΙΑ */
+        .phone-cloud {
+            position: fixed;
+            top: 100px; /* Κάτω από το menu */
+            right: 40px;
+            width: 120px;
+            height: 220px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 40;
+            padding: 10px;
+        }
+
+        .mini-phone {
+            width: 100%;
+            height: 100%;
+            background: #000;
+            border: 4px solid #334155;
+            border-radius: 20px;
+            background-image: url('./img_home_background.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* ΔΙΑΦΑΝΕΙΕΣ ΤΟΜΕΩΝ (Glassmorphism) */
+        .glass-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 40px 0;
+            border-radius: 40px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        .nav-glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
     </style>
 </head>
-<body class="bg-gray-50 text-slate-900 font-sans">
+<body class="text-white font-sans">
 
-    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-lg border-b border-gray-200">
+    <div class="main-bg"></div>
+
+    <div class="phone-cloud hidden md:flex">
+        <div class="mini-phone shadow-inner"></div>
+    </div>
+
+    <nav class="nav-glass fixed w-full z-50">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-xl font-black tracking-tighter text-blue-600">
-                VEHICLE <span class="text-slate-800">MAN</span>
+            <div class="text-2xl font-black tracking-tighter text-blue-400">
+                VEHICLE <span class="text-white">MAN</span>
             </div>
-            <div class="hidden md:flex space-x-8 font-bold text-sm uppercase tracking-wide">
-                <a href="#home" class="hover:text-blue-600 transition">Αρχική</a>
-                <a href="#features" class="hover:text-blue-600 transition">Λειτουργίες</a>
-                <a href="#charts" class="hover:text-blue-600 transition">Στατιστικά</a>
-                <a href="#about" class="hover:text-blue-600 transition">Σχετικά</a>
+            <div class="hidden md:flex space-x-10 font-bold text-xs uppercase tracking-[0.2em]">
+                <a href="#home" class="hover:text-blue-400 transition">Αρχική</a>
+                <a href="#features" class="hover:text-blue-400 transition">Λειτουργίες</a>
+                <a href="#about" class="hover:text-blue-400 transition">Σχετικά</a>
             </div>
-            <a href="#download" class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-bold hover:shadow-lg transition">ΛΗΨΗ</a>
         </div>
     </nav>
 
-    <section id="home" class="hero-gradient min-h-screen flex items-center justify-center text-center text-white px-4">
-        <div class="max-w-3xl">
-            <div class="mb-6 inline-block p-3 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
-                <img src="img_home_background.jpg" alt="Logo" class="w-20 h-20 object-cover rounded-xl shadow-2xl">
+    <main class="relative z-10 max-w-5xl mx-auto px-6">
+        
+        <section id="home" class="min-h-screen flex flex-col justify-center pt-20">
+            <div class="glass-section p-10 md:p-20">
+                <h1 class="text-5xl md:text-8xl font-black mb-6 leading-tight uppercase tracking-tighter">
+                    Drive <span class="text-blue-400 italic">Smarter.</span>
+                </h1>
+                <p class="text-xl text-gray-200 mb-10 max-w-2xl leading-relaxed">
+                    Η διαχείριση του οχήματος δεν ήταν ποτέ τόσο σοβαρή και εύκολη. Καταγράψτε τα πάντα με δύο κινήσεις.
+                </p>
+                <a href="#features" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-10 rounded-full transition shadow-xl">
+                    ΕΞΕΡΕΥΝΗΣΤΕ
+                </a>
             </div>
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">Όλα για το όχημά σου, σε <span class="text-blue-400">ένα app.</span></h1>
-            <p class="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed">
-                Η πιο ολοκληρωμένη λύση για τον έλεγχο εξόδων, καυσίμων και συντήρησης. Σχεδιασμένο για οδηγούς που θέλουν σοβαρή οργάνωση.
-            </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <div class="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-lg">
-                    <i class="fas fa-check-circle text-blue-400"></i>
-                    <span class="text-sm font-medium">Εύκολος Χειρισμός</span>
-                </div>
-                <div class="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-lg">
-                    <i class="fas fa-bolt text-blue-400"></i>
-                    <span class="text-sm font-medium">2 Tap Entry</span>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="features" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Λειτουργίες που ξεχωρίζουν</h2>
-                <div class="h-1 w-20 bg-blue-600 mx-auto"></div>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:border-blue-200 transition group">
-                    <i class="fas fa-gas-pump text-3xl text-blue-600 mb-6 transition-transform group-hover:scale-110"></i>
-                    <h3 class="text-xl font-bold mb-3">Διαχείριση Καυσίμων</h3>
-                    <p class="text-gray-600">Καταγράψτε κάθε γέμισμα και παρακολουθήστε την κατανάλωση ανά χιλιόμετρο.</p>
-                </div>
-                <div id="charts" class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:border-blue-200 transition group">
-                    <i class="fas fa-chart-pie text-3xl text-blue-600 mb-6 transition-transform group-hover:scale-110"></i>
-                    <h3 class="text-xl font-bold mb-3">Αναλυτικά Charts</h3>
-                    <p class="text-gray-600">Δείτε πού ξοδεύετε τα χρήματά σας με δυναμικά γραφήματα και μηνιαίες αναφορές.</p>
-                </div>
-                <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:border-blue-200 transition group">
-                    <i class="fas fa-tools text-3xl text-blue-600 mb-6 transition-transform group-hover:scale-110"></i>
-                    <h3 class="text-xl font-bold mb-3">Υπενθυμίσεις Service</h3>
-                    <p class="text-gray-600">Μην ξεχάσετε ποτέ ξανά την αλλαγή λαδιών ή το ΚΤΕΟ σας.</p>
+        <section id="features" class="py-20">
+            <div class="glass-section p-10 md:p-20">
+                <h2 class="text-4xl font-bold mb-12">Λειτουργίες</h2>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="border-l-4 border-blue-400 pl-6">
+                        <h3 class="text-2xl font-bold mb-4 italic uppercase tracking-wider">Στατιστικά</h3>
+                        <p class="text-gray-300">Πλήρης έλεγχος των εξόδων σας με γραφικά που μιλάνε από μόνα τους.</p>
+                    </div>
+                    <div class="border-l-4 border-blue-400 pl-6">
+                        <h3 class="text-2xl font-bold mb-4 italic uppercase tracking-wider">Ταχύτητα</h3>
+                        <p class="text-gray-300">Σχεδιασμένο για να καταχωρείτε δεδομένα ενώ βρίσκεστε καθ' οδόν.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="about" class="py-24 bg-slate-900 text-white">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-8">Σχετικά με το Vehicle Man</h2>
-            <p class="text-xl text-gray-400 leading-relaxed mb-10">
-                Το Vehicle Man ξεκίνησε με έναν στόχο: Να απλοποιήσει τη ζωή του οδηγού. Πιστεύουμε ότι η διαχείριση ενός οχήματος δεν πρέπει να είναι αγγαρεία, αλλά μια γρήγορη και ευχάριστη διαδικασία.
-            </p>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div><p class="text-3xl font-bold text-blue-500">100%</p><p class="text-sm text-gray-500 uppercase">Δωρεάν</p></div>
-                <div><p class="text-3xl font-bold text-blue-500">Dark</p><p class="text-sm text-gray-500 uppercase">Mode</p></div>
-                <div><p class="text-3xl font-bold text-blue-500">Fast</p><p class="text-sm text-gray-500 uppercase">Sync</p></div>
-                <div><p class="text-3xl font-bold text-blue-500">Privacy</p><p class="text-sm text-gray-500 uppercase">First</p></div>
+        <section id="about" class="py-20 mb-40">
+            <div class="glass-section p-10 md:p-20 bg-blue-900/20">
+                <h2 class="text-4xl font-bold mb-8 uppercase tracking-widest text-blue-400">Σχετικά</h2>
+                <p class="text-xl text-gray-200 leading-relaxed italic">
+                    "Η αποστολή μας είναι να προσφέρουμε στον οδηγό ένα εργαλείο που δεν θα τον καθυστερεί, αλλά θα του δίνει την πληροφορία που χρειάζεται για να εξοικονομεί χρήματα."
+                </p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer class="py-12 border-t border-gray-200 text-center">
-        <p class="text-gray-500 text-sm">© 2026 Vehicle Man. Αναπτύχθηκε με πάθος για την οδήγηση.</p>
+    </main>
+
+    <footer class="py-10 text-center text-gray-400 text-xs uppercase tracking-widest">
+        © 2024 Vehicle Manager • All rights reserved
     </footer>
 
 </body>
