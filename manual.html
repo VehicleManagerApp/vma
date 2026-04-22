@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Εγχειρίδιο Χρήσης | Vehicle Man</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        .main-bg {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('./img_home_background.png');
+            background-size: cover; background-position: center; z-index: -2;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            margin-bottom: 2rem;
+        }
+        .phone-cloud {
+            position: fixed; top: 100px; right: 40px; width: 140px; height: 270px;
+            background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 40px;
+            display: flex; align-items: center; justify-content: center; z-index: 100;
+        }
+        .device-body {
+            width: 115px; height: 235px; background: #0f172a; border: 3px solid #334155;
+            border-radius: 28px; position: relative; overflow: hidden;
+        }
+        .device-screen {
+            position: absolute; top: 5px; left: 5px; right: 5px; bottom: 5px;
+            background: #000; border-radius: 22px; display: flex; align-items: center; justify-content: center;
+        }
+        .app-logo-screen { width: 70%; filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.5)); }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); }
+        ::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 10px; }
+
+        h2 { color: #60a5fa; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem; }
+        strong { color: #fff; border-bottom: 1px solid #3b82f6; }
+        ul li { margin-bottom: 0.8rem; color: #cbd5e1; }
+    </style>
+</head>
+<body class="text-slate-200 font-sans antialiased">
+    <div class="main-bg"></div>
+
+    <div class="phone-cloud hidden lg:flex">
+        <div class="device-body">
+            <div class="device-screen">
+                <img src="./img_home_background.png" alt="Logo" class="app-logo-screen">
+            </div>
+        </div>
+    </div>
+
+    <nav class="fixed w-full z-[150] bg-slate-950/50 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-black tracking-tighter">
+                <i class="fas fa-arrow-left mr-2 text-blue-500"></i> ΕΠΙΣΤΡΟΦΗ
+            </a>
+            <div class="text-blue-500 font-bold tracking-widest text-sm uppercase">User Manual v1.0</div>
+        </div>
+    </nav>
+
+    <main class="relative z-10 max-w-4xl mx-auto px-6 pt-32 pb-20">
+        <h1 class="text-5xl md:text-7xl font-black mb-16 text-center uppercase tracking-tighter">
+            Εγχειρίδιο <span class="text-blue-500">Χρήσης</span>
+        </h1>
+
+        <section class="glass-card p-8 md:p-12">
+            <h2><i class="fas fa-home mr-3 text-blue-400"></i> 1. Αρχική Οθόνη – Το Κέντρο Ελέγχου</h2>
+            <div class="space-y-6">
+                <div>
+                    <h4 class="font-bold text-white mb-2 uppercase text-sm italic">Κινήσεις (Gestures):</h4>
+                    <ul class="list-disc ml-5">
+                        <li><strong>Μονό Tap:</strong> Μετάβαση στη Λίστα Εγγραφών.</li>
+                        <li><strong>Διπλό Tap:</strong> "Γρήγορη Καταχώρηση" (Shortcut).</li>
+                        <li><strong>Long Press:</strong> Μενού διαχείρισης (Επεξεργασία/Διαγραφή).</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-2 uppercase text-sm italic">Γενική Πλοήγηση:</h4>
+                    <ul class="list-disc ml-5">
+                        <li><strong>Swipe Αριστερά:</strong> Μετάβαση στα Στατιστικά (Stats).</li>
+                        <li><strong>Swipe Δεξιά:</strong> Μετάβαση στις Ρυθμίσεις (Settings).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="glass-card p-8 md:p-12">
+            <h2><i class="fas fa-car mr-3 text-blue-400"></i> 2. Προφίλ Οχήματος</h2>
+            <p class="mb-4">Εδώ ορίζετε την "ταυτότητα" και το πρόγραμμα συντήρησης.</p>
+            <ul class="list-none space-y-4">
+                <li class="bg-white/5 p-4 rounded-xl border-l-4 border-blue-500">
+                    <strong>Maintenance Schedule:</strong> Ρυθμίστε χιλιόμετρα ή μήνες για λάδια/ελαστικά. Το AI δημιουργεί αυτόματα <strong>Auto Reminders 90 ημερών</strong>.
+                </li>
+            </ul>
+        </section>
+
+        <section class="glass-card p-8 md:p-12">
+            <h2><i class="fas fa-list-ul mr-3 text-blue-400"></i> 3. Λίστα Εγγραφών (Timeline)</h2>
+            <ul class="list-disc ml-5 space-y-4">
+                <li><strong>Sticky Reminder:</strong> Εμφανίζεται στην κορυφή μόνο αν υπάρχει εκκρεμότητα.</li>
+                <li><strong>Κουμπί "Ολοκλήρωση":</strong> Το πιο έξυπνο εργαλείο. Μετατρέπει την υπενθύμιση σε Έξοδο και ενημερώνει το ιστορικό με ένα tap.</li>
+                <li><strong>Swipe Actions:</strong> Αριστερά για Διαγραφή (με 10" Αναίρεση), Δεξιά για Γρήγορη Επεξεργασία.</li>
+            </ul>
+        </section>
+
+        <section class="glass-card p-8 md:p-12 border-2 border-blue-500/30">
+            <h2 class="flex items-center">
+                <i class="fas fa-robot mr-3 text-blue-400"></i> 4. Νέα Εγγραφή & AI
+            </h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-blue-500/10 p-5 rounded-2xl">
+                    <h4 class="text-blue-400 font-bold mb-2 uppercase text-xs">Έξυπνη Ημερομηνία</h4>
+                    <p class="text-sm">Το AI καταλαβαίνει: Παλιά ημερομηνία = Έξοδο, Μελλοντική = Υπενθύμιση.</p>
+                </div>
+                <div class="bg-blue-500/10 p-5 rounded-2xl">
+                    <h4 class="text-blue-400 font-bold mb-2 uppercase text-xs">Grenglish Support</h4>
+                    <p class="text-sm">Γράψτε "servis" και το AI το μετατρέπει σε "Service" αυτόματα.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="glass-card p-8 md:p-12">
+            <h2><i class="fas fa-cogs mr-3 text-blue-400"></i> 5. Ρυθμίσεις & Pro Mode</h2>
+            <ul class="space-y-4">
+                <li><strong>Night Mode:</strong> Αλλάζει τα γραφικά του δρόμου στο timeline.</li>
+                <li><strong>Twin App Sync:</strong> Σύνδεση δύο συσκευών (π.χ. ζευγάρι) για κοινή βάση δεδομένων σε πραγματικό χρόνο.</li>
+                <li><strong>Driver Management (Pro 3):</strong> Ανάθεση οχημάτων σε διαφορετικούς οδηγούς (ιδανικό για στόλους).</li>
+            </ul>
+        </section>
+
+        <div class="bg-blue-600 p-8 rounded-[40px] shadow-2xl">
+            <h3 class="text-2xl font-black mb-4 uppercase italic tracking-tighter text-white">
+                <i class="fas fa-lightbulb mr-2"></i> Pro Tips
+            </h3>
+            <ul class="text-white/90 text-sm space-y-2">
+                <li>• Μη διαγράφετε υπενθυμίσεις, πατήστε "Ολοκλήρωση" για να μαθαίνει το AI.</li>
+                <li>• Κάντε τακτικά Backup σε JSON (Pro Mode 2).</li>
+                <li>• Το AI καταλαβαίνει συνώνυμα όπως "pampriz" -> "Κρύσταλλα".</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer class="py-12 text-center text-gray-500 text-xs font-bold uppercase tracking-[0.4em]">
+        © 2026 Vehicle Manager App • Engineering for Drivers
+    </footer>
+</body>
+</html>
