@@ -131,7 +131,6 @@
 
     <div class="main-bg"></div>
 
-    <!-- Floating Device -->
     <div class="phone-cloud hidden lg:flex">
         <div class="device-body">
             <div class="device-island"></div>
@@ -141,7 +140,6 @@
         </div>
     </div>
 
-    <!-- Navigation -->
     <nav class="nav-glass fixed w-full z-[150]">
         <div class="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
             <div class="text-2xl font-black tracking-tighter">
@@ -150,8 +148,9 @@
             <div class="hidden md:flex space-x-10 text-xs font-bold uppercase tracking-[0.3em]">
                 <a href="#home" class="hover:text-blue-400 transition">Αρχική</a>
                 <a href="#features" class="hover:text-blue-400 transition">AI Λειτουργίες</a>
+                <a href="#gestures" class="hover:text-blue-400 transition">Gestures</a>
                 <a href="#pro" class="hover:text-blue-400 transition">Pro Mode</a>
-                <a href="manual.html" class="hover:text-blue-400 transition">ΕΓΧΕΙΡΙΔΙΟ ΧΡΗΣΗΣ</a>
+                <a href="manual.html" class="hover:text-blue-400 transition text-yellow-500">ΕΓΧΕΙΡΙΔΙΟ ΧΡΗΣΗΣ</a>
                 <a href="#contact" class="hover:text-blue-400 transition text-blue-400">Επικοινωνία</a>
             </div>
             <button class="bg-blue-600 hover:bg-blue-500 text-white px-6 py-2 rounded-full text-xs font-bold transition shadow-lg shadow-blue-900/20">
@@ -162,7 +161,6 @@
 
     <main class="relative z-10 max-w-6xl mx-auto px-6">
         
-        <!-- Hero Section -->
         <section id="home" class="min-h-screen flex items-center pt-24">
             <div class="glass-card p-12 md:p-24 w-full md:w-3/4">
                 <span class="text-blue-400 font-bold tracking-[0.4em] uppercase text-xs mb-4 block">AI-Powered Vehicle Assistant</span>
@@ -170,7 +168,7 @@
                     Drive & <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">Drivers.</span>
                 </h1>
                 <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-xl leading-relaxed font-light">
-                    Η πρώτη εφαρμογή με <span class="text-white font-semibold">10.000+ γραμμές κώδικα</span> που καταλαβαίνει πώς μιλάτε. Διαχειριστείτε τα οχήματά σας με τη δύναμη της τεχνητής νοημοσύνης.
+                    Η πρώτη εφαρμογή που συνδυάζει <span class="text-white font-semibold italic underline decoration-blue-500">2-Tap entry</span> και τεχνητή νοημοσύνη. Διαχειριστείτε τα οχήματά σας με την ταχύτητα της σκέψης.
                 </p>
                 <div class="flex gap-6">
                     <a href="#features" class="bg-white text-slate-900 px-10 py-4 rounded-2xl font-bold hover:bg-blue-400 hover:text-white transition-all transform hover:scale-105">
@@ -180,7 +178,6 @@
             </div>
         </section>
 
-        <!-- Stats Grid (New Content) -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-20">
             <div class="glass-card p-6 text-center">
                 <div class="text-3xl font-bold text-blue-400">10K+</div>
@@ -200,30 +197,57 @@
             </div>
         </div>
 
-        <!-- Features Grid -->
+        <section id="gestures" class="py-10">
+            <h2 class="text-4xl font-black mb-12 uppercase italic text-blue-500 tracking-tighter">Fast-Lane Gestures</h2>
+            <div class="glass-card p-10 md:p-16">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="space-y-6">
+                        <div class="flex gap-4 items-center">
+                            <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center font-bold text-blue-400">2x</div>
+                            <p class="text-gray-300 italic"><strong class="text-white">Double Tap:</strong> "Γρήγορη Καταχώρηση" για άμεση εισαγωγή εγγραφής στο όχημα.</p>
+                        </div>
+                        <div class="flex gap-4 items-center">
+                            <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center font-bold text-blue-400"><i class="fas fa-hand-pointer"></i></div>
+                            <p class="text-gray-300 italic"><strong class="text-white">Long Press:</strong> Άμεση διαχείριση και επεξεργασία του οχήματος.</p>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="flex gap-4 items-center">
+                            <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center font-bold text-white"><i class="fas fa-chevron-left"></i></div>
+                            <p class="text-gray-300 italic"><strong class="text-white">Swipe Left:</strong> Γρήγορη μετάβαση στα Στατιστικά (Stats).</p>
+                        </div>
+                        <div class="flex gap-4 items-center">
+                            <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center font-bold text-white"><i class="fas fa-chevron-right"></i></div>
+                            <p class="text-gray-300 italic"><strong class="text-white">Swipe Right:</strong> Γρήγορη μετάβαση στις Ρυθμίσεις (Settings).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="features" class="py-10">
-            <h2 class="text-4xl font-black mb-12 uppercase italic text-blue-500 tracking-tighter">Core intelligence</h2>
+            <h2 class="text-4xl font-black mb-12 uppercase italic text-blue-500 tracking-tighter">AI Intelligence</h2>
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="glass-card p-12">
                     <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-8">
-                        <i class="fas fa-brain text-blue-400 text-xl"></i>
+                        <i class="fas fa-keyboard text-blue-400 text-xl"></i>
                     </div>
-                    <h3 class="text-3xl font-bold mb-4 uppercase italic">AI Smart Entry</h3>
-                    <p class="text-gray-400 leading-relaxed">Γράψτε "all lad" και η εφαρμογή θα καταλάβει αυτόματα την "Αλλαγή Λαδιών". Με ενσωματωμένο λεξικό 500+ συνωνύμων, η κατηγοριοποίηση γίνεται μόνη της.</p>
+                    <h3 class="text-3xl font-bold mb-4 uppercase italic">AI Autofill Tech</h3>
+                    <p class="text-gray-400 leading-relaxed">Το AI αναλύει τον τίτλο (π.χ. "all lad") και συμπληρώνει αυτόματα κόστος, λίτρα ή τύπο καυσίμου, βρίσκοντας τα πάντα από το ιστορικό σας.</p>
                 </div>
                 <div class="glass-card p-12">
                     <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-8">
                         <i class="fas fa-language text-blue-400 text-xl"></i>
                     </div>
-                    <h3 class="text-3xl font-bold mb-4 uppercase italic">Grenglish Support</h3>
-                    <p class="text-gray-400 leading-relaxed">Πληκτρολογήστε σε Grenglish και δείτε τους τίτλους να μεταμορφώνονται σε Ελληνικά. Εσείς ελέγχετε αν η μετάφραση θα είναι αυτόματη ή με επιβεβαίωση.</p>
+                    <h3 class="text-3xl font-bold mb-4 uppercase italic">Grenglish Engine</h3>
+                    <p class="text-gray-400 leading-relaxed">Γράψτε "servis" και δείτε το να μεταμορφώνεται σε "Service". Η εφαρμογή μαθαίνει τις προτιμήσεις σας και μεταφράζει αυτόματα.</p>
                 </div>
-                <div class="glass-card p-12">
+                <div class="glass-card p-12 border-t-2 border-blue-500/30">
                     <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-8">
-                        <i class="fas fa-history text-blue-400 text-xl"></i>
+                        <i class="fas fa-calendar-check text-blue-400 text-xl"></i>
                     </div>
-                    <h3 class="text-3xl font-bold mb-4 uppercase italic">90-Day Reminders</h3>
-                    <p class="text-gray-400 leading-relaxed">Οι υπενθυμίσεις εμφανίζονται μόνο όταν είναι κοντά (90 ημέρες) και μετατρέπονται σε έξοδα με ένα tap, διαγράφοντας αυτόματα το παλιό reminder.</p>
+                    <h3 class="text-3xl font-bold mb-4 uppercase italic">Smart Date Logic</h3>
+                    <p class="text-gray-400 leading-relaxed">Η εφαρμογή "σκέφτεται": Επιλέξατε παρελθούσα ημερομηνία; Είναι Έξοδο. Επιλέξατε μελλοντική; Γίνεται αυτόματα Υπενθύμιση.</p>
                 </div>
                 <div class="glass-card p-12">
                     <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-8">
@@ -235,7 +259,6 @@
             </div>
         </section>
 
-        <!-- Pro Mode Section -->
         <section id="pro" class="py-20">
             <div class="glass-card p-12 md:p-24 border-none bg-blue-600/10">
                 <div class="max-w-3xl">
@@ -245,21 +268,21 @@
                             <i class="fas fa-star text-yellow-400 mt-2"></i>
                             <div>
                                 <h4 class="text-xl font-bold uppercase">Multi-Level Access</h4>
-                                <p class="text-gray-400">Τρία επίπεδα Pro που ξεκλειδώνουν από προσαρμοσμένη ταξινόμηση μέχρι πλήρη διαχείριση στόλου οδηγών.</p>
+                                <p class="text-gray-400">Τρία επίπεδα Pro που ξεκλειδώνουν από προσαρμοσμένη ταξινόμηση μέχρι πλήρη διαχείριση στόλου οδηγών (Pro Mode 3).</p>
                             </div>
                         </div>
                         <div class="flex gap-6 items-start">
                             <i class="fas fa-sync text-blue-400 mt-2"></i>
                             <div>
                                 <h4 class="text-xl font-bold uppercase">Twin App Sync</h4>
-                                <p class="text-gray-400">Συγχρονισμός σε πραγματικό χρόνο μεταξύ δύο συσκευών για κοινή χρήση των δεδομένων του οχήματος.</p>
+                                <p class="text-gray-400">Σύνδεση δύο συσκευών για κοινή χρήση του οχήματος με live ενημέρωση μέσω κοινής βάσης δεδομένων.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 items-start">
-                            <i class="fas fa-file-export text-blue-400 mt-2"></i>
+                            <i class="fas fa-chart-pie text-blue-400 mt-2"></i>
                             <div>
-                                <h4 class="text-xl font-bold uppercase">Advanced Exports</h4>
-                                <p class="text-gray-400">Εξαγωγή των δεδομένων σας σε JSON και CSV μορφή για πλήρη έλεγχο και ανάλυση εκτός εφαρμογής.</p>
+                                <h4 class="text-xl font-bold uppercase">Driver Analysis</h4>
+                                <p class="text-gray-400">Πλήρης ανάλυση και εξαγωγή στατιστικών για την οδηγική συμπεριφορά κάθε οδηγού ξεχωριστά.</p>
                             </div>
                         </div>
                     </div>
@@ -267,7 +290,6 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="py-20 mb-40">
             <div class="glass-card p-12 md:p-16 text-center">
                 <h2 class="text-4xl font-black mb-6 uppercase tracking-widest text-white">Επικοινωνία</h2>
@@ -281,7 +303,6 @@
 
     </main>
 
-    <!-- Footer -->
     <footer class="relative z-10 py-16 border-t border-white/10 text-center">
         <div class="max-w-7xl mx-auto px-6">
             <p class="text-gray-500 text-xs font-bold uppercase tracking-[0.5em]">
