@@ -7,103 +7,132 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { background-color: #020617; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        
+        body { background-color: #020617; font-family: 'Inter', sans-serif; }
+        
         .main-bg {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background-image: linear-gradient(rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.9)), url('./img_home_background.png');
+            background-image: linear-gradient(rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.95)), url('./img_home_background.png');
             background-size: cover; background-position: center; z-index: -1;
         }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 2rem;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        /* DEEP GLASS EFFECT */
+        .deep-glass {
+            background: rgba(255, 255, 255, 0.03) !important;
+            backdrop-filter: blur(25px) saturate(180%) !important;
+            -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
-        .pro-card:hover {
-            transform: translateY(-10px);
-            border-color: rgba(59, 130, 246, 0.5);
-            background: rgba(255, 255, 255, 0.05);
+
+        /* GRANDE LOGO ANIMATION */
+        .logo-glow {
+            filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.5));
         }
-        .star-icon { filter: drop-shadow(0 0 8px currentColor); }
-        .disabled-btn { cursor: not-allowed; opacity: 0.5; }
+
+        .tier-card {
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .tier-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #ffffff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
-<body class="text-white font-sans antialiased">
+<body class="text-white antialiased">
     <div class="main-bg"></div>
 
-    <nav class="fixed w-full z-50 px-8 py-6">
-        <a href="index.html" class="flex items-center gap-2 text-gray-400 hover:text-white transition">
-            <i class="fas fa-arrow-left"></i> Επιστροφή στην Αρχική
+    <nav class="fixed top-0 w-full z-50 p-6">
+        <a href="index.html" class="inline-flex items-center gap-2 text-gray-500 hover:text-white transition group">
+            <i class="fas fa-chevron-left transition group-hover:-translate-x-1"></i> 
+            <span class="uppercase text-[10px] font-bold tracking-[0.3em]">Back to Dashboard</span>
         </a>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-6 pt-32 pb-20">
-        <div class="text-center mb-16">
-            <h1 class="text-4xl md:text-6xl font-black uppercase italic mb-4">Vehicle Man <span class="text-blue-500">Pro</span></h1>
-            <p class="text-gray-400 max-w-2xl mx-auto uppercase tracking-widest text-sm">Επιλέξτε το επίπεδο που ταιριάζει στις ανάγκες σας</p>
+    <header class="pt-32 pb-20 text-center px-6">
+        <div class="flex flex-col items-center mb-6">
+            <div class="w-24 h-24 mb-6 logo-glow">
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 10C27.9 10 10 27.9 10 50C10 72.1 27.9 90 50 90C72.1 90 90 72.1 90 50" stroke="#3b82f6" stroke-width="4" stroke-linecap="round"/>
+                    <path d="M30 55H70L60 40H40L30 55Z" fill="#3b82f6"/>
+                    <circle cx="75" cy="50" r="15" stroke="white" stroke-width="2" stroke-dasharray="4 2"/>
+                    <path d="M45 70L55 70M50 65L50 75" stroke="white" stroke-width="3"/>
+                </svg>
+            </div>
+            <h1 class="text-5xl md:text-8xl font-black tracking-tighter uppercase mb-2">
+                VEHICLE <span class="text-blue-500">MAN</span>
+            </h1>
+            <div class="inline-block px-4 py-1 bg-blue-600 text-[10px] font-black tracking-[0.5em] uppercase rounded-full">
+                PRO MODE ECOSYSTEM
+            </div>
         </div>
+        <p class="text-gray-400 max-w-xl mx-auto text-sm md:text-base leading-relaxed font-light">
+            Ξεκλειδώστε την πλήρη ισχύ της τεχνητής νοημοσύνης και μετατρέψτε τη διαχείριση του στόλου σας σε μια απόλυτα αυτοματοποιημένη εμπειρία.
+        </p>
+    </header>
 
-        <div class="grid md:grid-cols-4 gap-6">
+    <main class="max-w-7xl mx-auto px-6 pb-32">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             
-            <div class="glass-card pro-card p-8 flex flex-col">
-                <div class="mb-6 text-gray-500"><i class="fas fa-star text-2xl"></i></div>
-                <h3 class="text-xl font-black mb-2 uppercase">Free</h3>
-                <p class="text-3xl font-bold mb-6">€0 <span class="text-xs text-gray-500 uppercase font-normal">για πάντα</span></p>
-                <ul class="space-y-4 mb-8 flex-grow text-sm text-gray-400">
-                    <li><i class="fas fa-check text-blue-500 mr-2"></i> AI Smart Entry</li>
-                    <li><i class="fas fa-check text-blue-500 mr-2"></i> Greeklish Support</li>
-                    <li><i class="fas fa-check text-blue-500 mr-2"></i> Smart Reminders</li>
+            <div class="deep-glass tier-card p-10 rounded-[2.5rem] flex flex-col border-white/5">
+                <div class="text-gray-500 mb-8"><i class="fas fa-star text-3xl"></i></div>
+                <h3 class="text-2xl font-bold uppercase mb-1">Free</h3>
+                <p class="text-gray-500 text-xs tracking-widest uppercase mb-6">Basic Entry</p>
+                <div class="text-4xl font-black mb-10">€0</div>
+                <ul class="space-y-5 mb-12 flex-grow text-sm text-gray-400">
+                    <li><i class="fas fa-check text-blue-500 mr-3"></i> AI Smart Entry</li>
+                    <li><i class="fas fa-check text-blue-500 mr-3"></i> Greeklish Support</li>
+                    <li><i class="fas fa-check text-blue-500 mr-3"></i> Smart Reminders</li>
                 </ul>
-                <button class="w-full py-4 rounded-xl border border-white/10 font-bold uppercase text-xs" disabled>Ενεργό</button>
+                <button class="w-full py-4 rounded-2xl bg-white/5 border border-white/10 text-xs font-bold uppercase tracking-widest text-gray-500" disabled>Τρέχον Πλάνο</button>
             </div>
 
-            <div class="glass-card pro-card p-8 flex flex-col relative overflow-hidden">
-                <div class="mb-6 text-blue-400"><i class="fas fa-star text-2xl star-icon"></i></div>
-                <h3 class="text-xl font-black mb-2 uppercase">Pro 1</h3>
-                <p class="text-3xl font-bold mb-6 text-blue-400">€--</p>
-                <ul class="space-y-4 mb-8 flex-grow text-sm">
-                    <li class="text-blue-300 font-bold italic"><i class="fas fa-plus mr-2"></i> Custom Sorting</li>
-                    <li class="text-blue-300 font-bold italic"><i class="fas fa-plus mr-2"></i> Import Wizard</li>
-                    <li class="text-gray-500"><i class="fas fa-check mr-2"></i> Όλα τα Free προνόμια</li>
+            <div class="deep-glass tier-card p-10 rounded-[2.5rem] flex flex-col border-blue-500/20 shadow-[0_0_50px_-12px_rgba(59,130,246,0.3)]">
+                <div class="text-blue-500 mb-8"><i class="fas fa-star text-3xl logo-glow"></i></div>
+                <h3 class="text-2xl font-bold uppercase mb-1">Pro 1</h3>
+                <p class="text-blue-400 text-xs tracking-widest uppercase mb-6">Personal Organization</p>
+                <div class="text-4xl font-black mb-10">€--</div>
+                <ul class="space-y-5 mb-12 flex-grow text-sm">
+                    <li class="text-white"><i class="fas fa-plus text-blue-400 mr-3 font-bold"></i> Custom Sorting</li>
+                    <li class="text-white"><i class="fas fa-plus text-blue-400 mr-3 font-bold"></i> Import Wizard</li>
+                    <li class="text-gray-500 italic"><i class="fas fa-check mr-3"></i> + Όλα τα Free</li>
                 </ul>
-                <button class="disabled-btn w-full py-4 rounded-xl bg-blue-600 font-bold uppercase text-xs">Μη Διαθέσιμο</button>
+                <button class="w-full py-4 rounded-2xl bg-blue-600 hover:bg-blue-500 transition shadow-lg shadow-blue-900/20 text-xs font-bold uppercase tracking-widest">Αναβαθμιση</button>
             </div>
 
-            <div class="glass-card pro-card p-8 flex flex-col border-yellow-500/20">
-                <div class="mb-6 text-yellow-500"><i class="fas fa-star text-2xl star-icon"></i></div>
-                <h3 class="text-xl font-black mb-2 uppercase text-yellow-500">Pro 2</h3>
-                <p class="text-3xl font-bold mb-6">€--</p>
-                <ul class="space-y-4 mb-8 flex-grow text-sm">
-                    <li class="text-yellow-200 font-bold italic"><i class="fas fa-shield-alt mr-2"></i> Full Backup/Restore</li>
-                    <li class="text-yellow-200 font-bold italic"><i class="fas fa-file-export mr-2"></i> CSV/JSON Exports</li>
-                    <li class="text-gray-500"><i class="fas fa-check mr-2"></i> Όλα τα Pro 1 προνόμια</li>
+            <div class="deep-glass tier-card p-10 rounded-[2.5rem] flex flex-col border-yellow-500/20 shadow-[0_0_50px_-12px_rgba(234,179,8,0.2)]">
+                <div class="text-yellow-500 mb-8"><i class="fas fa-star text-3xl logo-glow"></i></div>
+                <h3 class="text-2xl font-bold uppercase mb-1">Pro 2</h3>
+                <p class="text-yellow-500 text-xs tracking-widest uppercase mb-6">Data Mobility</p>
+                <div class="text-4xl font-black mb-10">€--</div>
+                <ul class="space-y-5 mb-12 flex-grow text-sm">
+                    <li class="text-white"><i class="fas fa-shield-alt text-yellow-500 mr-3"></i> Backup & Restore</li>
+                    <li class="text-white"><i class="fas fa-file-export text-yellow-500 mr-3"></i> JSON/CSV Exports</li>
+                    <li class="text-gray-500 italic"><i class="fas fa-check mr-3"></i> + Όλα τα Pro 1</li>
                 </ul>
-                <button class="disabled-btn w-full py-4 rounded-xl bg-yellow-600 font-bold uppercase text-xs">Μη Διαθέσιμο</button>
+                <button class="w-full py-4 rounded-2xl bg-yellow-600 hover:bg-yellow-500 transition shadow-lg shadow-yellow-900/20 text-xs font-bold uppercase tracking-widest text-black">Αναβαθμιση</button>
             </div>
 
-            <div class="glass-card pro-card p-8 flex flex-col border-purple-500/30 bg-purple-500/5">
-                <div class="mb-6 text-purple-500"><i class="fas fa-star text-2xl star-icon"></i></div>
-                <h3 class="text-xl font-black mb-2 uppercase text-purple-500 italic">Pro 3</h3>
-                <p class="text-3xl font-bold mb-6">€--</p>
-                <ul class="space-y-4 mb-8 flex-grow text-sm">
-                    <li class="text-purple-300 font-bold italic"><i class="fas fa-sync mr-2"></i> Twin App Sync</li>
-                    <li class="text-purple-300 font-bold italic"><i class="fas fa-users-cog mr-2"></i> Drivers Managing</li>
-                    <li class="text-gray-500"><i class="fas fa-check mr-2"></i> Το πλήρες οικοσύστημα</li>
+            <div class="deep-glass tier-card p-10 rounded-[2.5rem] flex flex-col border-purple-500/30 shadow-[0_0_50px_-12px_rgba(168,85,247,0.3)] bg-purple-500/5">
+                <div class="text-purple-500 mb-8"><i class="fas fa-crown text-3xl logo-glow"></i></div>
+                <h3 class="text-2xl font-bold uppercase mb-1">Pro 3</h3>
+                <p class="text-purple-400 text-xs tracking-widest uppercase mb-6">Ultimate Ecosystem</p>
+                <div class="text-4xl font-black mb-10 text-gradient">€--</div>
+                <ul class="space-y-5 mb-12 flex-grow text-sm">
+                    <li class="text-white"><i class="fas fa-sync text-purple-400 mr-3"></i> Twin App Sync</li>
+                    <li class="text-white"><i class="fas fa-users text-purple-400 mr-3"></i> Drivers Management</li>
+                    <li class="text-gray-500 italic"><i class="fas fa-check mr-3"></i> + Το πλήρες πακέτο</li>
                 </ul>
-                <button class="disabled-btn w-full py-4 rounded-xl bg-purple-600 font-bold uppercase text-xs">Μη Διαθέσιμο</button>
+                <button class="w-full py-4 rounded-2xl bg-purple-600 hover:bg-purple-500 transition shadow-lg shadow-purple-900/20 text-xs font-bold uppercase tracking-widest">Αναβαθμιση</button>
             </div>
 
-        </div>
-
-        <div class="mt-20 text-center glass-card p-10 max-w-2xl mx-auto">
-            <i class="fas fa-lock text-gray-500 text-3xl mb-4"></i>
-            <h4 class="text-xl font-bold uppercase mb-2 text-gray-400 font-black">Μέθοδοι Πληρωμής</h4>
-            <p class="text-gray-600 text-sm mb-6 uppercase tracking-widest italic">Οι συναλλαγές θα είναι διαθέσιμες στην επόμενη ενημέρωση (V2.0)</p>
-            <div class="flex justify-center gap-8 opacity-20 grayscale">
-                <i class="fab fa-apple-pay text-4xl"></i>
-                <i class="fab fa-google-pay text-4xl"></i>
-                <i class="fab fa-cc-visa text-4xl"></i>
-                <i class="fab fa-cc-mastercard text-4xl"></i>
-            </div>
         </div>
     </main>
 </body>
