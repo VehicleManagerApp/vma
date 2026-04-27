@@ -130,6 +130,11 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
     </style>
+    .deep-glass {
+    background: rgba(15, 23, 42, 0.75) !important; /* Σκούρο ημιδιαφανές */
+    backdrop-filter: blur(25px) saturate(180%) !important; /* Βαθύ Blur */
+    -webkit-backdrop-filter: blur(25px) saturate(180%) !important; /* Για iPhone/Safari */
+}
 </head>
 <body class="text-white font-sans antialiased">
 
@@ -178,7 +183,7 @@
         </button>
     </div>
 
-    <div id="mobile-menu" class="hidden absolute top-[70px] left-4 right-4 md:right-auto md:w-[300px] glass-card border-2 border-yellow-500/50 shadow-2xl z-[210] animate-in fade-in zoom-in duration-300">
+    <div id="mobile-menu" class="hidden absolute top-[75px] left-4 right-4 md:right-auto md:w-[300px] deep-glass border-2 border-yellow-500/50 shadow-2xl z-[210] rounded-[2rem] animate-in fade-in zoom-in duration-300">
     <div class="flex flex-col p-8 space-y-6 text-[13px] font-bold uppercase tracking-[0.15em] text-white">
         
         <a href="#home" class="mobile-link flex items-center gap-3 hover:text-blue-400 transition-colors">
