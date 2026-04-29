@@ -3,153 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Εγχειρίδιο Χρήσης | Vehicle Man</title>
+    <title>Manual | Vehicle Man Industrial</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap');
+
         html { scroll-behavior: smooth; }
+
+        :root {
+            --industry-blue: #3b82f6;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        body { 
+            background-color: #1a1c20; 
+            color: #f1f5f9;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+        }
+
+        /* ΦΟΝΤΟ ΜΕ ΤΟΝ ΤΟΙΧΟ - ΠΙΟ ΟΡΑΤΟ */
         .main-bg {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('./img_home_background.png');
-            background-size: cover; background-position: center; z-index: -2;
+            background-image: url('Background_wall.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            z-index: -1;
         }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 30px;
-            margin-bottom: 2rem;
-        }
-        /*.phone-cloud {
-            position: fixed; top: 100px; right: 40px; width: 140px; height: 270px;
-            background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 40px;
-            display: flex; align-items: center; justify-content: center; z-index: 100;
-        }
-        .device-body {
-            width: 115px; height: 235px; background: #0f172a; border: 3px solid #334155;
-            border-radius: 28px; position: relative; overflow: hidden;
-        }
-        .device-screen {
-            position: absolute; top: 5px; left: 5px; right: 5px; bottom: 5px;
-            background: #000; border-radius: 22px; display: flex; align-items: center; justify-content: center;
-        }
-        .app-logo-screen { width: 70%; filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.5)); } */
-        
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); }
-        ::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 10px; }
 
-        h2 { color: #60a5fa; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem; }
-        strong { color: #fff; border-bottom: 1px solid #3b82f6; }
-        ul li { margin-bottom: 0.8rem; color: #cbd5e1; }
+        /* Ελαφρύ overlay για να διαβάζεται το κείμενο αλλά να φαίνεται ο τοίχος */
+        .main-bg::after {
+            content: "";
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(15, 17, 20, 0.6); 
+        }
+
+        .header-font { font-family: 'Orbitron', sans-serif; }
+
+        /* ΣΤΥΛ ΚΑΡΤΑΣ (BOX) */
+        .nav-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            text-decoration: none;
+            color: white;
+        }
+
+        .nav-card:hover {
+            background: rgba(59, 130, 246, 0.1);
+            border-color: var(--industry-blue);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 15px rgba(59, 130, 246, 0.2);
+        }
+
+        .nav-card i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--industry-blue);
+        }
+
+        /* SECTION STYLING */
+        .manual-section {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 4rem;
+            border-left: 4px solid var(--industry-blue);
+        }
+
+        h2 { font-family: 'Orbitron', sans-serif; text-transform: uppercase; letter-spacing: 2px; }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1a1c20; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--industry-blue); }
     </style>
 </head>
-<body class="text-slate-200 font-sans antialiased">
+<body>
     <div class="main-bg"></div>
 
-    <div class="phone-cloud hidden lg:flex">
-        <div class="device-body">
-            <div class="device-screen">
-                <img src="./img_home_background.png" alt="Logo" class="app-logo-screen">
-            </div>
-        </div>
-    </div>
-
-    <nav class="fixed w-full z-[150] bg-slate-950/50 backdrop-blur-md border-b border-white/10">
-        <div class="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
-            <a href="index.html" class="text-xl font-black tracking-tighter">
-                <i class="fas fa-arrow-left mr-2 text-blue-500"></i> ΕΠΙΣΤΡΟΦΗ
+    <nav class="fixed w-full z-[100] bg-black/50 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
+            <a href="index.html" class="header-font text-sm font-bold tracking-tighter hover:text-blue-500 transition uppercase">
+                <i class="fas fa-chevron-left mr-2"></i> Dashboard
             </a>
-            <div class="text-blue-500 font-bold tracking-widest text-sm uppercase">User Manual v1.0</div>
+            <div class="header-font text-[10px] text-blue-500 font-bold tracking-widest uppercase">System Documentation v1.0</div>
         </div>
     </nav>
 
-    <main class="relative z-10 max-w-4xl mx-auto px-6 pt-32 pb-20">
-        <h1 class="text-5xl md:text-7xl font-black mb-16 text-center uppercase tracking-tighter">
-            Εγχειρίδιο <span class="text-blue-500">Χρήσης</span>
-        </h1>
+    <main class="relative z-10 max-w-6xl mx-auto px-6 pt-32 pb-20">
+        <header class="text-center mb-20">
+            <h1 class="header-font text-4xl md:text-6xl font-black uppercase tracking-tighter mb-4">
+                User <span class="text-blue-500">Manual</span>
+            </h1>
+            <p class="text-slate-400 uppercase tracking-[0.5em] text-[10px] font-bold">Επιλέξτε ενότητα για οδηγίες</p>
+        </header>
 
-        <section class="glass-card p-8 md:p-12">
-            <h2><i class="fas fa-home mr-3 text-blue-400"></i> 1. Αρχική Οθόνη – Το Κέντρο Ελέγχου</h2>
-            <div class="space-y-6">
-                <div>
-                    <h4 class="font-bold text-white mb-2 uppercase text-sm italic">Κινήσεις (Gestures):</h4>
-                    <ul class="list-disc ml-5">
-                        <li><strong>Μονό Tap:</strong> Μετάβαση στη Λίστα Εγγραφών.</li>
-                        <li><strong>Διπλό Tap:</strong> "Γρήγορη Καταχώρηση" (Shortcut).</li>
-                        <li><strong>Long Press:</strong> Μενού διαχείρισης (Επεξεργασία/Διαγραφή).</li>
-                    </ul>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-32">
+            <a href="#initial" class="nav-card">
+                <i class="fas fa-th-list"></i>
+                <h3 class="header-font text-sm font-bold">1. Αρχική Οθόνη</h3>
+                <p class="text-[10px] text-slate-500 mt-2 uppercase">Λίστα / Διαγραφή / Τροποποίηση</p>
+            </a>
+            <a href="#add-vehicle" class="nav-card">
+                <i class="fas fa-car-plus"></i>
+                <h3 class="header-font text-sm font-bold">2. Add/Edit Screen</h3>
+                <p class="text-[10px] text-slate-500 mt-2 uppercase">Διαχείριση Οχημάτων</p>
+            </a>
+            <a href="#records" class="nav-card">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <h3 class="header-font text-sm font-bold">3. Record Screen</h3>
+                <p class="text-[10px] text-slate-500 mt-2 uppercase">Έξοδα & Υπενθυμίσεις</p>
+            </a>
+            <a href="#add-record" class="nav-card">
+                <i class="fas fa-pen-to-square"></i>
+                <h3 class="header-font text-sm font-bold">4. Add/Edit Record</h3>
+                <p class="text-[10px] text-slate-500 mt-2 uppercase">Εισαγωγή Εγγραφών</p>
+            </a>
+            <a href="#stats" class="nav-card">
+                <i class="fas fa-chart-line"></i>
+                <h3 class="header-font text-sm font-bold">5. Statistics</h3>
+                <p class="text-[10px] text-slate-500 mt-2 uppercase">Αναλύσεις & Στόλος</p>
+            </a>
+            <a href="#settings" class="nav-card">
+                <i class="fas fa-user-gear"></i>
+                <h3 class="header-font text-sm font-bold">6. Preferences</h3>
+                <p class="text-[10px] text-slate-500 mt-2 uppercase">Ρυθμίσεις & Pro Mode</p>
+            </a>
+        </div>
+
+        <div class="space-y-20">
+            <section id="initial" class="manual-section">
+                <h2 class="text-2xl mb-6 text-blue-500">01. Αρχική Οθόνη</h2>
+                <p class="text-slate-300 leading-relaxed mb-4">Το κέντρο ελέγχου της εφαρμογής. Εδώ εμφανίζεται η πλήρης λίστα των οχημάτων σας.</p>
+                <ul class="space-y-3 text-sm text-slate-400">
+                    <li><strong class="text-white">Λίστα:</strong> Προβολή όλων των ενεργών οχημάτων με γρήγορη ματιά στα χιλιόμετρα.</li>
+                    <li><strong class="text-white">Διαγραφή:</strong> Με παρατεταμένο πάτημα (Long Press) μπορείτε να αφαιρέσετε ένα όχημα.</li>
+                    <li><strong class="text-white">Τροποποίηση:</strong> Άμεση πρόσβαση στις λεπτομέρειες του οχήματος για αλλαγές.</li>
+                </ul>
+            </section>
+
+            <section id="add-vehicle" class="manual-section">
+                <h2 class="text-2xl mb-6 text-blue-500">02. Add/Edit Vehicle Screen</h2>
+                <p class="text-slate-300 leading-relaxed mb-4">Η οθόνη δημιουργίας της ταυτότητας του οχήματος.</p>
+                <p class="text-sm text-slate-400 italic">Συμπληρώστε τη μάρκα, το μοντέλο και τον αριθμό κυκλοφορίας. Εδώ ορίζεται και το βασικό πρόγραμμα συντήρησης που θα χρησιμοποιήσει το AI για τις υπενθυμίσεις.</p>
+            </section>
+
+            <section id="records" class="manual-section">
+                <h2 class="text-2xl mb-6 text-blue-500">03. Record Screen</h2>
+                <p class="text-slate-300 leading-relaxed mb-4">Το Timeline του οχήματος. Εδώ καταγράφεται κάθε ευρώ που ξοδεύετε.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
+                    <div class="bg-white/5 p-4 rounded-lg">
+                        <h4 class="text-white font-bold mb-2">Έξοδα</h4>
+                        <p class="text-xs text-slate-500">Σέρβις, καύσιμα, ασφάλειες που έχουν ήδη πληρωθεί.</p>
+                    </div>
+                    <div class="bg-white/5 p-4 rounded-lg">
+                        <h4 class="text-white font-bold mb-2">Υπενθυμίσεις</h4>
+                        <p class="text-xs text-slate-500">Μελλοντικές εργασίες που πρέπει να γίνουν.</p>
+                    </div>
                 </div>
-                <div>
-                    <h4 class="font-bold text-white mb-2 uppercase text-sm italic">Γενική Πλοήγηση:</h4>
-                    <ul class="list-disc ml-5">
-                        <li><strong>Swipe Αριστερά:</strong> Μετάβαση στα Στατιστικά (Stats).</li>
-                        <li><strong>Swipe Δεξιά:</strong> Μετάβαση στις Ρυθμίσεις (Settings).</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="glass-card p-8 md:p-12">
-            <h2><i class="fas fa-car mr-3 text-blue-400"></i> 2. Προφίλ Οχήματος</h2>
-            <p class="mb-4">Εδώ ορίζετε την "ταυτότητα" και το πρόγραμμα συντήρησης.</p>
-            <ul class="list-none space-y-4">
-                <li class="bg-white/5 p-4 rounded-xl border-l-4 border-blue-500">
-                    <strong>Maintenance Schedule:</strong> Ρυθμίστε χιλιόμετρα ή μήνες για λάδια/ελαστικά. Το AI δημιουργεί αυτόματα <strong>Auto Reminders 90 ημερών</strong>.
-                </li>
-            </ul>
-        </section>
+            <section id="add-record" class="manual-section">
+                <h2 class="text-2xl mb-6 text-blue-500">04. Add/Edit Record Screen</h2>
+                <p class="text-slate-300 leading-relaxed">Χρησιμοποιήστε την "Έξυπνη Εισαγωγή". Το σύστημα αναγνωρίζει αυτόματα αν η εγγραφή είναι έξοδο ή υπενθύμιση βάσει της ημερομηνίας που επιλέγετε.</p>
+            </section>
 
-        <section class="glass-card p-8 md:p-12">
-            <h2><i class="fas fa-list-ul mr-3 text-blue-400"></i> 3. Λίστα Εγγραφών (Timeline)</h2>
-            <ul class="list-disc ml-5 space-y-4">
-                <li><strong>Sticky Reminder:</strong> Εμφανίζεται στην κορυφή μόνο αν υπάρχει εκκρεμότητα.</li>
-                <li><strong>Κουμπί "Ολοκλήρωση":</strong> Το πιο έξυπνο εργαλείο. Μετατρέπει την υπενθύμιση σε Έξοδο και ενημερώνει το ιστορικό με ένα tap.</li>
-                <li><strong>Swipe Actions:</strong> Αριστερά για Διαγραφή (με 10" Αναίρεση), Δεξιά για Γρήγορη Επεξεργασία.</li>
-            </ul>
-        </section>
+            <section id="stats" class="manual-section">
+                <h2 class="text-2xl mb-6 text-blue-500">05. Statistics Screen</h2>
+                <p class="text-slate-300 leading-relaxed">Πλήρης οικονομική ανάλυση. Δείτε ποιο όχημα είναι το πιο δαπανηρό, την κατανάλωση ανά οδηγό και μηνιαία γραφήματα εξόδων.</p>
+            </section>
 
-        <section class="glass-card p-8 md:p-12 border-2 border-blue-500/30">
-            <h2 class="flex items-center">
-                <i class="fas fa-robot mr-3 text-blue-400"></i> 4. Νέα Εγγραφή & AI
-            </h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="bg-blue-500/10 p-5 rounded-2xl">
-                    <h4 class="text-blue-400 font-bold mb-2 uppercase text-xs">Έξυπνη Ημερομηνία</h4>
-                    <p class="text-sm">Το AI καταλαβαίνει: Παλιά ημερομηνία = Έξοδο, Μελλοντική = Υπενθύμιση.</p>
-                </div>
-                <div class="bg-blue-500/10 p-5 rounded-2xl">
-                    <h4 class="text-blue-400 font-bold mb-2 uppercase text-xs">Grenglish Support</h4>
-                    <p class="text-sm">Γράψτε "servis" και το AI το μετατρέπει σε "Service" αυτόματα.</p>
-                </div>
-            </div>
-        </section>
+            <section id="settings" class="manual-section">
+                <h2 class="text-2xl mb-6 text-blue-500">06. Preference Screen & Pro Mode</h2>
+                <p class="text-slate-300 leading-relaxed">Παραμετροποίηση της εφαρμογής. Ενεργοποιήστε το Pro Mode για ξεκλείδωμα απεριόριστων εγγραφών, Cloud Sync και Driver Management.</p>
+            </section>
+        </div>
 
-        <section class="glass-card p-8 md:p-12">
-            <h2><i class="fas fa-cogs mr-3 text-blue-400"></i> 5. Ρυθμίσεις & Pro Mode</h2>
-            <ul class="space-y-4">
-                <li><strong>Night Mode:</strong> Αλλάζει τα γραφικά του δρόμου στο timeline.</li>
-                <li><strong>Twin App Sync:</strong> Σύνδεση δύο συσκευών (π.χ. ζευγάρι) για κοινή βάση δεδομένων σε πραγματικό χρόνο.</li>
-                <li><strong>Driver Management (Pro 3):</strong> Ανάθεση οχημάτων σε διαφορετικούς οδηγούς (ιδανικό για στόλους).</li>
-            </ul>
-        </section>
-
-        <div class="bg-blue-600 p-8 rounded-[40px] shadow-2xl">
-            <h3 class="text-2xl font-black mb-4 uppercase italic tracking-tighter text-white">
-                <i class="fas fa-lightbulb mr-2"></i> Pro Tips
+        <div class="mt-32 bg-blue-600/90 backdrop-blur-lg p-10 rounded-[40px] shadow-2xl border border-blue-400/30">
+            <h3 class="header-font text-2xl font-black mb-6 uppercase italic tracking-tighter text-white">
+                <i class="fas fa-lightbulb mr-3"></i> Pro Tips
             </h3>
-            <ul class="text-white/90 text-sm space-y-2">
-                <li>• Μη διαγράφετε υπενθυμίσεις, πατήστε "Ολοκλήρωση" για να μαθαίνει το AI.</li>
-                <li>• Κάντε τακτικά Backup σε JSON (Pro Mode 2).</li>
-                <li>• Το AI καταλαβαίνει συνώνυμα όπως "pampriz" -> "Κρύσταλλα".</li>
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-white/90 text-sm font-medium">
+                <li class="flex items-start gap-2"><i class="fas fa-check-circle mt-1"></i> Χρησιμοποιήστε το "Ολοκλήρωση" για να μετατρέψετε υπενθυμίσεις σε έξοδα αυτόματα.</li>
+                <li class="flex items-start gap-2"><i class="fas fa-check-circle mt-1"></i> Το AI υποστηρίζει Greeklish (π.χ. "lastixa" -> "Ελαστικά").</li>
+                <li class="flex items-start gap-2"><i class="fas fa-check-circle mt-1"></i> Κάντε εξαγωγή σε CSV για λογιστική χρήση (Pro Mode 2).</li>
+                <li class="flex items-start gap-2"><i class="fas fa-check-circle mt-1"></i> Ρυθμίστε το Night Mode για καλύτερη ορατότητα το βράδυ.</li>
             </ul>
+        </div>
+
+        <div class="mt-12 text-center">
+            <p class="header-font text-[11px] text-blue-400 font-bold uppercase tracking-[0.3em]">
+                Heavy Duty Management <span class="mx-2 text-slate-700">•</span> Secure Data <span class="mx-2 text-slate-700">•</span> Local First
+            </p>
         </div>
     </main>
 
-    <footer class="py-12 text-center text-gray-500 text-xs font-bold uppercase tracking-[0.4em]">
+    <footer class="py-12 text-center text-slate-600 text-[10px] font-bold uppercase tracking-[0.4em]">
         © 2026 Vehicle Manager App • Engineering for Drivers
     </footer>
 </body>
