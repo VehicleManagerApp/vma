@@ -105,45 +105,4 @@
     </script>
 </body>
 </html>
-                    "Η <span class="text-white font-bold">ModiCofactor S.S.A.</span> λειτουργεί ως ένας σχεδιαστής μόδας υψηλής ραπτικής που μετασχηματίζει δομικά στοιχεία κώδικα και τα συναρμολογεί σε άψογης αισθητικής (Tailor Made) και απόδοσης (Premium Quality) λογισμικό  για Smartphones."
-                </p>
-            </div>
-            <img src="ModiCofactorSSAnoBg.png" class="absolute -right-10 -bottom-10 w-64 opacity-10 pointer-events-none" alt="Deco">
-        </div>
-
-    </main>
-
-    <footer class="py-12 text-center text-slate-700 text-[10px] font-bold uppercase tracking-[0.4em] border-t border-white/5">
-        © 2026 MODICOFACTOR S.S.A. • BUILT FOR INNOVATION BY MODIFICATION
-    </footer>
-
-    <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-
-        const toggleMenu = () => {
-            mobileMenu.classList.toggle('hidden');
-        };
-
-        menuBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            toggleMenu();
-        });
-
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        document.addEventListener('click', (e) => {
-            const isClickInsideMenu = mobileMenu.contains(e.target);
-            const isClickOnButton = menuBtn.contains(e.target);
-            if (!mobileMenu.classList.contains('hidden') && !isClickInsideMenu && !isClickOnButton) {
-                mobileMenu.classList.add('hidden');
-            }
-        });
-    </script>
-</body>
-</html>
+ 
