@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Vehicle Man & ModiCofactor S.S.A.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap');
+
+        body { 
+            background-color: #020617; 
+            color: #94a3b8; 
+            font-family: 'Inter', sans-serif; 
+        }
+
+        .main-bg { 
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+            background-image: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('Background_wall.jpg'); 
+            background-size: cover; z-index: -1; 
+        }
+
+        .nav-glass { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .deep-glass { background: rgba(15, 23, 42, 0.85) !important; backdrop-filter: blur(25px) saturate(180%) !important; }
+        
+        .header-font { font-family: 'Orbitron', sans-serif; }
+
+        /* Form Styling */
+        .contact-input {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .contact-input:focus {
+            border-color: #3b82f6;
+            background: rgba(59, 130, 246, 0.05);
+            outline: none;
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
+        }
+
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-bg"></div>
+
+    <nav class="nav-glass fixed w-full z-[200]">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center">
+            <button id="menu-btn" class="block md:hidden text-white focus:outline-none p-2 mr-4">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            <a href="index.html#home" class="flex items-center shrink-0 transition hover:opacity-80">
+                <img src="Vehicle_man_logo.jpg" alt="Vehicle Man Logo" class="h-8 md:h-10 w-auto object-contain rounded-lg">
+            </a>
+            <div class="hidden md:flex flex-grow justify-center items-center space-x-8 text-xs font-bold uppercase tracking-widest whitespace-nowrap">
+                <a href="index.html#home" class="hover:text-blue-400 transition">Αρχική</a>
+                <a href="company.html" class="hover:text-blue-400 transition">Η Εταιρεία μας</a>
+                <a href="legal.html" class="hover:text-blue-400 transition">Legal Notes</a>
+                <a href="promode.html" class="hover:text-blue-400 transition">Pro Mode</a>
+                <a href="manual.html" class="hover:text-blue-400 transition">ΕΓΧΕΙΡΙΔΙΟ ΧΡΗΣΗΣ</a>
+                <a href="contact.html" class="text-blue-400 underline decoration-2 underline-offset-8">Επικοινωνία</a>
+            </div>
+            <button class="hidden md:block bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-full text-[10px] font-bold transition shrink-0 ml-4">LATEST VERSION</button>
+        </div>
+        <div id="mobile-menu" class="hidden absolute top-[75px] left-4 right-4 md:w-[300px] deep-glass border-2 border-yellow-500/50 shadow-2xl z-[210] rounded-[2rem]">
+            <div class="flex flex-col p-8 space-y-6 text-[13px] font-bold uppercase tracking-[0.15em] text-white">
+                <a href="index.html#home" class="mobile-link flex items-center gap-3"><i class="fas fa-home w-5 text-blue-500"></i> Αρχική</a>
+                <a href="company.html" class="mobile-link flex items-center gap-3"><i class="fas fa-building w-5 text-blue-500"></i> Η Εταιρεία μας</a>
+                <a href="legal.html" class="mobile-link flex items-center gap-3"><i class="fas fa-file-contract w-5 text-blue-500"></i> Legal Notes</a>
+                <a href="promode.html" class="mobile-link flex items-center gap-3"><i class="fas fa-crown w-5 text-blue-500"></i> Pro Mode</a>
+                <hr class="border-white/10">
+                <a href="manual.html" class="mobile-link flex items-center gap-3 text-yellow-500"><i class="fas fa-book w-5"></i> ΕΓΧΕΙΡΙΔΙΟ ΧΡΗΣΗΣ</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 pt-32 pb-20">
+        
+        <header class="text-center mb-16">
+            <h1 class="header-font text-3xl md:text-5xl font-black text-white mb-4 uppercase italic">Επικοινωνία</h1>
+            <p class="text-blue-400 font-bold uppercase tracking-widest text-[10px]">Direct Channel to the ModiCofactor Atelier</p>
+        </header>
+
+        <div class="grid lg:grid-cols-3 gap-12">
+            
+            <div class="lg:col-span-1 space-y-8">
+                <div class="glass-panel p-8">
+                    <h3 class="header-font text-blue-400 text-sm mb-6 uppercase tracking-widest">Στοιχεία</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-500/10 p-3 rounded-lg text-blue-400">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs uppercase font-bold text-white mb-1">Email</p>
+                                <p class="text-sm">support@modicofactor.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-500/10 p-3 rounded-lg text-blue-400">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs uppercase font-bold text-white mb-1">Location</p>
+                                <p class="text-sm">Athens, Greece <br>Digital Atelier</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-8">
+                    <h3 class="header-font text-blue-400 text-sm mb-6 uppercase tracking-widest">Social</h3>
+                    <div class="flex gap-4">
+                        <a href="#" class="bg-white/5 hover:bg-blue-600 w-10 h-10 flex items-center justify-center rounded-full transition"><i class="fab fa-linkedin-in text-white"></i></a>
+                        <a href="#" class="bg-white/5 hover:bg-blue-600 w-10 h-10 flex items-center justify-center rounded-full transition"><i class="fab fa-github text-white"></i></a>
+                        <a href="#" class="bg-white/5 hover:bg-blue-600 w-10 h-10 flex items-center justify-center rounded-full transition"><i class="fab fa-instagram text-white"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2">
+                <div class="glass-panel p-8 md:p-12">
+                    <h2 class="header-font text-xl text-white mb-8 uppercase italic">Στείλτε μας ένα μήνυμα</h2>
+                    <form action="#" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-[10px] uppercase font-bold tracking-widest text-blue-400">Όνομα</label>
+                                <input type="text" placeholder="π.χ. Ιωάννης Παπαδόπουλος" class="contact-input w-full p-4 rounded-xl text-sm">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-[10px] uppercase font-bold tracking-widest text-blue-400">Email</label>
+                                <input type="email" placeholder="email@example.com" class="contact-input w-full p-4 rounded-xl text-sm">
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-[10px] uppercase font-bold tracking-widest text-blue-400">Θέμα</label>
+                            <select class="contact-input w-full p-4 rounded-xl text-sm appearance-none">
+                                <option>Τεχνική Υποστήριξη</option>
+                                <option>Πρόταση Συνεργασίας</option>
+                                <option>Pro Mode Ερωτήσεις</option>
+                                <option>Άλλο</option>
+                            </select>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-[10px] uppercase font-bold tracking-widest text-blue-400">Μήνυμα</label>
+                            <textarea rows="5" placeholder="Πώς μπορούμε να βοηθήσουμε;" class="contact-input w-full p-4 rounded-xl text-sm"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl transition uppercase tracking-widest text-xs shadow-lg shadow-blue-900/20">
+                            Αποστολή Μηνύματος
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="text-center mt-20 opacity-40 text-[10px] uppercase tracking-[0.5em]">
+            ModiCofactor S.S.A. • High Couture Software Engineering
+        </footer>
+
+    </main>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
