@@ -18,7 +18,7 @@
         }
 
         body { 
-            background-color: #1a1c20; 
+            background-color: #020617; 
             color: #f1f5f9;
             font-family: 'Inter', sans-serif;
             margin: 0;
@@ -36,11 +36,16 @@
         .main-bg::after {
             content: "";
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(15, 17, 20, 0.75); 
+            background: rgba(15, 23, 42, 0.85); 
         }
 
         .header-font { font-family: 'Orbitron', sans-serif; }
 
+        /* Navigation Styles */
+        .nav-glass { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .deep-glass { background: rgba(15, 23, 42, 0.85) !important; backdrop-filter: blur(25px) saturate(180%) !important; }
+
+        /* Manual Specific Cards */
         .nav-card {
             background: var(--glass-bg);
             backdrop-filter: blur(10px);
@@ -72,17 +77,16 @@
         }
 
         .manual-section {
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.4);
             backdrop-filter: blur(5px);
-            border-radius: 20px;
+            border-radius: 24px;
             padding: 2.5rem;
             margin-bottom: 3rem;
             border-left: 4px solid var(--industry-blue);
-            border-right: 1px solid rgba(255,255,255,0.05);
+            border-top: 1px solid rgba(255,255,255,0.05);
         }
 
-        h2 { font-family: 'Orbitron', sans-serif; text-transform: uppercase; letter-spacing: 2px; }
-        h3 { font-family: 'Orbitron', sans-serif; }
+        h2, h3 { font-family: 'Orbitron', sans-serif; text-transform: uppercase; letter-spacing: 2px; }
 
         .pro-badge {
             background: #3b82f6;
@@ -97,20 +101,45 @@
         }
 
         ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #1a1c20; }
-        ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }
         ::-webkit-scrollbar-thumb:hover { background: var(--industry-blue); }
     </style>
 </head>
 <body>
     <div class="main-bg"></div>
 
-    <nav class="fixed w-full z-[100] bg-black/50 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
-            <a href="index.html" class="header-font text-sm font-bold tracking-tighter hover:text-blue-500 transition uppercase">
-                <i class="fas fa-chevron-left mr-2"></i> Dashboard
+    <nav class="nav-glass fixed w-full z-[200]">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center">
+            <button id="menu-btn" class="block md:hidden text-white focus:outline-none p-2 mr-4">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+
+            <a href="index.html#home" class="flex items-center shrink-0 transition hover:opacity-80">
+                <img src="Vehicle_man_logo.jpg" alt="Vehicle Man Logo" class="h-8 md:h-10 w-auto object-contain rounded-lg">
             </a>
-            <div class="header-font text-[10px] text-blue-500 font-bold tracking-widest uppercase">Vehicle Man AI Documentation</div>
+
+            <div class="hidden md:flex flex-grow justify-center items-center space-x-8 text-xs font-bold uppercase tracking-widest whitespace-nowrap">
+                <a href="index.html#home" class="hover:text-blue-400 transition text-slate-300">Αρχική</a>
+                <a href="company.html" class="hover:text-blue-400 transition text-slate-300">Η Εταιρεία μας</a>
+                <a href="legal.html" class="hover:text-blue-400 transition text-slate-300">Legal Notes</a>
+                <a href="promode.html" class="hover:text-blue-400 transition text-slate-300">Pro Mode</a>
+                <a href="manual.html" class="text-yellow-500 underline decoration-2 underline-offset-8">ΕΓΧΕΙΡΙΔΙΟ ΧΡΗΣΗΣ</a>
+                <a href="index.html#contact" class="text-blue-400 hover:text-white transition">Επικοινωνία</a>
+            </div>
+
+            <button class="hidden md:block bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-full text-[10px] font-bold transition shrink-0 ml-4">LATEST VERSION</button>
+        </div>
+
+        <div id="mobile-menu" class="hidden absolute top-[75px] left-4 right-4 md:w-[300px] deep-glass border-2 border-yellow-500/50 shadow-2xl z-[210] rounded-[2rem]">
+            <div class="flex flex-col p-8 space-y-6 text-[13px] font-bold uppercase tracking-[0.15em] text-white">
+                <a href="index.html#home" class="mobile-link flex items-center gap-3"><i class="fas fa-home w-5 text-blue-500"></i> Αρχική</a>
+                <a href="company.html" class="mobile-link flex items-center gap-3"><i class="fas fa-building w-5 text-blue-500"></i> Η Εταιρεία μας</a>
+                <a href="legal.html" class="mobile-link flex items-center gap-3"><i class="fas fa-file-contract w-5 text-blue-500"></i> Legal Notes</a>
+                <a href="promode.html" class="mobile-link flex items-center gap-3"><i class="fas fa-crown w-5 text-blue-500"></i> Pro Mode</a>
+                <hr class="border-white/10">
+                <a href="manual.html" class="mobile-link flex items-center gap-3 text-yellow-500"><i class="fas fa-book w-5"></i> ΕΓΧΕΙΡΙΔΙΟ ΧΡΗΣΗΣ</a>
+            </div>
         </div>
     </nav>
 
@@ -151,9 +180,8 @@
 
         <div class="space-y-12">
             <section id="initial" class="manual-section">
-                <h2 class="text-2xl mb-6 text-blue-500">01. Αρχική Οθόνη (Home Screen)</h2>
+                <h2 class="text-2xl mb-6 text-blue-500 font-bold">01. Αρχική Οθόνη (Home Screen)</h2>
                 <p class="text-slate-300 leading-relaxed mb-6">Το κέντρο ελέγχου του στόλου σας. Εμφανίζει όλα τα οχήματά σας σε μορφή καρτών.</p>
-                
                 <div class="grid md:grid-cols-2 gap-6 text-sm">
                     <div class="space-y-4">
                         <h4 class="text-white font-bold uppercase text-xs tracking-widest border-b border-blue-500/30 pb-2">Χειρισμοί & Gestures</h4>
@@ -176,7 +204,7 @@
             </section>
 
             <section id="add-vehicle" class="manual-section">
-                <h2 class="text-2xl mb-6 text-blue-500">02. Διαχείριση Οχήματος (Add/Edit Screen)</h2>
+                <h2 class="text-2xl mb-6 text-blue-500 font-bold">02. Διαχείριση Οχήματος</h2>
                 <p class="text-slate-300 leading-relaxed mb-6">Ορίστε την ταυτότητα του οχήματος και τους κανόνες αυτοματισμού.</p>
                 <div class="bg-blue-500/5 p-6 rounded-xl border border-blue-500/10">
                     <h4 class="text-white font-bold mb-3">Αυτοματισμοί Συντήρησης & AI</h4>
@@ -188,15 +216,13 @@
             </section>
 
             <section id="records" class="manual-section">
-                <h2 class="text-2xl mb-6 text-blue-500">03. Λίστα Εγγραφών (Timeline)</h2>
+                <h2 class="text-2xl mb-6 text-blue-500 font-bold">03. Λίστα Εγγραφών (Timeline)</h2>
                 <p class="text-slate-300 leading-relaxed mb-6">Η ιστορία του οχήματός σας με φόντο έναν δρόμο που κινείται κατά το scroll.</p>
-                
                 <div class="space-y-6">
                     <div class="bg-white/5 p-5 rounded-lg border-l-2 border-yellow-500">
                         <h4 class="text-yellow-500 font-bold text-xs uppercase mb-2">Sticky Reminder (Αυτοκόλλητη Υπενθύμιση)</h4>
                         <p class="text-sm text-slate-300">Εμφανίζεται στην κορυφή για υποχρεώσεις (π.χ. ΚΤΕΟ) εντός 90 ημερών. Με το κουμπί <strong>"Ολοκλήρωση"</strong>, η υπενθύμιση μετατρέπεται αυτόματα σε μόνιμη εγγραφή ιστορικού.</p>
                     </div>
-
                     <div class="grid md:grid-cols-2 gap-6">
                         <div class="text-sm text-slate-400">
                             <h4 class="text-white font-bold mb-2 uppercase text-[10px]">Gestures στη Λίστα</h4>
@@ -207,14 +233,14 @@
                         </div>
                         <div class="text-sm text-slate-400">
                             <h4 class="text-white font-bold mb-2 uppercase text-[10px]">Πλοήγηση</h4>
-                            <p>Χρησιμοποιήστε το <strong>Pulldown μενού</strong> στην κορυφή για γρήγορη εναλλαγή οχημάτων και το statistics button για άμεση ανάλυση.</p>
+                            <p>Χρησιμοποιήστε το <strong>Pulldown μενού</strong> στην κορυφή για γρήγορη εναλλαγή οχημάτων.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
             <section id="add-record" class="manual-section">
-                <h2 class="text-2xl mb-6 text-blue-500">04. Έξυπνη Καταχώρηση (Smart AI Entry)</h2>
+                <h2 class="text-2xl mb-6 text-blue-500 font-bold">04. Έξυπνη Καταχώρηση (Smart AI Entry)</h2>
                 <div class="grid md:grid-cols-3 gap-6">
                     <div class="bg-white/5 p-4 rounded-lg">
                         <i class="fas fa-magic text-blue-400 mb-3"></i>
@@ -224,69 +250,37 @@
                     <div class="bg-white/5 p-4 rounded-lg">
                         <i class="fas fa-language text-blue-400 mb-3"></i>
                         <h4 class="text-white font-bold text-xs mb-2 uppercase">Grenglish Engine</h4>
-                        <p class="text-[11px] text-slate-400 italic">Αυτόματη μετάφραση από "service" σε "Σέρβις". Το σύστημα μαθαίνει την προτίμησή σας.</p>
+                        <p class="text-[11px] text-slate-400 italic">Αυτόματη μετάφραση από "service" σε "Σέρβις".</p>
                     </div>
                     <div class="bg-white/5 p-4 rounded-lg">
                         <i class="fas fa-calendar-check text-blue-400 mb-3"></i>
                         <h4 class="text-white font-bold text-xs mb-2 uppercase">Έξυπνη Ημερομηνία</h4>
-                        <p class="text-[11px] text-slate-400 italic">Σήμερα/Παλιά = Έξοδο. Μελλοντική ημερομηνία = Αυτόματη μετατροπή σε Υπενθύμιση.</p>
+                        <p class="text-[11px] text-slate-400 italic">Μελλοντική ημερομηνία = Αυτόματη μετατροπή σε Υπενθύμιση.</p>
                     </div>
                 </div>
-                <p class="mt-6 text-sm text-slate-400">Το <strong>Λεξικό Συνωνύμων</strong> αναγνωρίζει λέξεις όπως "pampriz" και κατηγοριοποιεί αυτόματα την εγγραφή στις "Ζημιές/Κρύσταλλα".</p>
             </section>
 
             <section id="settings" class="manual-section">
-                <h2 class="text-2xl mb-6 text-blue-500">05. Ρυθμίσεις & Pro Mode</h2>
-                
+                <h2 class="text-2xl mb-6 text-blue-500 font-bold">05. Ρυθμίσεις & Pro Mode</h2>
                 <div class="space-y-8">
                     <div>
                         <h3 class="text-white text-sm mb-4 uppercase tracking-widest border-l-2 border-blue-500 pl-3">General & Data</h3>
                         <div class="grid md:grid-cols-2 gap-4 text-xs text-slate-400">
                             <p>• <strong>Night Mode:</strong> Σκοτεινό θέμα.</p>
-                            <p>• <strong>Translate Prefs:</strong> Ρύθμιση AI για Grenglish.</p>
                             <p>• <strong>Backup/Restore:</strong> Τοπική αποθήκευση ή Cloud <span class="pro-badge">Pro 2</span>.</p>
                             <p>• <strong>Import/Export:</strong> CSV/JSON για ανάλυση <span class="pro-badge">Pro 1/2</span>.</p>
                         </div>
                     </div>
-
-                    <div>
-                        <h3 class="text-white text-sm mb-4 uppercase tracking-widest border-l-2 border-blue-500 pl-3">User Management <span class="pro-badge">Pro 3</span></h3>
-                        <p class="text-xs text-slate-400 mb-2"><strong>Twin App Setup:</strong> Συγχρονισμός δύο συσκευών σε πραγματικό χρόνο (π.χ. ζευγάρι). Οτιδήποτε καταχωρεί ο ένας, εμφανίζεται στον άλλον.</p>
-                        <p class="text-xs text-slate-400"><strong>Manage Drivers:</strong> Ανάθεση οχημάτων σε συγκεκριμένους οδηγούς για στατιστική ανάλυση.</p>
-                    </div>
-
-                    <div class="bg-blue-600/10 p-6 rounded-xl border border-blue-500/20">
+                    <div class="bg-blue-600/10 p-6 rounded-xl border border-blue-500/20 text-center">
                         <h3 class="text-blue-400 text-xs font-bold uppercase mb-4">Πλάνα Χρήσης</h3>
-                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 text-[10px]">
-                            <div class="bg-black/30 p-3 rounded">
-                                <span class="text-white font-bold block mb-1">FREE</span>
-                                3 Οχήματα / 10 εγγραφές ανά όχημα.
-                            </div>
-                            <div class="bg-black/30 p-3 rounded">
-                                <span class="text-blue-400 font-bold block mb-1">SIGN UP USER</span>
-                                3 Οχήματα / 150 εγγραφές ανά όχημα.
-                            </div>
-                            <div class="bg-black/30 p-3 rounded">
-                                <span class="text-blue-400 font-bold block mb-1">PRO 1 & 2</span>
-                                Import Wizard, CSV/JSON Export, Full Backup/Restore.
-                            </div>
-                            <div class="bg-black/30 p-3 rounded border border-blue-500/50">
-                                <span class="text-blue-400 font-bold block mb-1">PRO 3</span>
-                                Twin App Sync & Driver Management.
-                            </div>
+                        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 text-[9px]">
+                            <div class="bg-black/30 p-3 rounded">FREE: 3 Οχήματα / 10 εγγραφές.</div>
+                            <div class="bg-black/30 p-3 rounded">SIGN UP: 3 Οχήματα / 150 εγγραφές.</div>
+                            <div class="bg-black/30 p-3 rounded">PRO 1 & 2: Full Analytics & Backup.</div>
+                            <div class="bg-black/30 p-3 rounded border border-blue-500/50">PRO 3: Twin App Sync.</div>
                         </div>
                     </div>
                 </div>
-            </section>
-
-            <section id="stats" class="manual-section">
-                <h2 class="text-2xl mb-6 text-blue-500">06. Στατιστικά & Αναφορές</h2>
-                <p class="text-slate-300 leading-relaxed mb-4">Πλήρης οικονομική ανάλυση με αυτόματη ενημέρωση σε κάθε νέα εγγραφή.</p>
-                <ul class="text-sm text-slate-400 space-y-2">
-                    <li>• Γραφήματα κατανάλωσης και συνολικά έξοδα ανά μήνα/έτος.</li>
-                    <li>• Κατανομή εξόδων ανά κατηγορία (Καύσιμα, Service, κ.λπ.).</li>
-                    <li>• <strong class="text-blue-400">Pro 3:</strong> Στατιστική ανάλυση ανά οδηγό.</li>
-                </ul>
             </section>
         </div>
 
@@ -295,22 +289,32 @@
                 <i class="fas fa-lightbulb mr-3"></i> Tips & Advice
             </h3>
             <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 text-white/90 text-sm font-medium">
-                <li class="flex items-start gap-2"><i class="fas fa-check-circle mt-1"></i> <strong>Μην διαγράφετε υπενθυμίσεις:</strong> Χρησιμοποιείτε το "Ολοκλήρωση" για σωστό ιστορικό.</li>
-                <li class="flex items-start gap-2"><i class="fas fa-check-circle mt-1"></i> <strong>Privacy First:</strong> Τα δεδομένα είναι τοπικά. Κάντε τακτικά Backup (Pro 2).</li>
-                <li class="flex items-start gap-2"><i class="fas fa-check-circle mt-1"></i> <strong>AI Speed:</strong> Γράψτε μόνο τα πρώτα γράμματα, το AI θα σας καταλάβει αμέσως.</li>
-                <li class="flex items-start gap-2"><i class="fas fa-check-circle mt-1"></i> <strong>Undo:</strong> Αν διαγράψετε κάτι κατά λάθος, έχετε 10 δευτερόλεπτα να το επαναφέρετε.</li>
+                <li class="flex items-start gap-2"><i class="fas fa-check-circle mt-1"></i> <strong>Ολοκλήρωση:</strong> Μετατρέψτε υπενθυμίσεις σε ιστορικό.</li>
+                <li class="flex items-start gap-2"><i class="fas fa-check-circle mt-1"></i> <strong>Privacy:</strong> Τα δεδομένα σας μένουν στη συσκευή σας.</li>
+                <li class="flex items-start gap-2"><i class="fas fa-check-circle mt-1"></i> <strong>AI Speed:</strong> Γράψτε λίγα γράμματα, το AI θα κάνει τα υπόλοιπα.</li>
+                <li class="flex items-start gap-2"><i class="fas fa-check-circle mt-1"></i> <strong>Undo:</strong> Έχετε 10'' χρόνο να αναιρέσετε μια διαγραφή.</li>
             </ul>
-        </div>
-
-        <div class="mt-12 text-center">
-            <p class="header-font text-[11px] text-blue-400 font-bold uppercase tracking-[0.3em]">
-                Vehicle Man: Ο πιο έξυπνος τρόπος να φροντίζετε το όχημά σας
-            </p>
         </div>
     </main>
 
     <footer class="py-12 text-center text-slate-600 text-[10px] font-bold uppercase tracking-[0.4em]">
         © 2026 Vehicle Manager App • Engineering for Drivers
     </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
 </body>
 </html>
