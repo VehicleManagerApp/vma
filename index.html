@@ -3,85 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | ModiCofactor S.S.A.</title>
+    <title>Vehicle Man | AI-Powered Management</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap');
+        html { scroll-behavior: smooth; }
 
-        :root {
-            --industry-blue: #3b82f6;
-            --glass-bg: rgba(255, 255, 255, 0.03);
-            --glass-border: rgba(255, 255, 255, 0.1);
-        }
-
-        body { 
-            background-color: #0f172a; 
-            color: #f1f5f9;
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            overflow-x: hidden;
-        }
-
+        /* ΣΤΑΘΕΡΟ BACKGROUND */
         .main-bg {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background-image: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('Background_wall.jpg');
-            background-size: cover;
-            background-position: center;
-            z-index: -2;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./img_home_background.png');
+            background-size: cover; background-position: center; z-index: -2;
         }
 
-        /* NAVIGATION & MENU STYLES */
+/* PREMIUM SMARTPHONE BODY */
+.phone-cloud {
+    position: fixed; 
+    top: 120px; 
+    right: 50px; 
+    width: 180px; 
+    height: 360px;
+    z-index: 100;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+/* Το εφέ σηκώματος και περιστροφής */
+.phone-cloud:hover {
+    transform: translateY(-20px) rotate(-3deg) scale(1.05);
+}
+
+.device-body {
+    width: 100%;
+    height: 100%;
+    background: #1e293b;
+    border: 4px solid #475569;
+    border-radius: 35px;
+    position: relative;
+    box-shadow: 0 50px 100px rgba(0,0,0,0.6), inset 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* Πλαϊνά Κουμπιά */
+.device-body::before { /* Volume Buttons */
+    content: ''; position: absolute; left: -6px; top: 80px; width: 3px; height: 50px;
+    background: #64748b; border-radius: 5px 0 0 5px;
+}
+.device-body::after { /* Power Button */
+    content: ''; position: absolute; right: -6px; top: 100px; width: 3px; height: 40px;
+    background: #64748b; border-radius: 0 5px 5px 0;
+}
+
+.device-screen {
+    position: absolute; 
+    top: 8px; left: 8px; right: 8px; bottom: 8px;
+    background: #000;
+    border-radius: 28px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Για να πάνε τα κουμπιά κάτω */
+}
+/* Η Εικόνα σε Full Screen */
+.screen-content {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('./img_home_background.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+/* Dynamic Island */
+.dynamic-island {
+    position: absolute;
+    top: 15px; left: 50%;
+    transform: translateX(-50%);
+    width: 50px; height: 16px;
+    background: #000;
+    border-radius: 20px;
+    z-index: 20;
+}
+
+.front-camera {
+    width: 6px; height: 6px;
+    background: #1a1a1a;
+    border-radius: 50%;
+    box-shadow: inset 0 0 2px #333, 0 0 1px #444;
+}
+
+/* Κάτω Κουμπιά Πλοήγησης */
+.nav-buttons {
+    position: absolute;
+    bottom: 0; left: 0; width: 100%; height: 25px;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 50;
+    padding-bottom: 4px;
+}
+
+.nav-dot { width: 8px; height: 8px; background: rgba(255,255,255,0.6); border-radius: 50%; }
+.nav-square { width: 8px; height: 8px; border: 1.5px solid rgba(255,255,255,0.6); border-radius: 2px; }
+.nav-back { width: 0; height: 0; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-right: 7px solid rgba(255,255,255,0.6); }
+
+/* Glass Reflection */
+.screen-glare {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 40%, rgba(255,255,255,0.05) 100%);
+    z-index: 60;
+    pointer-events: none;
+}
+
+        /* GLASS CARDS */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover { background: rgba(255, 255, 255, 0.12); transform: translateY(-5px); }
+
         .nav-glass {
             background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
-        .deep-glass {
-            background: rgba(15, 23, 42, 0.75) !important; 
-            backdrop-filter: blur(25px) saturate(180%) !important; 
-            -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
-        }
-
-        .watermark-bg {
-            position: fixed;
-            top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
-            width: 70%;
-            opacity: 0.03;
-            z-index: -1;
-            pointer-events: none;
-            filter: grayscale(100%);
-        }
-
-        .header-font { font-family: 'Orbitron', sans-serif; }
-
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 24px;
-        }
-
-        .glow-blue {
-            filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.4));
-        }
+.deep-glass {
+    background: rgba(15, 23, 42, 0.75) !important; 
+    backdrop-filter: blur(25px) saturate(180%) !important; 
+    -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
+}
     </style>
 </head>
-<body>
+<body class="text-white font-sans antialiased">
+
     <div class="main-bg"></div>
-    
-    <img src="ModiCofactorSSAnoBg.png" class="watermark-bg" alt="ModiCofactor Watermark">
+<div class="phone-cloud hidden lg:flex">
+    <div class="device-body">
+        <div class="dynamic-island">
+            <div class="front-camera"></div>
+        </div>
 
-    <nav class="nav-glass fixed w-full z-[200]">
-        <div class="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center">
+        <div class="device-screen">
+            <div class="screen-content"></div>
             
-            <button id="menu-btn" class="block md:hidden text-white focus:outline-none p-2 mr-4">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
+            <div class="screen-glare"></div>
 
-            <a href="index.html#home" class="flex items-center shrink-0 transition hover:opacity-80">
-                <img src="Vehicle_man_logo.jpg" alt="Vehicle Man Logo" class="h-8 md:h-10 w-auto object-contain rounded-lg">
-            </a> 
+            <div class="nav-buttons">
+                <div class="nav-back"></div>
+                <div class="nav-dot"></div>
+                <div class="nav-square"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<nav class="nav-glass fixed w-full z-[200]">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center">
+        
+        <button id="menu-btn" class="block md:hidden text-white focus:outline-none p-2 mr-4">
+            <i class="fas fa-bars text-2xl"></i>
+        </button>
+
+<!-- LOGO SECTION -->
+<a href="#home" class="flex items-center shrink-0 transition hover:opacity-80">
+    <img src="Vehicle_man_logo.jpg" alt="Vehicle Man Logo" class="h-8 md:h-10 w-auto object-contain rounded-lg">
+</a>
+        
         <div class="hidden md:flex flex-grow justify-center items-center space-x-8 text-xs font-bold uppercase tracking-widest whitespace-nowrap">
             <a href="#home" class="hover:text-blue-400 transition">Αρχική</a>
             <a href="company.html" class="hover:text-blue-400 transition">Η Εταιρεία μας</a>
