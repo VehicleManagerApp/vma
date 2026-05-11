@@ -90,34 +90,23 @@
     <div class="main-bg"></div>
 
     <nav class="nav-glass fixed w-full z-[200]">
-        <div class="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
-            <div class="flex items-center">
-                <button id="menu-btn" class="block md:hidden text-white focus:outline-none p-2 mr-4">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-                <div class="hidden md:flex space-x-8 text-[10px] font-bold uppercase tracking-widest">
-                    <a href="index.html" class="hover:text-blue-400 transition text-slate-400">Αρχική</a>
-                    <a href="company.html" class="hover:text-blue-400 transition text-slate-400">Η Εταιρεία μας</a>
-                    <a href="legal.html" class="hover:text-blue-400 transition text-slate-400">Legal Notes</a>
-                    <a href="promode.html" class="hover:text-blue-400 transition text-slate-400">Pro Mode</a>
-                    <a href="manual.html" class="text-yellow-500 hover:text-yellow-400 transition">ΕΓΧΕΙΡΙΔΙΟ ΧΡΗΣΗΣ</a>
-                    <a href="contact.html" class="text-blue-400 underline decoration-2 underline-offset-8">Επικοινωνία</a>
-                </div>
-            </div>
-            <div class="text-[9px] text-slate-600 uppercase font-black tracking-widest">
-                MC SSA
-            </div>
-        </div>
-
-        <div id="mobile-menu" class="hidden absolute top-[70px] left-4 right-4 bg-[#1a1c20] border border-white/10 shadow-2xl rounded-xl overflow-hidden">
-            <div class="flex flex-col p-6 space-y-4 text-[11px] font-bold uppercase tracking-widest">
-                <a href="index.html" class="flex items-center gap-3 py-2 border-b border-white/5"><i class="fas fa-home text-blue-500"></i> Αρχική</a>
-                <a href="company.html" class="flex items-center gap-3 py-2 border-b border-white/5"><i class="fas fa-building text-blue-500"></i> Η Εταιρεία μας</a>
-                <a href="promode.html" class="flex items-center gap-3 py-2 border-b border-white/5"><i class="fas fa-crown text-blue-500"></i> Pro Mode</a>
-                <a href="manual.html" class="flex items-center gap-3 py-2 border-b border-white/5 text-yellow-500"><i class="fas fa-book"></i> ΕΓΧΕΙΡΙΔΙΟ ΧΡΗΣΗΣ</a>
-                <a href="contact.html" class="flex items-center gap-3 py-2 text-blue-400"><i class="fas fa-envelope"></i> Επικοινωνία</a>
-            </div>
-        </div>
+<div class="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between gap-4">
+    <div class="flex items-center shrink-0">
+        <button id="menu-btn" class="block md:hidden text-white focus:outline-none p-2 mr-4">
+            <i class="fas fa-bars text-2xl"></i>
+        </button>
+    </div>
+    
+    <div class="hidden md:flex flex-grow justify-center items-center space-x-6 lg:space-x-8 text-[10px] lg:text-xs font-bold uppercase tracking-widest whitespace-nowrap">
+        <a href="index.html#home" class="hover:text-blue-400 transition">Αρχική</a>
+        <a href="company.html" class="text-blue-400 transition underline decoration-2 underline-offset-8">Η Εταιρεία μας</a>
+        <a href="legal.html" class="hover:text-blue-400 transition">Legal Notes</a>
+        <a href="promode.html" class="hover:text-blue-400 transition">Pro Mode</a>
+        <a href="manual.html" class="text-yellow-500 hover:text-yellow-400 transition">ΕΓΧΕΙΡΙΔΙΟ ΧΡΗΣΗΣ</a>
+        <a href="contact.html" class="hover:text-blue-400 transition">Επικοινωνία</a>
+    </div>
+    <div class="hidden md:block w-10"></div>
+</div>
     </nav>
 
     <main class="relative z-10 max-w-5xl mx-auto px-6 pt-32 pb-20">
