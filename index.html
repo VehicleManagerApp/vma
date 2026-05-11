@@ -170,15 +170,27 @@
     <img src="Vehicle_man_logo.jpg" alt="Vehicle Man Logo" class="h-8 md:h-10 w-auto object-contain rounded-lg">
 </a>
         
-        <div class="hidden md:flex flex-grow justify-center items-center space-x-8 text-xs font-bold uppercase tracking-widest whitespace-nowrap">
-            <a href="#home" class="hover:text-blue-400 transition">Αρχική</a>
-            <a href="company.html" class="hover:text-blue-400 transition">Η Εταιρεία μας</a>
-            <a href="legal.html" class="hover:text-blue-400 transition">Legal Notes</a>
-            <a href="promode.html" class="hover:text-blue-400 transition">Pro Mode</a>
-            <a href="manual.html" class="text-yellow-500 hover:text-yellow-400 transition">ΕΓΧΕΙΡΙΔΙΟ ΧΡΗΣΗΣ</a>
-            <a href="contact.html" class="text-blue-400 hover:text-white transition">Επικοινωνία</a>
-        </div>
-
+ <div class="flex flex-col p-8 space-y-6 text-[13px] font-bold uppercase tracking-[0.15em] text-white">
+    <a href="#home" class="mobile-link flex items-center gap-3 hover:text-blue-400 transition-colors">
+        <i class="fas fa-home w-5 text-blue-500"></i> Αρχική
+    </a>
+    <a href="company.html" class="mobile-link flex items-center gap-3 hover:text-blue-400 transition-colors">
+        <i class="fas fa-building w-5 text-blue-500"></i> Η Εταιρεία μας
+    </a>
+    <a href="legal.html" class="mobile-link flex items-center gap-3 hover:text-blue-400 transition-colors">
+        <i class="fas fa-file-contract w-5 text-blue-500"></i> Legal Notes
+    </a>
+    <a href="promode.html" class="mobile-link flex items-center gap-3 text-white hover:text-blue-400 transition-colors">
+        <i class="fas fa-crown w-5 text-blue-500"></i> Pro Mode
+    </a>
+    <hr class="border-white/10">
+    <a href="manual.html" class="mobile-link flex items-center gap-3 text-yellow-500 hover:text-yellow-400 transition-colors">
+        <i class="fas fa-book w-5"></i> ΕΓΧΕΙΡΙΔΙΟ ΧΡΗΣΗΣ
+    </a>
+    <a href="contact.html" class="mobile-link flex items-center gap-3 text-blue-400 hover:text-white transition-colors">
+        <i class="fas fa-envelope w-5"></i> Επικοινωνία
+    </a>
+</div>
         <button class="hidden md:block bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-full text-[10px] font-bold transition shrink-0 ml-4">
             LATEST VERSION
         </button>
@@ -324,12 +336,17 @@
             </div>
         </section>
 
-        <section id="contact" class="py-20 mb-40 text-center">
-            <div class="glass-card p-16">
-                <h2 class="text-3xl font-black mb-6 uppercase tracking-widest text-white">Επικοινωνία</h2>
-                <a href="mailto:vehiclemanagerapp@gmail.com" class="text-2xl font-bold text-blue-400 hover:text-white transition">vehiclemanagerapp@gmail.com</a>
+<section id="contact" class="py-20 mb-40 text-center">
+    <a href="contact.html" class="block group">
+        <div class="glass-card p-16 group-hover:bg-white/5 transition-all duration-500 border-group-hover:border-blue-500/50">
+            <h2 class="text-3xl font-black mb-6 uppercase tracking-widest text-white group-hover:text-blue-400 transition-colors">Επικοινωνία</h2>
+            <p class="text-sm text-blue-400 uppercase tracking-widest font-bold">Μεταβείτε στο ModiCofactor</p>
+            <div class="mt-4 inline-block bg-blue-600/20 text-blue-400 px-6 py-2 rounded-full border border-blue-500/30 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                Αποστολή Μηνύματος <i class="fas fa-arrow-right ml-2"></i>
             </div>
-        </section>
+        </div>
+    </a>
+</section>
 
     </main>
 
