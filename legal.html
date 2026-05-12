@@ -1,191 +1,1238 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal Notes | Vehicle Man & ModiCofactor S.S.A.</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body { 
-            background-color: #0f172a; 
-            color: #cbd5e1;
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-        }
+<title>Legal Notes | Vehicle Man & Modicofactor S.S.A.</title>
 
-        .main-bg {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background-image: linear-gradient(rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.95)), url('Background_wall.jpg');
-            background-size: cover; z-index: -1;
-        }
+<script src="https://cdn.tailwindcss.com"></script>
 
-        .legal-section {
-            background: rgba(30, 41, 59, 0.5);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-        }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
-        h2 { color: #3b82f6; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; border-bottom: 1px solid #3b82f6; display: inline-block; }
-        h3 { color: #f1f5f9; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.5rem; }
-        p, li { font-size: 0.85rem; text-align: justify; }
-        
-        .lang-label {
-            background: #3b82f6;
-            color: white;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 10px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            display: inline-block;
-        }
-    </style>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#020617;
+    color:#cbd5e1;
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* =========================
+BACKGROUND
+========================= */
+
+.main-bg{
+    position:fixed;
+    inset:0;
+    z-index:-5;
+    background:
+        linear-gradient(rgba(2,6,23,0.92), rgba(2,6,23,0.96)),
+        url('ModiCofactorSSAWIDE.png');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.main-bg::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(circle at top right, rgba(59,130,246,0.15), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(59,130,246,0.10), transparent 35%);
+}
+
+/* =========================
+WATERMARK
+========================= */
+
+.watermark-bg{
+    position:fixed;
+    width:650px;
+    opacity:0.035;
+    bottom:-100px;
+    right:-100px;
+    z-index:-2;
+    pointer-events:none;
+    filter:blur(1px);
+}
+
+/* =========================
+NAVBAR
+========================= */
+
+.nav-glass{
+    background:rgba(2,6,23,0.72);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(255,255,255,0.06);
+    box-shadow:0 10px 40px rgba(0,0,0,0.45);
+}
+
+.deep-glass{
+    background:rgba(15,23,42,0.88);
+    backdrop-filter:blur(24px);
+}
+
+.mobile-link{
+    position:relative;
+    padding-bottom:6px;
+}
+
+.mobile-link::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:0%;
+    height:2px;
+    background:#3b82f6;
+    transition:0.3s ease;
+}
+
+.mobile-link:hover::after{
+    width:100%;
+}
+
+/* =========================
+HEADER
+========================= */
+
+.hero-title{
+    font-size:clamp(2.5rem,5vw,5rem);
+    font-weight:900;
+    line-height:1;
+    letter-spacing:-0.04em;
+    color:white;
+    text-transform:uppercase;
+    font-style:italic;
+}
+
+.hero-sub{
+    color:#60a5fa;
+    letter-spacing:0.4em;
+    text-transform:uppercase;
+    font-size:0.7rem;
+    font-weight:800;
+}
+
+/* =========================
+LEGAL BOXES
+========================= */
+
+.legal-box{
+    position:relative;
+    background:rgba(15,23,42,0.55);
+    backdrop-filter:blur(16px);
+    border:1px solid rgba(255,255,255,0.06);
+    border-radius:28px;
+    overflow:hidden;
+    box-shadow:
+        0 10px 35px rgba(0,0,0,0.35),
+        inset 0 1px 0 rgba(255,255,255,0.03);
+    transition:0.35s ease;
+}
+
+.legal-box:hover{
+    transform:translateY(-3px);
+    border-color:rgba(59,130,246,0.35);
+    box-shadow:
+        0 15px 45px rgba(0,0,0,0.45),
+        0 0 25px rgba(59,130,246,0.08);
+}
+
+.legal-box::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:3px;
+    background:linear-gradient(to right,#3b82f6,transparent);
+}
+
+.section-inner{
+    padding:2rem;
+}
+
+.lang-label{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:6px 14px;
+    background:rgba(59,130,246,0.14);
+    border:1px solid rgba(59,130,246,0.25);
+    border-radius:999px;
+    color:#60a5fa;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    margin-bottom:20px;
+}
+
+.legal-title{
+    font-size:1.35rem;
+    font-weight:900;
+    color:white;
+    margin-bottom:1.2rem;
+    line-height:1.3;
+}
+
+.legal-title span{
+    color:#3b82f6;
+}
+
+.legal-text{
+    font-size:0.9rem;
+    line-height:1.95;
+    color:#cbd5e1;
+    text-align:justify;
+}
+
+.legal-text strong{
+    color:white;
+    font-weight:700;
+}
+
+.legal-text ul,
+.legal-text ol{
+    margin-top:12px;
+    margin-left:20px;
+}
+
+.legal-text li{
+    margin-bottom:10px;
+}
+
+.separator{
+    width:100%;
+    height:1px;
+    background:linear-gradient(to right, transparent, rgba(255,255,255,0.08), transparent);
+    margin:5rem 0 4rem;
+}
+
+.footer-legal{
+    border-top:1px solid rgba(255,255,255,0.08);
+    padding-top:40px;
+    margin-top:70px;
+    text-align:center;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:0.25em;
+    color:rgba(255,255,255,0.45);
+}
+
+/* =========================
+SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#020617;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#1e40af;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#3b82f6;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .section-inner{
+        padding:1.4rem;
+    }
+
+    .legal-text{
+        font-size:0.82rem;
+        line-height:1.85;
+    }
+
+    .watermark-bg{
+        width:420px;
+        right:-140px;
+    }
+}
+</style>
 </head>
+
 <body>
-    <div class="main-bg"></div>
 
-    <nav class="fixed w-full z-[100] bg-black/60 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-sm font-bold hover:text-blue-500 transition uppercase">
-                <i class="fas fa-chevron-left mr-2"></i> Back to App
-            </a>
-            <div class="text-[10px] text-blue-400 font-bold tracking-widest uppercase">Legal Compliance Department</div>
+<div class="main-bg"></div>
+
+<img src="ModiCofactorSSAnoBg.png" class="watermark-bg" alt="ModiCofactor Watermark">
+
+<!-- =========================
+NAVIGATION
+========================= -->
+
+<nav class="nav-glass fixed w-full z-[200]">
+
+<div class="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between gap-4">
+
+    <div class="flex items-center shrink-0">
+
+        <button id="menu-btn" class="block md:hidden text-white focus:outline-none p-2 mr-4">
+            <i class="fas fa-bars text-2xl"></i>
+        </button>
+
+        <a href="index.html#home" class="flex items-center transition hover:opacity-80">
+            <img src="Vehicle_man_logo.jpg"
+                 alt="Vehicle Man Logo"
+                 class="h-8 md:h-10 w-auto object-contain rounded-lg">
+        </a>
+
+    </div>
+
+    <div class="hidden md:flex flex-grow justify-center items-center space-x-6 lg:space-x-8 text-[10px] lg:text-xs font-bold uppercase tracking-widest whitespace-nowrap">
+
+        <a href="index.html#home" class="hover:text-blue-400 transition">Αρχική</a>
+
+        <a href="company.html" class="hover:text-blue-400 transition">Η Εταιρεία μας</a>
+
+        <a href="legal.html"
+           class="text-blue-400 transition underline decoration-2 underline-offset-8">
+            Legal Notes
+        </a>
+
+        <a href="promode.html" class="hover:text-blue-400 transition">Pro Mode</a>
+
+        <a href="manual.html"
+           class="text-yellow-500 hover:text-yellow-400 transition">
+           ΕΓΧΕΙΡΙΔΙΟ ΧΡΗΣΗΣ
+        </a>
+
+        <a href="contact.html" class="hover:text-blue-400 transition">Επικοινωνία</a>
+
+    </div>
+
+    <div class="hidden md:block w-10"></div>
+
+</div>
+
+<!-- MOBILE MENU -->
+
+<div id="mobile-menu"
+     class="hidden absolute top-[75px] left-4 right-4 md:right-auto md:w-[300px] deep-glass border-2 border-yellow-500/50 shadow-2xl z-[210] rounded-[2rem] animate-in fade-in zoom-in duration-300">
+
+    <div class="flex flex-col p-8 space-y-6 text-[13px] font-bold uppercase tracking-[0.15em] text-white">
+
+        <a href="index.html#home"
+           class="mobile-link flex items-center gap-3 hover:text-blue-400 transition-colors">
+            <i class="fas fa-home w-5 text-blue-500"></i>
+            Αρχική
+        </a>
+
+        <a href="company.html"
+           class="mobile-link flex items-center gap-3 hover:text-blue-400 transition-colors">
+            <i class="fas fa-building w-5"></i>
+            Η Εταιρεία μας
+        </a>
+
+        <a href="legal.html"
+           class="mobile-link flex items-center gap-3 text-blue-400 transition-colors">
+            <i class="fas fa-file-contract w-5 text-blue-500"></i>
+            Legal Notes
+        </a>
+
+        <a href="promode.html"
+           class="mobile-link flex items-center gap-3 text-white hover:text-blue-400 transition-colors">
+            <i class="fas fa-crown w-5 text-blue-500"></i>
+            Pro Mode
+        </a>
+
+        <hr class="border-white/10">
+
+        <a href="manual.html"
+           class="mobile-link flex items-center gap-3 text-yellow-500 hover:text-yellow-400 transition-colors">
+            <i class="fas fa-book w-5"></i>
+            ΕΓΧΕΙΡΙΔΙΟ ΧΡΗΣΗΣ
+        </a>
+
+        <a href="contact.html"
+           class="mobile-link flex items-center gap-3 text-blue-400 hover:text-white transition-colors">
+            <i class="fas fa-envelope w-5"></i>
+            Επικοινωνία
+        </a>
+
+    </div>
+</div>
+
+</nav>
+
+<!-- =========================
+CONTENT
+========================= -->
+
+<main class="max-w-7xl mx-auto px-4 md:px-8 pt-40 pb-24">
+
+<header class="text-center mb-20">
+
+    <div class="mb-6">
+        <img src="Vehicle_man_logo.jpg"
+             alt="Vehicle Man"
+             class="mx-auto w-28 h-28 object-cover rounded-[2rem] shadow-2xl border border-white/10">
+    </div>
+
+    <h1 class="hero-title">
+        Legal Notes
+    </h1>
+
+    <div class="mt-6 hero-sub">
+        Vehicle Man • Modicofactor S.S.A.
+    </div>
+
+</header>
+
+<!-- =========================================================
+IMPORTANT:
+ΒΑΖΕΙΣ ΕΔΩ ΟΛΟΚΛΗΡΟ ΚΑΙ ΑΥΤΟΥΣΙΟ ΤΟ ΚΕΙΜΕΝΟ ΑΠΟ ΤΟ DOCX
+ΧΩΡΙΣ ΝΑ ΑΦΑΙΡΕΣΕΙΣ ΟΥΤΕ ΜΙΑ ΓΡΑΜΜΗ
+========================================================= -->
+
+
+<section class="grid lg:grid-cols-2 gap-8 mb-8">
+
+    <!-- GREEK -->
+
+    <div class="legal-box">
+        <div class="section-inner">
+
+            <div class="lang-label">
+                <i class="fas fa-language"></i>
+                Ελληνικά
+            </div>
+
+            <h2 class="legal-title">
+                <span>1.1.</span>
+                Ταυτότητα Παρόχου – Επικοινωνία
+            </h2>
+
+            <div class="legal-text">
+
+                Η παρούσα εφαρμογή για κινητές συσκευές με την ονομασία
+                «Vehicle Man» (εφεξής η «Εφαρμογή») ανήκει και τελεί υπό
+                τη διαχείριση της εταιρείας «Modicofactor S.S.A.»
+                (εφεξής η «Εταιρεία», «εμείς», «μας»).
+
+                <br><br>
+
+                <strong>Στοιχεία επικοινωνίας:</strong>
+
+                <br><br>
+
+                Επωνυμία: Modicofactor S.S.A.<br>
+                Έδρα/Διεύθυνση: [ΑΘΗΝΑ]<br>
+                Χώρα: [ΕΛΛΑΔΑ]<br>
+                Email υποστήριξης: [vehiclemanagement@duck.com]<br>
+                Ιστότοπος:
+                [https://vehiclemanagerapp.github.io/vma/]
+
+            </div>
+
         </div>
-    </nav>
+    </div>
 
-    <main class="max-w-6xl mx-auto px-6 pt-32 pb-20">
-        
-        <header class="text-center mb-16">
-            <h1 class="text-4xl md:text-5xl font-black text-white mb-4 uppercase italic">Legal Notes & Privacy Policy</h1>
-            <p class="text-blue-400 font-bold uppercase tracking-widest text-xs">Vehicle Man Ecosystem • ModiCofactor S.S.A.</p>
-        </header>
+    <!-- ENGLISH -->
 
-        <div class="grid md:grid-cols-2 gap-8 legal-section">
-            <div>
-                <span class="lang-label">ΕΛΛΗΝΙΚΑ</span>
-                <h2>1. Πνευματική Ιδιοκτησία</h2>
-                <p>Το σύνολο του περιεχομένου της εφαρμογής "Vehicle Man", συμπεριλαμβανομένων, ενδεικτικά αλλά όχι περιοριστικά, των κειμένων, γραφικών, λογοτύπων, εικονιδίων, εικόνων, αποσπασμάτων ήχου, ψηφιακών λήψεων, δομής κώδικα και λογισμικού, αποτελεί αποκλειστική ιδιοκτησία της <strong>ModiCofactor S.S.A.</strong> ή των προμηθευτών περιεχομένου της και προστατεύεται από τους ελληνικούς, ευρωπαϊκούς και διεθνείς νόμους περί πνευματικής ιδιοκτησίας. Απαγορεύεται αυστηρά η αναπαραγωγή, αντιγραφή, πώληση, μεταπώληση ή οποιαδήποτε άλλη εκμετάλλευση της εφαρμογής για εμπορικούς σκοπούς χωρίς τη ρητή έγγραφη συγκατάθεση της εταιρείας.</p>
+    <div class="legal-box">
+        <div class="section-inner">
+
+            <div class="lang-label">
+                <i class="fas fa-language"></i>
+                English
             </div>
-            <div>
-                <span class="lang-label">ENGLISH</span>
-                <h2>1. Intellectual Property</h2>
-                <p>All content included in the "Vehicle Man" application, such as text, graphics, logos, icons, images, audio clips, digital downloads, code structure, and software, is the exclusive property of <strong>ModiCofactor S.S.A.</strong> or its content suppliers and is protected by Greek, European, and international copyright laws. Any reproduction, duplication, sale, resale, or other exploitation of the application for commercial purposes without the express written consent of the company is strictly prohibited.</p>
+
+            <h2 class="legal-title">
+                <span>1.1.</span>
+                Provider Identity – Contact Details
+            </h2>
+
+            <div class="legal-text">
+
+                This mobile application named “Vehicle Man”
+                (the “App”) is owned and operated by the company
+                “Modicofactor S.S.A.” (the “Company”, “we”, “us”, “our”).
+
+                <br><br>
+
+                <strong>Contact details:</strong>
+
+                <br><br>
+
+                Legal name: Modicofactor S.S.A.<br>
+                Registered office/Address: [ADDRESS]<br>
+                Country: [COUNTRY]<br>
+                Support email: [vehiclemanagement@duck.com]<br>
+                Website:
+                [https://vehiclemanagerapp.github.io/vma/]
+
+            </div>
+
+        </div>
+    </div>
+
+<section class="grid lg:grid-cols-2 gap-8 mb-8">
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+            <h2 class="legal-title">
+                <span>1.2.</span>
+                Αποδοχή – Δεσμευτικότητα
+            </h2>
+            <div class="legal-text">
+Με τη λήψη, εγκατάσταση, πρόσβαση ή/και χρήση της Εφαρμογής, ο χρήστης (εφεξής «Χρήστης», «εσείς») δηλώνει ότι διάβασε, κατανόησε και αποδέχεται ανεπιφύλακτα τους παρόντες Όρους Χρήσης, καθώς και κάθε τυχόν πρόσθετο όρο, πολιτική ή οδηγία που ενσωματώνεται δια παραπομπής (συμπεριλαμβανομένης της Πολιτικής Ασφαλείας και της Πολιτικής Απορρήτου όπου εφαρμόζει).  
+Αν δεν συμφωνείτε, δεν επιτρέπεται να χρησιμοποιείτε την Εφαρμογή.
             </div>
         </div>
+    </div>
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.3.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
 
-        <div class="grid md:grid-cols-2 gap-8 legal-section">
-            <div>
-                <span class="lang-label">ΕΛΛΗΝΙΚΑ</span>
-                <h2>2. Όροι Χρήσης & Άδεια</h2>
-                <p>Η ModiCofactor S.S.A. σας παραχωρεί μια περιορισμένη, μη αποκλειστική, μη μεταβιβάσιμη και ανακλητή άδεια πρόσβασης και προσωπικής χρήσης της εφαρμογής. 
-                <br><br><strong>Περιορισμοί:</strong> Ο χρήστης συμφωνεί να μην: 
-                <ul class="list-disc ml-5 mt-2">
-                    <li>Αποσυμπιέζει ή πραγματοποιεί reverse engineering στον κώδικα της εφαρμογής.</li>
-                    <li>Χρησιμοποιεί την εφαρμογή για παράνομες δραστηριότητες.</li>
-                    <li>Παρεμβαίνει στην ασφάλεια ή τη λειτουργία του λογισμικού.</li>
-                </ul>
-                Η άδεια τερματίζεται αυτόματα σε περίπτωση παραβίασης των ανωτέρω όρων.</p>
-            </div>
-            <div>
-                <span class="lang-label">ENGLISH</span>
-                <h2>2. Terms of Use & License</h2>
-                <p>ModiCofactor S.S.A. grants you a limited, non-exclusive, non-transferable, and revocable license to access and use the application for personal purposes. 
-                <br><br><strong>Restrictions:</strong> The user agrees not to: 
-                <ul class="list-disc ml-5 mt-2">
-                    <li>Decompile or perform reverse engineering on the application's code.</li>
-                    <li>Use the application for illegal activities.</li>
-                    <li>Interfere with the security or functionality of the software.</li>
-                </ul>
-                This license terminates automatically if you violate any of these terms.</p>
-            </div>
-        </div>
+ 1.3. Επιλεξιμότητα – Χρήση από Ανηλίκους
+Η Εφαρμογή προορίζεται για χρήση από άτομα που έχουν δικαιοπρακτική ικανότητα σύμφωνα με το δίκαιο της χώρας κατοικίας τους. Εάν είστε ανήλικος/η, απαιτείται συγκατάθεση και επίβλεψη από γονέα/κηδεμόνα, ο οποίος φέρει την ευθύνη της χρήσης. Η Εταιρεία δύναται να απαιτήσει εύλογη απόδειξη συγκατάθεσης.
+</div>
+</div>
+</div>
 
-        <div class="legal-section border-l-4 border-blue-500">
-            <div class="grid md:grid-cols-2 gap-8">
-                <div>
-                    <span class="lang-label">ΕΛΛΗΝΙΚΑ</span>
-                    <h2>3. Πολιτική Απορρήτου (GDPR)</h2>
-                    <h3>Φιλοσοφία "Local First"</h3>
-                    <p>Σύμφωνα με τον Γενικό Κανονισμό Προστασίας Δεδομένων (GDPR - EU 2016/679), η εφαρμογή λειτουργεί ως εργαλείο επεξεργασίας που περιορίζεται αποκλειστικά στη συσκευή του χρήστη.
-                    <br><br><strong>Συλλογή Δεδομένων:</strong> Η ModiCofactor S.S.A. <strong>ΔΕΝ</strong> συλλέγει, <strong>ΔΕΝ</strong> αποθηκεύει και <strong>ΔΕΝ</strong> έχει πρόσβαση σε κανένα δεδομένο που εισάγετε (π.χ. πινακίδες, χιλιόμετρα, κόστη, ονόματα οδηγών). 
-                    <br><br><strong>Τοποθεσία Αποθήκευσης:</strong> Όλα τα δεδομένα αποθηκεύονται σε κρυπτογραφημένη ή προστατευμένη τοπική βάση δεδομένων στον ιδιωτικό κατάλογο της εφαρμογής (Internal Storage). 
-                    <br><br><strong>Διαβίβαση:</strong> Καμία πληροφορία δεν μεταδίδεται σε cloud servers ή τρίτους φορείς. Ο χρήστης είναι ο μόνος "Υπεύθυνος Επεξεργασίας" των δεδομένων του.</p>
-                </div>
-                <div>
-                    <span class="lang-label">ENGLISH</span>
-                    <h2>3. Privacy Policy (GDPR)</h2>
-                    <h3>"Local First" Philosophy</h3>
-                    <p>In accordance with the General Data Protection Regulation (GDPR - EU 2016/679), this application operates as a processing tool restricted solely to the user's device.
-                    <br><br><strong>Data Collection:</strong> ModiCofactor S.S.A. <strong>DOES NOT</strong> collect, <strong>DOES NOT</strong> store, and <strong>DOES NOT</strong> have access to any data you enter (e.g., license plates, mileage, costs, driver names). 
-                    <br><br><strong>Storage Location:</strong> All data is stored in an encrypted or protected local database within the application's private directory (Internal Storage). 
-                    <br><br><strong>Transmission:</strong> No information is transmitted to cloud servers or third parties. The user is the sole "Data Controller" of their information.</p>
-                </div>
-            </div>
-        </div>
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
 
-        <div class="grid md:grid-cols-2 gap-8 legal-section">
-            <div>
-                <span class="lang-label">ΕΛΛΗΝΙΚΑ</span>
-                <h2>4. Ασφάλεια & Αποθήκευση</h2>
-                <p>Η εφαρμογή χρησιμοποιεί το σύστημα <strong>Sandboxing</strong> του Android, το οποίο απομονώνει τα δεδομένα του Vehicle Man από άλλες εγκατεστημένες εφαρμογές στη συσκευή. 
-                <br><br><strong>Ευθύνη Χρήστη:</strong> Καθώς η εφαρμογή δεν διαθέτει cloud backup (για λόγους προστασίας απορρήτου), η ασφάλεια των δεδομένων εξαρτάται από:
-                <ol class="list-decimal ml-5 mt-2">
-                    <li>Την ασφάλεια της ίδιας της συσκευής (PIN, Biometrics).</li>
-                    <li>Τη λήψη αντιγράφων ασφαλείας (Export) από τον χρήστη.</li>
-                    <li>Τη μη εξουσιοδοτημένη πρόσβαση τρίτων στη συσκευή.</li>
-                </ol>
-                Η ModiCofactor S.S.A. δεν φέρει ευθύνη για απώλεια δεδομένων λόγω βλάβης της συσκευής ή διαγραφής της εφαρμογής.</p>
-            </div>
-            <div>
-                <span class="lang-label">ENGLISH</span>
-                <h2>4. Security & Storage</h2>
-                <p>The application utilizes Android's <strong>Sandboxing</strong> system, which isolates Vehicle Man data from other installed applications on the device. 
-                <br><br><strong>User Responsibility:</strong> Since the application does not feature cloud backup (for privacy reasons), data security depends on:
-                <ol class="list-decimal ml-5 mt-2">
-                    <li>The security of the device itself (PIN, Biometrics).</li>
-                    <li>The manual creation of backups (Export) by the user.</li>
-                    <li>Prevention of unauthorized physical access to the device.</li>
-                </ol>
-                ModiCofactor S.S.A. is not liable for data loss due to device failure or application uninstallation.</p>
-            </div>
-        </div>
+ 1.4. Περιγραφή και Σκοπός της Εφαρμογής
+Η Εφαρμογή παρέχει λειτουργίες καταχώρησης οχημάτων, καταχώρησης εξόδων, δημιουργίας/διαχείρισης μελλοντικών υπενθυμίσεων, αυτόματης παραγωγής υπενθυμίσεων, παραγωγής στατιστικών στοιχείων και πρόσθετες «premium» λειτουργίες που διευκολύνουν τη χρήση και τη λειτουργία της.  
+Η Εφαρμογή δεν παρέχει νομικές, φορολογικές, λογιστικές, τεχνικές, μηχανολογικές ή άλλες επαγγελματικές συμβουλές. Τυχόν αποτελέσματα, υπολογισμοί, στατιστικά, προβλέψεις ή ειδοποιήσεις έχουν ενημερωτικό χαρακτήρα και ο Χρήστης οφείλει να επαληθεύει την ακρίβεια και την καταλληλότητα για τη συγκεκριμένη χρήση του.
+</div>
+</div>
+</div>
 
-        <div class="grid md:grid-cols-2 gap-8 legal-section bg-red-900/10 border-red-500/20">
-            <div>
-                <span class="lang-label">ΕΛΛΗΝΙΚΑ</span>
-                <h2>5. Περιορισμός Ευθύνης</h2>
-                <p>Η εφαρμογή παρέχεται "ΩΣ ΕΧΕΙ" (AS IS) και "ΟΠΩΣ ΔΙΑΤΙΘΕΤΑΙ" (AS AVAILABLE). Η ModiCofactor S.S.A. δεν εγγυάται ότι η λειτουργία της θα είναι αδιάλειπτη ή απαλλαγμένη από σφάλματα. Σε καμία περίπτωση η εταιρεία δεν ευθύνεται για άμεσες, έμμεσες ή παρεπόμενες ζημίες που προκύπτουν από τη χρήση ή την αδυναμία χρήσης της εφαρμογής, συμπεριλαμβανομένων σφαλμάτων στους υπολογισμούς καυσίμου ή συντήρησης.</p>
-            </div>
-            <div>
-                <span class="lang-label">ENGLISH</span>
-                <h2>5. Limitation of Liability</h2>
-                <p>The application is provided on an "AS IS" and "AS AVAILABLE" basis. ModiCofactor S.S.A. does not warrant that the operation will be uninterrupted or error-free. Under no circumstances shall the company be liable for any direct, indirect, or incidental damages resulting from the use or inability to use the application, including errors in fuel or maintenance calculations.</p>
-            </div>
-        </div>
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
 
-        <div class="grid md:grid-cols-2 gap-8 legal-section">
-            <div>
-                <span class="lang-label">ΕΛΛΗΝΙΚΑ</span>
-                <h2>6. Εφαρμοστέο Δίκαιο</h2>
-                <p>Οι παρόντες όροι διέπονται από το Ελληνικό Δίκαιο. Για οποιαδήποτε διαφορά προκύψει σχετικά με την εφαρμογή, αρμόδια είναι τα δικαστήρια των Αθηνών. Η ModiCofactor S.S.A. διατηρεί το δικαίωμα να τροποποιεί τους όρους αυτούς ανά πάσα στιγμή μέσω ενημέρωσης της παρούσας σελίδας.</p>
-            </div>
-            <div>
-                <span class="lang-label">ENGLISH</span>
-                <h2>6. Governing Law</h2>
-                <p>These terms are governed by Greek Law. Any dispute arising in connection with the application shall be subject to the exclusive jurisdiction of the courts of Athens, Greece. ModiCofactor S.S.A. reserves the right to amend these terms at any time by updating this page.</p>
-            </div>
-        </div>
+ 1.5. Λογαριασμός Χρήστη – Ασφάλεια Λογαριασμού
+Για τη χρήση ορισμένων λειτουργιών ενδέχεται να απαιτείται δημιουργία λογαριασμού. Ο Χρήστης:
+α) δηλώνει ότι θα παρέχει ακριβή, αληθή και επικαιροποιημένα στοιχεία,  
+β) είναι υπεύθυνος για τη διαφύλαξη των διαπιστευτηρίων πρόσβασης (κωδικών, tokens, συσκευών),  
+γ) υποχρεούται να ειδοποιεί άμεσα την Εταιρεία για κάθε μη εξουσιοδοτημένη χρήση,  
+δ) αποδέχεται ότι η Εταιρεία δεν ευθύνεται για ζημίες που οφείλονται σε αδυναμία του Χρήστη να προστατεύσει τα στοιχεία πρόσβασης.  
+Η Εταιρεία δύναται να εφαρμόζει μέτρα ασφάλειας όπως έλεγχο πολλαπλών παραγόντων, περιορισμούς σύνδεσης ή επαλήθευση ταυτότητας, όπου κρίνεται απαραίτητο.
+</div>
+</div>
+</div>
 
-        <footer class="text-center py-10 opacity-50 text-[10px] uppercase tracking-widest">
-            Last Updated: May 2026 • ModiCofactor S.S.A. Legal Compliance Unit
-        </footer>
+<div class="legal-box">
+<div class="section-inner">
+<div class="lan<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+g-label"><i class="fas fa-language"></i> Ελληνικά</div>
 
-    </main>
+ 1.6. Άδεια Χρήσης – Επιτρεπτή Χρήση
+Η Εταιρεία παρέχει στον Χρήστη μια περιορισμένη, μη αποκλειστική, μη μεταβιβάσιμη, ανακλητή άδεια πρόσβασης και χρήσης της Εφαρμογής για προσωπική ή/και εσωτερική επαγγελματική χρήση, αποκλειστικά σύμφωνα με τους παρόντες Όρους.  
+Απαγορεύεται η χρήση της Εφαρμογής για:
+α) παράνομους σκοπούς ή κατά παράβαση δικαιωμάτων τρίτων,  
+β) παρεμβολή στη λειτουργία της Εφαρμογής, των συστημάτων ή της ασφάλειάς της,  
+γ) απόπειρα μη εξουσιοδοτημένης πρόσβασης σε λογαριασμούς, δεδομένα ή υποδομές,  
+δ) αντιγραφή, τροποποίηση, αποσυμπίληση, αποσυναρμολόγηση, reverse engineering ή δημιουργία παράγωγων έργων, εκτός αν επιτρέπεται υποχρεωτικά από αναγκαστικό δίκαιο,  
+ε) ενοικίαση, μεταπώληση, εκχώρηση, sublicensing ή παροχή πρόσβασης ως υπηρεσία σε τρίτους (π.χ. «service bureau»), χωρίς έγγραφη άδεια της Εταιρείας,  
+στ) χρήση αυτοματοποιημένων μέσων (bots, scrapers) που επιβαρύνουν ή παρακάμπτουν τεχνικούς περιορισμούς,  
+ζ) υποβολή κακόβουλου κώδικα ή δεδομένων που θέτουν σε κίνδυνο ασφάλεια/ακεραιότητα.  
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 1.7. Πνευματική Ιδιοκτησία
+Η Εφαρμογή, το λογισμικό, ο πηγαίος/αντικειμενικός κώδικας, οι βάσεις δεδομένων, τα γραφικά, το UI/UX, τα σήματα, οι επωνυμίες, τα λογότυπα, τα κείμενα, τα σχέδια, οι αλγόριθμοι, οι ροές εργασίας και κάθε συναφές δικαίωμα αποτελούν ιδιοκτησία της Εταιρείας ή των δικαιοπαρόχων της και προστατεύονται από το ισχύον δίκαιο πνευματικής ιδιοκτησίας και διεθνείς συμβάσεις.  
+Ο Χρήστης δεν αποκτά κανένα δικαίωμα κυριότητας. Επιτρέπεται μόνο η χρήση που προβλέπεται ρητά στους παρόντες Όρους.
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 1.8. Περιεχόμενο και Δεδομένα που Υποβάλλει ο Χρήστης
+Ο Χρήστης δύναται να εισάγει/ανεβάζει δεδομένα σχετικά με οχήματα, έξοδα, έγγραφα, υπενθυμίσεις, σημειώσεις και λοιπές πληροφορίες (εφεξής «Δεδομένα Χρήστη»).  
+Ο Χρήστης:
+α) εγγυάται ότι έχει δικαίωμα να χρησιμοποιεί και να υποβάλλει τα Δεδομένα Χρήστη,  
+β) αναλαμβάνει την πλήρη ευθύνη για την ακρίβεια, νομιμότητα και καταλληλότητά τους,  
+γ) αναγνωρίζει ότι η Εταιρεία δεν υποχρεούται να ελέγχει/επαληθεύει τα Δεδομένα Χρήστη.  
+Κατά το μέτρο που απαιτείται για την παροχή της Εφαρμογής, ο Χρήστης παρέχει στην Εταιρεία μη αποκλειστική, παγκόσμια, ατελή (royalty-free) άδεια επεξεργασίας, αποθήκευσης, μετάδοσης και εμφάνισης των Δεδομένων Χρήστη αποκλειστικά για τους σκοπούς λειτουργίας, υποστήριξης, ασφάλειας, βελτίωσης και συμμόρφωσης της Εφαρμογής, σύμφωνα με τις ισχύουσες πολιτικές προστασίας δεδομένων.
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+ 
+1.9. Αυτόματες Υπενθυμίσεις – Ειδοποιήσεις
+Η Εφαρμογή μπορεί να δημιουργεί αυτόματα υπενθυμίσεις/ειδοποιήσεις βάσει των δεδομένων που εισάγει ο Χρήστης (π.χ. συντήρηση, ασφάλιση, τέλη, ΚΤΕΟ, λοιπά).  
+Ο Χρήστης αναγνωρίζει ότι:
+α) οι ειδοποιήσεις ενδέχεται να καθυστερήσουν, να μην αποσταλούν ή να μην εμφανιστούν λόγω ρυθμίσεων συσκευής/λειτουργικού, δικτύου, πολιτικών καταστημάτων εφαρμογών, εξοικονόμησης μπαταρίας, ή τεχνικών περιορισμών τρίτων,  
+β) η Εταιρεία δεν εγγυάται αδιάλειπτη/έγκαιρη παράδοση ειδοποιήσεων,  
+γ) ο Χρήστης οφείλει να διατηρεί εναλλακτικές διαδικασίες ελέγχου κρίσιμων προθεσμιών.
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 1.10. Στατιστικά – Αναφορές – Αποτελέσματα
+Οι αναφορές, στατιστικά και οπτικοποιήσεις εξαρτώνται από την ορθότητα/πληρότητα των δεδομένων, τις ρυθμίσεις και τις μεθόδους υπολογισμού. Η Εταιρεία δεν εγγυάται ότι τα παραγόμενα αποτελέσματα είναι πλήρη, ακριβή ή κατάλληλα για συγκεκριμένο σκοπό και δεν φέρει ευθύνη για αποφάσεις που λαμβάνονται βάσει αυτών.
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 1.11. Premium Λειτουργίες – Αγορές – Συνδρομές
+Η Εφαρμογή ενδέχεται να περιλαμβάνει επί πληρωμή λειτουργίες (εφάπαξ αγορές ή/και συνδρομές) (εφεξής «Premium»).  
+Οι όροι τιμολόγησης, διάρκειας, ανανέωσης, δοκιμαστικής περιόδου (αν υπάρχει), και οι σχετικοί όροι που εμφανίζονται στο κατάστημα εφαρμογών (App Store/Google Play ή άλλο) ή εντός της Εφαρμογής αποτελούν μέρος της σύμβασης.  
+Οι πληρωμές διεκπεραιώνονται συνήθως από τον πάροχο του καταστήματος εφαρμογών ή τρίτο πάροχο πληρωμών. Η Εταιρεία δεν αποθηκεύει κατ’ ανάγκην στοιχεία κάρτας/πληρωμής.  
+Ακυρώσεις, επιστροφές και διαχείριση συνδρομών διέπονται από τους όρους του αντίστοιχου καταστήματος εφαρμογών/παρόχου πληρωμών και τις υποχρεωτικές διατάξεις του εφαρμοστέου δικαίου.  
+Η Εταιρεία δύναται να αλλάξει χαρακτηριστικά των Premium, να προσθέσει/αφαιρέσει λειτουργίες ή να αντικαταστήσει ισοδύναμα χαρακτηριστικά, τηρώντας τις υποχρεωτικές απαιτήσεις διαφάνειας και, όπου απαιτείται, παρέχοντας εύλογη ενημέρωση.
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 1.12. Ενημερώσεις – Αλλαγές – Διακοπή Λειτουργιών
+Η Εταιρεία δύναται να παρέχει ενημερώσεις, διορθώσεις, βελτιώσεις ή νέες εκδόσεις. Ορισμένες ενημερώσεις μπορεί να είναι απαραίτητες για λόγους ασφάλειας ή συμβατότητας.  
+Η Εταιρεία δύναται να τροποποιήσει, αναστείλει ή διακόψει την Εφαρμογή ή μέρος αυτής (συμπεριλαμβανομένων Premium λειτουργιών), προσωρινά ή οριστικά, για λόγους ασφάλειας, συμμόρφωσης, τεχνικούς ή επιχειρησιακούς. Όπου είναι εύλογο, θα καταβάλλεται προσπάθεια προηγούμερης ειδοποίησης.
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 1.13. Δικαιώματα Καταστημάτων Εφαρμογών (Third-Party Platforms)
+Η λήψη/χρήση της Εφαρμογής μέσω App Store, Google Play ή άλλου καταστήματος υπόκειται και στους όρους του αντίστοιχου παρόχου πλατφόρμας. Η Εταιρεία δεν ευθύνεται για πράξεις/παραλείψεις των πλατφορμών (π.χ. πολιτικές πληρωμών, επιστροφών, διαθεσιμότητας, περιορισμών, κατάργησης εφαρμογής).
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 1.14. Τρίτες Υπηρεσίες – Σύνδεσμοι – Εξαρτήσεις
+Η Εφαρμογή μπορεί να ενσωματώνει υπηρεσίες τρίτων (π.χ. analytics, push notifications, cloud hosting, authentication) ή να παραπέμπει σε ιστότοπους/υπηρεσίες τρίτων. Η χρήση τους διέπεται από τους όρους και πολιτικές των τρίτων. Η Εταιρεία δεν φέρει ευθύνη για περιεχόμενο, διαθεσιμότητα, ασφάλεια ή πρακτικές τρίτων.
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 1.15. Διαθεσιμότητα – Απόδοση – Αποποίηση Εγγυήσεων
+Η Εφαρμογή παρέχεται «ως έχει» και «όπως διατίθεται», χωρίς εγγύηση οποιουδήποτε είδους, στο μέτρο που επιτρέπεται από το εφαρμοστέο δίκαιο.  
+Η Εταιρεία δεν εγγυάται ότι:
+α) η Εφαρμογή θα είναι αδιάλειπτη, έγκαιρη, ασφαλής ή χωρίς σφάλματα,  
+β) θα είναι συμβατή με όλες τις συσκευές/λειτουργικά/εκδόσεις,  
+γ) τα δεδομένα δεν θα χαθούν ή αλλοιωθούν, ιδίως αν ο Χρήστης δεν τηρεί αντίγραφα ασφαλείας όπου αυτό παρέχεται/ενδείκνυται.  
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 1.16. Περιορισμός Ευθύνης
+Στο μέγιστο βαθμό που επιτρέπεται από το εφαρμοστέο δίκαιο, η Εταιρεία δεν ευθύνεται για έμμεσες, παρεπόμενες, ειδικές, αποθετικές, τιμωρητικές ζημίες, απώλεια κερδών, απώλεια δεδομένων, απώλεια φήμης, διακοπή εργασιών, ή απαιτήσεις τρίτων που σχετίζονται με τη χρήση ή αδυναμία χρήσης της Εφαρμογής, ακόμη και αν έχει ενημερωθεί για την πιθανότητα τέτοιων ζημιών.  
+Σε κάθε περίπτωση, η συνολική ευθύνη της Εταιρείας για άμεσες ζημίες που απορρέουν από τη χρήση της Εφαρμογής περιορίζεται στο συνολικό ποσό που καταβλήθηκε από τον Χρήστη στην Εταιρεία για τη χρήση της Εφαρμογής κατά τους τελευταίους δώδεκα (12) μήνες πριν από το γεγονός που γέννησε την ευθύνη ή στο ποσό των εκατό (100) ευρώ, όποιο είναι υψηλότερο, εκτός αν το εφαρμοστέο αναγκαστικό δίκαιο επιβάλλει διαφορετικά.
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 1.17. Αποζημίωση (Indemnification)
+Ο Χρήστης συμφωνεί να αποζημιώσει και να απαλλάξει την Εταιρεία, τα στελέχη, εργαζόμενους, συνεργάτες και δικαιοπαρόχους της από κάθε αξίωση, ζημία, ευθύνη, δαπάνη και εύλογα έξοδα (συμπεριλαμβανομένων δικηγορικών αμοιβών) που προκύπτουν από:
+α) παραβίαση των παρόντων Όρων,  
+β) παράνομη ή ακατάλληλη χρήση της Εφαρμογής,  
+γ) παραβίαση δικαιωμάτων τρίτων μέσω Δεδομένων Χρήστη,  
+δ) παραβίαση υποχρεώσεων σχετικά με λογαριασμό/ασφάλεια.
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 1.18. Τερματισμός – Αναστολή – Διαγραφή Λογαριασμού
+Η Εταιρεία δύναται να αναστείλει ή να τερματίσει την πρόσβαση του Χρήστη, με ή χωρίς ειδοποίηση, εφόσον:
+α) υπάρχει εύλογη υποψία παραβίασης των Όρων ή παράνομης χρήσης,  
+β) απαιτείται για λόγους ασφάλειας ή προστασίας της Εφαρμογής/χρηστών/τρίτων,  
+γ) απαιτείται από νόμο ή αρμόδια αρχή.  
+Ο Χρήστης μπορεί να διακόψει τη χρήση οποτεδήποτε απεγκαθιστώντας την Εφαρμογή και, όπου παρέχεται, αιτούμενος διαγραφή λογαριασμού. Η διαγραφή/απενεργοποίηση ενδέχεται να συνεπάγεται απώλεια πρόσβασης σε δεδομένα, στο μέτρο που δεν είναι εφικτή η ανάκτησή τους ή δεν προβλέπεται εξαγωγή.  
+Ρήτρες που από τη φύση τους επιβιώνουν (π.χ. πνευματική ιδιοκτησία, αποποίηση εγγυήσεων, περιορισμός ευθύνης, αποζημίωση, εφαρμοστέο δίκαιο/δικαιοδοσία) παραμένουν σε ισχύ μετά τον τερματισμό.
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 1.19. Αλλαγές των Όρων
+Η Εταιρεία μπορεί να τροποποιεί τους παρόντες Όρους. Η πλέον πρόσφατη έκδοση θα είναι διαθέσιμη εντός της Εφαρμογής ή/και στον ιστότοπο. Αν οι αλλαγές είναι ουσιώδεις, η Εταιρεία θα καταβάλλει εύλογη προσπάθεια ενημέρωσης. Η συνέχιση χρήσης μετά την ισχύ των αλλαγών συνιστά αποδοχή τους, εκτός αν το εφαρμοστέο δίκαιο απαιτεί διαφορετική διαδικασία συναίνεσης.
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 1.20. Εφαρμοστέο Δίκαιο – Δικαιοδοσία – Διεθνής Χρήση
+Οι παρόντες Όροι διέπονται από το δίκαιο της Ελλάδας, εκτός αν η εφαρμογή του αποκλείεται από αναγκαστικές διατάξεις προστασίας καταναλωτή της χώρας συνήθους διαμονής του Χρήστη.  
+Αρμόδια για την επίλυση διαφορών είναι τα δικαστήρια [ΠΟΛΗ ΔΙΚΑΣΤΗΡΙΩΝ], με την επιφύλαξη αναγκαστικής διεθνούς δικαιοδοσίας και κανόνων προστασίας καταναλωτή που δεν μπορούν να αποκλειστούν.  
+Ο Χρήστης αναγνωρίζει ότι η χρήση είναι παγκόσμια και δεσμεύεται να συμμορφώνεται με τους νόμους της χώρας του.
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 1.21. Διάφορες Διατάξεις
+Αν οποιοσδήποτε όρος κριθεί άκυρος ή ανεφάρμοστος, οι λοιποί όροι παραμένουν σε ισχύ.  
+Η μη άσκηση δικαιώματος από την Εταιρεία δεν αποτελεί παραίτηση.  
+Ο Χρήστης δεν δύναται να εκχωρήσει δικαιώματα/υποχρεώσεις χωρίς έγγραφη συναίνεση της Εταιρείας. Η Εταιρεία δύναται να εκχωρήσει στο πλαίσιο εταιρικής αναδιάρθρωσης/μεταβίβασης.  
+Οι παρόντες Όροι αποτελούν τη συνολική συμφωνία ως προς τη χρήση της Εφαρμογής.
+</div>
+</div>
+</div>
+
+
+---
+
+ 2. Πολιτική Ασφαλείας Πληροφοριών και Λειτουργίας («Vehicle Man»)
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 2.1. Σκοπός και Πεδίο Εφαρμογής
+Η παρούσα Πολιτική Ασφαλείας περιγράφει τα οργανωτικά και τεχνικά μέτρα που υιοθετεί η Modicofactor S.S.A. για την προστασία της εμπιστευτικότητας, ακεραιότητας και διαθεσιμότητας των πληροφοριών και των συστημάτων που σχετίζονται με την Εφαρμογή «Vehicle Man», συμπεριλαμβανομένων δεδομένων χρηστών, υποδομών, λειτουργιών, υποστήριξης και διαδικασιών ανάπτυξης.
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 2.2. Ορισμοί
+«Δεδομένα Χρήστη»: τα δεδομένα που εισάγει/δημιουργεί/αποθηκεύει ο Χρήστης μέσω της Εφαρμογής.  
+«Προσωπικά Δεδομένα»: δεδομένα που αφορούν ταυτοποιημένο ή ταυτοποιήσιμο φυσικό πρόσωπο.  
+«Περιστατικό Ασφάλειας»: γεγονός που οδηγεί ή ενδέχεται να οδηγήσει σε παραβίαση εμπιστευτικότητας, ακεραιότητας ή διαθεσιμότητας.  
+«Πάροχοι»: τρίτοι που παρέχουν υπηρεσίες φιλοξενίας, ειδοποιήσεων, analytics, πληρωμών κ.λπ., όταν χρησιμοποιούνται.
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 2.3. Αρχές Ασφάλειας
+Η Εταιρεία εφαρμόζει μέτρα βάσει αρχών:
+α) ελαχιστοποίησης πρόσβασης (least privilege),  
+β) διαχωρισμού καθηκόντων,  
+γ) άμυνας σε βάθος,  
+δ) ασφάλειας εξ αρχής και εξ ορισμού (security by design/by default) στο μέτρο που είναι πρακτικά εφικτό,  
+ε) συνεχούς βελτίωσης και διαχείρισης κινδύνων.
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 2.4. Διαχείριση Πρόσβασης
+Η Εταιρεία εφαρμόζει ελέγχους πρόσβασης για συστήματα και δεδομένα, όπως:
+α) ατομικούς λογαριασμούς πρόσβασης για προσωπικό/συνεργάτες,  
+β) ισχυρή αυθεντικοποίηση όπου είναι εφικτό,  
+γ) διαδικασίες χορήγησης/ανάκλησης πρόσβασης με βάση ρόλους,  
+δ) καταγραφή και παρακολούθηση πρόσβασης όπου απαιτείται,  
+ε) περιοδική ανασκόπηση δικαιωμάτων.
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 2.5. Κρυπτογράφηση και Προστασία Μεταφοράς
+Η Εταιρεία επιδιώκει, κατά το μέτρο που είναι τεχνικά εφικτό, να προστατεύει τα δεδομένα σε μεταφορά μέσω ασφαλών πρωτοκόλλων.  
+Η κρυπτογράφηση δεδομένων σε αποθήκευση εφαρμόζεται όπου κρίνεται αναγκαίο με βάση τον κίνδυνο, την αρχιτεκτονική και τους παρόχους υποδομής. Η ακριβής υλοποίηση μπορεί να διαφοροποιείται ανά έκδοση και πλατφόρμα.
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 2.6. Ασφάλεια Υποδομών και Φιλοξενίας
+Όταν χρησιμοποιούνται υπηρεσίες cloud/φιλοξενίας τρίτων, η Εταιρεία επιλέγει παρόχους με κατάλληλες πρακτικές ασφαλείας και συμβατικές δεσμεύσεις, στο μέτρο που είναι διαθέσιμες.  
+Η Εταιρεία εφαρμόζει μέτρα όπως τείχη προστασίας, έλεγχο δικτύου, ενημερώσεις ασφαλείας, περιορισμό θυρών/υπηρεσιών και παρακολούθηση λειτουργίας όπου είναι τεχνικά και οικονομικά εφικτό.
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 2.7. Ασφάλεια Εφαρμογής και Ανάπτυξης
+Η Εταιρεία εφαρμόζει διαδικασίες ανάπτυξης που στοχεύουν στη μείωση ευπαθειών, όπως:
+α) διαχείριση αλλαγών και εκδόσεων,  
+β) αξιολόγηση εξαρτήσεων/βιβλιοθηκών τρίτων στο μέτρο του δυνατού,  
+γ) δοκιμές πριν από κυκλοφορία ενημερώσεων,  
+δ) διόρθωση σφαλμάτων/ευπαθειών εντός εύλογου χρόνου, ανάλογα με τον κίνδυνο.
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 2.8. Καταγραφή Συμβάντων και Παρακολούθηση
+Η Εταιρεία δύναται να συλλέγει τεχνικά αρχεία καταγραφής (logs) για:
+α) ασφάλεια, πρόληψη απάτης, ανίχνευση κακόβουλων ενεργειών,  
+β) διάγνωση σφαλμάτων και βελτίωση σταθερότητας,  
+γ) συμμόρφωση με νόμιμα αιτήματα αρμόδιων αρχών.  
+Τα logs περιορίζονται στο αναγκαίο και τηρούνται για όσο απαιτείται για τους ανωτέρω σκοπούς, σύμφωνα με τις εσωτερικές πολιτικές και τις υποχρεωτικές νομικές απαιτήσεις.
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 2.9. Αντίγραφα Ασφαλείας – Ανάκτηση
+Η Εταιρεία ενδέχεται να εφαρμόζει διαδικασίες αντιγράφων ασφαλείας/ανάκτησης για κρίσιμα συστήματα, αναλόγως αρχιτεκτονικής. Ο Χρήστης παραμένει υπεύθυνος να τηρεί ανεξάρτητα αντίγραφα όπου αυτό είναι κρίσιμο για τον ίδιο, ιδίως όταν η Εφαρμογή παρέχει λειτουργία εξαγωγής ή όταν τα δεδομένα αποθηκεύονται τοπικά στη συσκευή.
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 2.10. Διαχείριση Περιστατικών Ασφάλειας
+Η Εταιρεία διατηρεί διαδικασίες για:
+α) αναγνώριση, αξιολόγηση και κατηγοριοποίηση περιστατικών,  
+β) περιορισμό και αποκατάσταση,  
+γ) τεκμηρίωση και βελτίωση,  
+δ) επικοινωνία με χρήστες/αρχές όπου απαιτείται από το εφαρμοστέο δίκαιο.  
+Αναφορές περιστατικών από χρήστες υποβάλλονται στο [EMAIL ΥΠΟΣΤΗΡΙΞΗΣ] με θέμα «Security Incident».
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 2.11. Ασφάλεια Συσκευής Χρήστη
+Η ασφάλεια επηρεάζεται από τη συσκευή/λειτουργικό του Χρήστη. Ο Χρήστης οφείλει να:
+α) διατηρεί ενημερωμένο λειτουργικό και εφαρμογές,  
+β) χρησιμοποιεί ισχυρό κλείδωμα συσκευής,  
+γ) αποφεύγει εγκατάσταση από μη επίσημες πηγές,  
+δ) ελέγχει δικαιώματα ειδοποιήσεων/αποθήκευσης και να αποφεύγει jailbreaking/rooting,  
+ε) προστατεύει τον λογαριασμό email/αριθμό τηλεφώνου (αν χρησιμοποιείται) και τις ανακτήσεις.
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 2.12. Διαχείριση Προμηθευτών (Third Parties)
+Όπου η λειτουργία της Εφαρμογής απαιτεί τρίτους παρόχους, η Εταιρεία επιδιώκει να:
+α) αξιολογεί βασικούς κινδύνους,  
+β) συνάπτει συμβατικές δεσμεύσεις εμπιστευτικότητας και ασφάλειας όπου είναι εφικτό,  
+γ) περιορίζει την κοινοποίηση δεδομένων στο αναγκαίο.
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 2.13. Διατήρηση και Διαγραφή Δεδομένων
+Η διατήρηση δεδομένων γίνεται για όσο:
+α) απαιτείται για την παροχή της υπηρεσίας,  
+β) απαιτείται για έννομες υποχρεώσεις, άσκηση/υποστήριξη νομικών αξιώσεων, ή πρόληψη απάτης/κατάχρησης,  
+γ) προβλέπεται από τις ρυθμίσεις λογαριασμού/αιτήματα διαγραφής, όπου εφαρμόζει.  
+Η διαγραφή μπορεί να είναι τεχνικά σταδιακή (π.χ. από αντίγραφα ασφαλείας) εντός εύλογου χρόνου.
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 2.14. Αλλαγές της Πολιτικής Ασφαλείας
+Η Εταιρεία δύναται να τροποποιεί την παρούσα Πολιτική για λόγους βελτίωσης, συμμόρφωσης ή τεχνικών αλλαγών. Η επικαιροποιημένη έκδοση θα είναι διαθέσιμη εντός της Εφαρμογής ή/και στον ιστότοπο.
+</div>
+</div>
+</div>
+
+
+---
+
+ 3. Όροι Παροχής Υπηρεσιών (Terms of Service) για την «Vehicle Man»
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 3.1. Αντικείμενο της Σύμβασης
+Οι παρόντες Όροι Παροχής Υπηρεσιών (εφεξής «Όροι Υπηρεσιών») ρυθμίζουν την παροχή ψηφιακών υπηρεσιών/λειτουργιών της Εφαρμογής «Vehicle Man» από τη Modicofactor S.S.A. προς τον Χρήστη, συμπεριλαμβανομένων δωρεάν και Premium λειτουργιών, υποστήριξης, ενημερώσεων και κάθε συναφούς υπηρεσίας.
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 3.2. Ιεραρχία Εγγράφων
+Σε περίπτωση ασυμφωνίας, υπερισχύουν κατά σειρά:
+α) ειδικοί όροι που εμφανίζονται σε οθόνες αγοράς/συνδρομής ή σε έγγραφη συμφωνία,  
+β) οι παρόντες Όροι Υπηρεσιών,  
+γ) οι Όροι Χρήσης,  
+δ) η Πολιτική Ασφαλείας,  
+ε) λοιπές πολιτικές/οδηγίες εντός της Εφαρμογής.  
+Οι αναγκαστικές διατάξεις προστασίας καταναλωτή υπερισχύουν σε κάθε περίπτωση.
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 3.3. Έκταση Υπηρεσιών – Επίπεδο Υπηρεσιών
+Η Εταιρεία καταβάλλει εύλογες προσπάθειες για τη διαθεσιμότητα της Εφαρμογής, χωρίς να εγγυάται συγκεκριμένο ποσοστό uptime, εκτός αν συμφωνηθεί διαφορετικά εγγράφως. Ενδέχεται να πραγματοποιούνται εργασίες συντήρησης που προκαλούν προσωρινή μη διαθεσιμότητα.
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 3.4. Υποστήριξη
+Η Εταιρεία δύναται να παρέχει υποστήριξη μέσω email ή άλλων καναλιών που ανακοινώνονται εντός της Εφαρμογής.  
+Χρόνοι απόκρισης δεν είναι εγγυημένοι, εκτός αν συμφωνηθεί διαφορετικά. Η υποστήριξη μπορεί να εξαρτάται από τον τύπο λογαριασμού (δωρεάν/Premium).
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 3.5. Δοκιμαστικές Περίοδοι και Προσφορές
+Αν προσφέρονται δοκιμαστικές περίοδοι ή προωθητικές τιμές, οι όροι τους (διάρκεια, αυτόματη ανανέωση, προϋποθέσεις) θα αναφέρονται κατά την ενεργοποίηση. Ο Χρήστης οφείλει να ακυρώσει εγκαίρως μέσω του αντίστοιχου καταστήματος εφαρμογών για να αποφύγει χρέωση, εφόσον προβλέπεται αυτόματη ανανέωση.
+<div class="legal-box">
+<div class="section-inner">
+<div cla<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+ss="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+
+ 3.6. Τιμολόγηση – Φόροι
+Οι τιμές εμφανίζονται στο νόμισμα και με τους φόρους/επιβαρύνσεις όπως καθορίζονται από το κατάστημα εφαρμογών ή/και τη χώρα του Χρήστη. Η Εταιρεία δεν ευθύνεται για χρεώσεις μετατροπής νομίσματος, προμήθειες τραπεζών ή επιβαρύνσεις τρίτων.
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 3.7. Ανανέωση Συνδρομών – Ακύρωση
+Οι συνδρομές ανανεώνονται σύμφωνα με τους όρους του καταστήματος εφαρμογών/παρόχου πληρωμών. Η ακύρωση γίνεται μέσω των ρυθμίσεων συνδρομών του αντίστοιχου παρόχου και ισχύει από την επόμενη περίοδο χρέωσης, εκτός αν ορίζεται διαφορετικά.
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 3.8. Παράδοση Ψηφιακού Περιεχομένου/Υπηρεσιών
+Η πρόσβαση σε Premium λειτουργίες παρέχεται συνήθως άμεσα μετά την επιτυχή επιβεβαίωση πληρωμής από τον πάροχο πλατφόρμας. Η Εταιρεία δεν ευθύνεται για καθυστερήσεις επιβεβαίωσης πληρωμής που οφείλονται σε τρίτους.
+<div class="legal-box">
+<div class="section-inner">
+<div class<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+
+ 3.9. Επιστροφές Χρημάτων
+Αιτήματα επιστροφής διεκπεραιώνονται σύμφωνα με τις πολιτικές του καταστήματος εφαρμογών/παρόχου πληρωμών και τις αναγκαστικές διατάξεις του εφαρμοστέου δικαίου. Όπου ο πάροχος πλατφόρμας επιτρέπει ο Χρήστης να υποβάλει αίτημα απευθείας, η Εταιρεία δύναται να ζητήσει στοιχεία συναλλαγής για διερεύνηση.
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 3.10. Δεδομένα – Φορητότητα – Εξαγωγή
+Η Εταιρεία μπορεί να παρέχει λειτουργίες εξαγωγής/εισαγωγής δεδομένων. Η διαθεσιμότητα και το εύρος εξαρτώνται από την εκάστοτε έκδοση. Ο Χρήστης αναγνωρίζει ότι:
+α) η φορητότητα μπορεί να έχει τεχνικούς περιορισμούς,  
+β) η Εταιρεία δεν ευθύνεται για απώλειες που οφείλονται σε ακατάλληλη εξαγωγή/εισαγωγή ή σε ασυμβατότητα.
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 3.11. Συμμόρφωση Χρήστη – Απαγόρευση Κατάχρησης
+Ο Χρήστης υποχρεούται να χρησιμοποιεί τις υπηρεσίες σύμφωνα με τους Όρους και να μην καταχράται υποδομές ή Premium μηχανισμούς (π.χ. παρακάμψεις, κοινή χρήση λογαριασμού κατά παράβαση πολιτικών, μη εξουσιοδοτημένη μεταπώληση πρόσβασης).
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 3.12. Αναστολή Υπηρεσιών για Λόγους Ασφάλειας/Συμμόρφωσης
+Η Εταιρεία δύναται να αναστείλει προσωρινά υπηρεσίες ή λογαριασμό όταν:
+α) απαιτείται για αποτροπή/διερεύνηση απάτης ή κακόβουλων ενεργειών,  
+β) υπάρχει απαίτηση αρμόδιας αρχής,  
+γ) υπάρχει σοβαρός τεχνικός κίνδυνος,  
+δ) υπάρχει ουσιώδης παραβίαση των Όρων.  
+Η Εταιρεία θα καταβάλλει εύλογες προσπάθειες αποκατάστασης και ενημέρωσης, όπου είναι εφικτό.
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 3.13. Εμπιστευτικότητα
+Τυχόν μη δημόσιες πληροφορίες σχετικά με λειτουργίες, τιμολόγηση, επιχειρησιακές διαδικασίες, τεχνικές προδιαγραφές ή επικοινωνίες υποστήριξης που χαρακτηρίζονται εύλογα ως εμπιστευτικές δεν επιτρέπεται να αποκαλύπτονται σε τρίτους χωρίς έγγραφη άδεια, εκτός αν απαιτείται από νόμο.
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 3.14. Αποποίηση Εγγυήσεων Υπηρεσιών
+Οι υπηρεσίες παρέχονται χωρίς εγγύηση καταλληλότητας για συγκεκριμένο σκοπό, εμπορευσιμότητας ή μη παραβίασης, στο μέτρο που επιτρέπεται. Η Εταιρεία δεν εγγυάται ότι οι υπηρεσίες θα καλύψουν ειδικές ανάγκες του Χρήστη (π.χ. εταιρικά πρωτόκολλα στόλου, κανονιστικές απαιτήσεις συγκεκριμένου κλάδου).
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 3.15. Ευθύνη – Ανώτερη Βία
+Η Εταιρεία δεν ευθύνεται για αδυναμία ή καθυστέρηση παροχής υπηρεσιών λόγω γεγονότων εκτός εύλογου ελέγχου της (π.χ. διακοπές παρόχων cloud, γενικευμένες διακοπές δικτύου, κυβερνοεπιθέσεις, αποφάσεις πλατφορμών, φυσικές καταστροφές, απεργίες, πόλεμος, κυβερνητικά μέτρα).  
+Οι περιορισμοί ευθύνης των Όρων Χρήσης εφαρμόζονται και στους παρόντες.
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 3.16. Διάρκεια – Λύση
+Η σύμβαση ισχύει από την πρώτη χρήση της Εφαρμογής και διαρκεί έως τη διαγραφή/τερματισμό. Οι Premium συνδρομές ισχύουν για τη διάρκεια που δηλώνεται κατά την αγορά και ανανεώνονται/λήγουν σύμφωνα με τους όρους του παρόχου πλατφόρμας και τις επιλογές του Χρήστη.
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 3.17. Εφαρμοστέο Δίκαιο – Δικαιοδοσία
+Ισχύει η ρήτρα εφαρμοστέου δικαίου και δικαιοδοσίας των Όρων Χρήσης και εφαρμόζεται αναλογικά στους παρόντες Όρους Υπηρεσιών.
+</div>
+</div>
+</div>
+
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+ 3.18. Τελικές Διατάξεις
+Οι παρόντες Όροι Υπηρεσιών, μαζί με τους Όρους Χρήσης και την Πολιτική Ασφαλείας, αποτελούν ενιαίο πλαίσιο συμφωνίας.  
+Τυχόν τίτλοι ενοτήτων τίθενται για διευκόλυνση και δεν επηρεάζουν την ερμηνεία.
+</div>
+</div>
+</div>
+
+
+---
+
+ 4. Στοιχεία Έκδοσης
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
+
+Ημερομηνία τελευταίας ενημέρωσης: 12/05/2026  
+Έκδοση: [0001/20260512]
+</div>
+</div>
+</div>
+</section>
+
+<footer class="footer-legal">
+LAST UPDATED: 12 MAY 2026 • VERSION 0001/20260512
+<br><br>
+MODICOFACTOR S.S.A. LEGAL COMPLIANCE DIVISION
+</footer>
+
+</main>
+
+<script>
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+menuBtn.addEventListener('click', () => {
+mobileMenu.classList.toggle('hidden');
+});
+
+document.addEventListener('click', function(event){
+const isClickInside = mobileMenu.contains(event.target) || menuBtn.contains(event.target);
+if(!isClickInside){
+mobileMenu.classList.add('hidden');
+}
+});
+</script>
+
 </body>
 </html>
+
+ 
