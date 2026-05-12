@@ -3,223 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal Notes | Vehicle Man & ModiCofactor S.S.A.</title>
+    <title>Comprehensive Legal Framework | ModiCofactor S.S.A.</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
-        body { background-color: #020617; color: #94a3b8; font-family: 'Inter', sans-serif; overflow-x: hidden; }
-        .main-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.95)), url('Background_wall.jpg'); background-size: cover; z-index: -1; }
-        .nav-glass { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
-        .deep-glass { background: rgba(15, 23, 42, 0.75) !important; backdrop-filter: blur(25px) saturate(180%) !important; }
-        .legal-card { background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255,255,255,0.05); padding: 40px; border-radius: 20px; margin-bottom: 30px; }
-        h2 { color: #3b82f6; font-size: 1.25rem; font-weight: 800; text-transform: uppercase; margin-bottom: 20px; border-left: 4px solid #3b82f6; padding-left: 15px; }
-        h3 { color: #f1f5f9; font-size: 1rem; font-weight: 700; margin-top: 20px; margin-bottom: 10px; }
-        p, li { font-size: 0.85rem; text-align: justify; line-height: 1.7; margin-bottom: 1rem; }
-        .lang-grid { display: grid; grid-template-cols: 1fr; gap: 40px; }
-        @media (min-width: 1024px) { .lang-grid { grid-template-cols: 1fr 1fr; } }
-        .clause-ref { font-family: monospace; color: #60a5fa; font-size: 0.7rem; display: block; margin-bottom: 5px; }
-        strong { color: #f1f5f9; }
-        .section-header { margin-top: 60px; margin-bottom: 30px; text-align: center; }
-        .section-header h1 { font-size: 2rem; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: 0.2em; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { background-color: #020617; color: #94a3b8; font-family: 'Inter', sans-serif; line-height: 1.5; }
+        .legal-container { max-width: 1100px; margin: 0 auto; padding: 120px 20px; }
+        .paper-effect { background: rgba(15, 23, 42, 0.8); border: 1px solid #1e293b; padding: 50px; border-radius: 4px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); }
+        h1 { color: #f8fafc; font-size: 2.5rem; font-weight: 800; margin-bottom: 40px; border-bottom: 4px solid #3b82f6; display: inline-block; }
+        h2 { color: #3b82f6; font-size: 1.2rem; font-weight: 700; margin-top: 40px; margin-bottom: 20px; text-transform: uppercase; border-left: 3px solid #3b82f6; padding-left: 15px; }
+        h3 { color: #e2e8f0; font-size: 1rem; font-weight: 600; margin-top: 20px; }
+        p, li { font-size: 0.8rem; text-align: justify; margin-bottom: 12px; }
+        .lang-grid { display: grid; grid-template-cols: 1fr 1fr; gap: 40px; }
+        .divider { height: 1px; background: #1e293b; margin: 40px 0; }
+        .clause-number { color: #3b82f6; font-weight: 800; margin-right: 5px; }
+        .legal-ref { color: #60a5fa; font-family: monospace; font-size: 0.75rem; }
     </style>
 </head>
 <body>
-    <div class="main-bg"></div>
 
-    <nav class="nav-glass fixed w-full z-[200]">
-        <div class="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
-            <div class="flex items-center">
-                <button id="menu-btn" class="block md:hidden text-white focus:outline-none p-2 mr-4">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-                <a href="index.html#home" class="flex items-center shrink-0 transition hover:opacity-80">
-                    <img src="Vehicle_man_logo.jpg" alt="Vehicle Man Logo" class="h-8 md:h-10 w-auto object-contain rounded-lg">
-                </a>
-            </div>
-            
-            <div class="hidden md:flex flex-grow justify-center items-center space-x-8 text-xs font-bold uppercase tracking-widest whitespace-nowrap">
-                <a href="index.html#home" class="hover:text-blue-400 transition">Αρχική</a>
-                <a href="company.html" class="hover:text-blue-400 transition">Η Εταιρεία μας</a>
-                <a href="legal.html" class="text-blue-400 transition underline decoration-2 underline-offset-8">Legal Notes</a>
-                <a href="promode.html" class="hover:text-blue-400 transition">Pro Mode</a>
-                <a href="manual.html" class="text-yellow-500 hover:text-yellow-400 transition">ΕΓΧΕΙΡΙΔΙΟ ΧΡΗΣΗΣ</a>
-                <a href="index.html#contact" class="text-blue-400 hover:text-white transition">Επικοινωνία</a>
-            </div>
-            
-            <button class="hidden md:block bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-full text-[10px] font-bold transition shrink-0 ml-4">LATEST VERSION</button>
-        </div>
-        
-        <div id="mobile-menu" class="hidden absolute top-[75px] left-4 right-4 deep-glass border-2 border-blue-500/50 shadow-2xl z-[210] rounded-[2rem]">
-            <div class="flex flex-col p-8 space-y-6 text-[13px] font-bold uppercase tracking-[0.15em] text-white">
-                <a href="index.html#home" class="mobile-link flex items-center gap-3"><i class="fas fa-home w-5 text-blue-500"></i> Αρχική</a>
-                <a href="company.html" class="mobile-link flex items-center gap-3"><i class="fas fa-building w-5 text-blue-500"></i> Η Εταιρεία μας</a>
-                <a href="legal.html" class="mobile-link flex items-center gap-3 text-blue-400"><i class="fas fa-file-contract w-5"></i> Legal Notes</a>
-                <a href="promode.html" class="mobile-link flex items-center gap-3"><i class="fas fa-crown w-5 text-blue-500"></i> Pro Mode</a>
-                <a href="manual.html" class="mobile-link flex items-center gap-3 text-yellow-500"><i class="fas fa-book w-5"></i> Εγχειρίδιο</a>
-                <a href="index.html#contact" class="mobile-link flex items-center gap-3"><i class="fas fa-envelope w-5 text-blue-500"></i> Επικοινωνία</a>
-            </div>
-        </div>
-    </nav>
+    <div class="legal-container">
+        <div class="paper-effect">
+            <header class="text-center mb-10">
+                <h1>LEGAL COMPLIANCE & PRIVACY FRAMEWORK</h1>
+                <p class="text-xs font-mono uppercase tracking-[0.3em]">Vehicle Man Ecosystem • Version 2026.1.A</p>
+                <p class="text-xs mt-2 text-slate-500 italic">Αυτή η σελίδα αποτελεί δεσμευτική νομική συμφωνία μεταξύ της ModiCofactor S.S.A. και του Τελικού Χρήστη.</p>
+            </header>
 
-    <main class="max-w-7xl mx-auto px-4 md:px-8 pt-32 pb-20">
-        
-        <div class="section-header">
-            <h1>1. Όροι Χρήσης Εφαρμογής «Vehicle Man»</h1>
-        </div>
+            <div class="divider"></div>
 
-        <div class="legal-card">
             <div class="lang-grid">
                 <div>
-                    <h2>1.1. Ταυτότητα Παρόχου – Επικοινωνία</h2>
-                    <p>Η παρούσα εφαρμογή για κινητές συσκευές με την ονομασία «Vehicle Man» (εφεξής η «Εφαρμογή») ανήκει και τελεί υπό τη διαχείριση της εταιρείας «Modicofactor S.S.A.» (εφεξής η «Εταιρεία», «εμείς», «μας»).</p>
-                    <p><strong>Στοιχεία επικοινωνίας:</strong><br>
-                    Επωνυμία: Modicofactor S.S.A.<br>
-                    Έδρα/Διεύθυνση: [ΑΘΗΝΑ, ΕΛΛΑΔΑ]<br>
-                    Email υποστήριξης: vehiclemanagement@duck.com<br>
-                    Ιστότοπος: https://vehiclemanagerapp.github.io/vma/</p>
-
-                    <h2>1.2. Αποδοχή – Δεσμευτικότητα</h2>
-                    <p>Με τη λήψη, εγκατάσταση, πρόσβαση ή/και χρήση της Εφαρμογής, ο χρήστης δηλώνει ότι διάβασε, κατανόησε και αποδέχεται ανεπιφύλακτα τους παρόντες Όρους Χρήσης. Αν δεν συμφωνείτε, δεν επιτρέπεται να χρησιμοποιείτε την Εφαρμογή.</p>
+                    <h2>1. Ταυτότητα & Πεδίο Εφαρμογής</h2>
+                    <p><span class="clause-number">1.1</span> Η εφαρμογή λογισμικού "Vehicle Man" αναπτύσσεται και παρέχεται από την εταιρεία <strong>ModiCofactor S.S.A. (Smartphone Software Assembly)</strong>. Οι παρόντες όροι διέπουν τη χρήση της εφαρμογής σε παγκόσμιο επίπεδο, συμμορφούμενοι με τις διατάξεις του Ελληνικού Αστικού Κώδικα και τις Οδηγίες της ΕΕ.</p>
+                    <p><span class="clause-number">1.2</span> Η εγκατάσταση και χρήση της εφαρμογής συνιστά ρητή και ανεπιφύλακτη αποδοχή των όρων χρήσης (EULA - End User License Agreement).</p>
                 </div>
                 <div>
-                    <h2>1.1. Provider Identity – Contact</h2>
-                    <p>The mobile application named "Vehicle Man" is owned and managed by "Modicofactor S.S.A.". All rights reserved.</p>
-                    <p><strong>Contact Details:</strong><br>
-                    Company: Modicofactor S.S.A.<br>
-                    Location: [ATHENS, GREECE]<br>
-                    Support Email: vehiclemanagement@duck.com<br>
-                    URL: https://vehiclemanagerapp.github.io/vma/</p>
-
-                    <h2>1.2. Acceptance – Binding Agreement</h2>
-                    <p>By downloading, installing, or using the App, the user declares full acceptance of these Terms of Use. If you do not agree, you are not authorized to use the Application.</p>
+                    <h2>1. Identity & Scope</h2>
+                    <p><span class="clause-number">1.1</span> The "Vehicle Man" software application is developed and provided by <strong>ModiCofactor S.S.A. (Smartphone Software Assembly)</strong>. These terms govern the use of the application globally, complying with the provisions of the Greek Civil Code and EU Directives.</p>
+                    <p><span class="clause-number">1.2</span> Installation and use of the application constitute express and unconditional acceptance of these terms of use (EULA - End User License Agreement).</p>
                 </div>
             </div>
-        </div>
 
-        <div class="legal-card">
             <div class="lang-grid">
                 <div>
-                    <h2>1.4. Περιγραφή και Σκοπός</h2>
-                    <p>Η Εφαρμογή παρέχει λειτουργίες καταχώρησης οχημάτων, εξόδων, υπενθυμίσεων και στατιστικών στοιχείων. Δεν παρέχει νομικές, τεχνικές ή μηχανολογικές συμβουλές. Τυχόν αποτελέσματα έχουν ενημερωτικό χαρακτήρα και ο Χρήστης οφείλει να επαληθεύει την ακρίβεια τους.</p>
-                    
-                    <h2>1.6. Άδεια Χρήσης – Επιτρεπτή Χρήση</h2>
-                    <p>Παρέχεται μια περιορισμένη, μη αποκλειστική άδεια χρήσης. Απαγορεύεται η χρήση για παράνομους σκοπούς, η αντιγραφή, η αποσυμπίληση (reverse engineering) ή η χρήση bots/scrapers.</p>
-                    
-                    <h2>1.7. Πνευματική Ιδιοκτησία</h2>
-                    <p>Το λογισμικό, ο κώδικας, τα γραφικά, οι αλγόριθμοι και τα λογότυπα αποτελούν αποκλειστική ιδιοκτησία της Modicofactor S.S.A. και προστατεύονται από το διεθνές δίκαιο πνευματικής ιδιοκτησίας.</p>
+                    <h2>2. Πνευματική Ιδιοκτησία</h2>
+                    <p class="legal-ref">[Νόμος 2121/1993, Οδηγία 2009/24/ΕΚ]</p>
+                    <p><span class="clause-number">2.1</span> Το λογισμικό προστατεύεται ως έργο πνευματικής ιδιοκτησίας. Η ModiCofactor S.S.A. διατηρεί όλους τους τίτλους κυριότητας επί του πηγαίου κώδικα (Source Code), των αλγορίθμων "Greeklish Engine", των γραφικών διεπαφών (UI/UX) και των εμπορικών σημάτων.</p>
+                    <p><span class="clause-number">2.2</span> Απαγορεύεται η αντίστροφη μηχανική (Reverse Engineering), η αποσυμπίληση (Decompilation) και η τροποποίηση του λογισμικού, εκτός εάν επιτρέπεται ρητά από το άρθρο 5 της Οδηγίας 2009/24/ΕΚ για σκοπούς διαλειτουργικότητας.</p>
                 </div>
                 <div>
-                    <h2>1.4. Description and Purpose</h2>
-                    <p>The App offers vehicle management features, expense tracking, and reminders. It does not provide professional engineering or legal advice. Information is for reference only; users must verify accuracy manually.</p>
-                    
-                    <h2>1.6. License – Permitted Use</h2>
-                    <p>A limited, non-exclusive license is granted. Prohibited actions include reverse engineering, illegal use, or unauthorized commercial redistribution.</p>
-                    
-                    <h2>1.7. Intellectual Property</h2>
-                    <p>The App's source code, UI/UX, algorithms, and branding are the exclusive property of Modicofactor S.S.A. Protected under IP Law and international treaties.</p>
+                    <h2>2. Intellectual Property</h2>
+                    <p class="legal-ref">[Greek Law 2121/1993, Directive 2009/24/EC]</p>
+                    <p><span class="clause-number">2.1</span> The software is protected as a work of intellectual property. ModiCofactor S.S.A. retains all ownership titles to the Source Code, "Greeklish Engine" algorithms, graphical interfaces (UI/UX), and trademarks.</p>
+                    <p><span class="clause-number">2.2</span> Reverse engineering, decompilation, and modification of the software are strictly prohibited, unless expressly permitted by Article 5 of Directive 2009/24/EC for interoperability purposes.</p>
                 </div>
             </div>
-        </div>
 
-        <div class="legal-card bg-blue-500/5">
             <div class="lang-grid">
                 <div>
-                    <h2>1.9. Αυτόματες Υπενθυμίσεις</h2>
-                    <p>Οι ειδοποιήσεις ενδέχεται να καθυστερήσουν ή να μην εμφανιστούν λόγω ρυθμίσεων συσκευής, δικτύου ή εξοικονόμησης μπαταρίας. Η Εταιρεία δεν εγγυάται την αδιάλειπτη παράδοση. Ο Χρήστης οφείλει να διατηρεί εναλλακτικούς τρόπους ελέγχου προθεσμιών (ΚΤΕΟ, Ασφάλεια κ.λπ.).</p>
-                    
-                    <h2>1.16. Περιορισμός Ευθύνης</h2>
-                    <p>Η Εταιρεία δεν ευθύνεται για έμμεσες ζημίες, απώλεια δεδομένων ή κερδών. Η συνολική ευθύνη περιορίζεται στο ποσό που καταβλήθηκε τους τελευταίους 12 μήνες ή στα 100€ (όποιο είναι υψηλότερο).</p>
+                    <h2>3. Προστασία Δεδομένων (GDPR)</h2>
+                    <p class="legal-ref">[Κανονισμός (ΕΕ) 2016/679, Νόμος 4624/2019]</p>
+                    <p><span class="clause-number">3.1 Υπεύθυνος Επεξεργασίας:</span> Σύμφωνα με το <strong>Άρθρο 4, παράγραφος 7 του GDPR</strong>, ο Χρήστης της εφαρμογής ορίζεται ως ο μοναδικός "Υπεύθυνος Επεξεργασίας" (Data Controller) των δεδομένων που εισάγει. Η ModiCofactor S.S.A. δεν ενεργεί ως Υπεύθυνος ούτε ως Εκτελών την Επεξεργασία, καθώς δεν διαθέτει πρόσβαση στα δεδομένα.</p>
+                    <p><span class="clause-number">3.2 Local-First Architecture:</span> Η επεξεργασία δεδομένων πραγματοποιείται αποκλειστικά εντός της συσκευής (On-device processing). Δεν υφίσταται διαβίβαση δεδομένων σε τρίτες χώρες ή διεθνείς οργανισμούς (Άρθρα 44-49 GDPR).</p>
+                    <p><span class="clause-number">3.3 Δικαιώματα Υποκειμένου:</span> Ο χρήστης ασκεί τα δικαιώματα πρόσβασης, διόρθωσης και διαγραφής (Άρθρα 15, 16, 17 GDPR) απευθείας μέσω του περιβάλλοντος της εφαρμογής, διαγράφοντας τοπικά τις εγγραφές ή την ίδια την εφαρμογή.</p>
                 </div>
                 <div>
-                    <h2>1.9. Automated Reminders</h2>
-                    <p>Push notifications may fail due to OS settings, network issues, or battery optimizations. The Company is not liable for missed deadlines. Users must maintain manual backup schedules for critical tasks.</p>
-                    
-                    <h2>1.16. Limitation of Liability</h2>
-                    <p>The Company is not liable for indirect damages or data loss. Total liability is capped at the amount paid in the last 12 months or €100 (whichever is greater).</p>
+                    <h2>3. Data Protection (GDPR)</h2>
+                    <p class="legal-ref">[Regulation (EU) 2016/679, Law 4624/2019]</p>
+                    <p><span class="clause-number">3.1 Data Controller:</span> In accordance with <strong>Article 4(7) of the GDPR</strong>, the User of the application is defined as the sole "Data Controller" of the entered data. ModiCofactor S.S.A. acts neither as a Controller nor as a Processor, as it has no access to the data.</p>
+                    <p><span class="clause-number">3.2 Local-First Architecture:</span> Data processing occurs exclusively on-device. There is no transfer of data to third countries or international organizations (Articles 44-49 GDPR).</p>
+                    <p><span class="clause-number">3.3 Data Subject Rights:</span> The user exercises rights of access, rectification, and erasure (Articles 15, 16, 17 GDPR) directly through the application interface by deleting records or the application itself.</p>
                 </div>
             </div>
-        </div>
 
-        <div class="section-header">
-            <h1>2. Πολιτική Ασφαλείας Πληροφοριών</h1>
-        </div>
-
-        <div class="legal-card">
             <div class="lang-grid">
                 <div>
-                    <span class="clause-ref">Security by Design</span>
-                    <h2>2.3. Αρχές Ασφάλειας</h2>
-                    <p>Η Modicofactor S.S.A. εφαρμόζει μέτρα ελαχιστοποίησης πρόσβασης, διαχωρισμού καθηκόντων και άμυνας σε βάθος. Η ασφάλεια είναι ενσωματωμένη εξ αρχής (security by design).</p>
-                    
-                    <h2>2.11. Ασφάλεια Συσκευής Χρήστη</h2>
-                    <p>Ο Χρήστης φέρει την ευθύνη για την ασφάλεια της συσκευής του (PIN, Biometrics). Απαγορεύεται η χρήση της εφαρμογής σε συσκευές με jailbreaking/rooting καθώς εκθέτουν τα δεδομένα σε κίνδυνο.</p>
+                    <h2>4. Τεχνική Ασφάλεια & Αποθήκευση</h2>
+                    <p class="legal-ref">[Οδηγία (ΕΕ) 2022/2555 - NIS 2]</p>
+                    <p><span class="clause-number">4.1 Application Sandboxing:</span> Το λογισμικό συμμορφώνεται με τα πρότυπα ασφαλείας του λειτουργικού συστήματος Android. Τα δεδομένα αποθηκεύονται στον κατάλογο `/data/user/0/com.vehicleman/databases/`, ο οποίος προστατεύεται από SE Linux Policies και UID-based isolation.</p>
+                    <p><span class="clause-number">4.2 Encryption:</span> Η εφαρμογή προτρέπει τον χρήστη να χρησιμοποιεί τις ενσωματωμένες δυνατότητες κρυπτογράφησης του συστήματος (File-Based Encryption - FBE).</p>
+                    <p><span class="clause-number">4.3 Backup:</span> Η ευθύνη για τη δημιουργία αντιγράφων ασφαλείας βαρύνει αποκλειστικά τον χρήστη (Local Export Feature).</p>
                 </div>
                 <div>
-                    <span class="clause-ref">Security by Design</span>
-                    <h2>2.3. Security Principles</h2>
-                    <p>Implementation of least privilege, defense in depth, and security-by-design to ensure data integrity and confidentiality.</p>
-                    
-                    <h2>2.11. User Device Security</h2>
-                    <p>Users are responsible for device-level security (PIN/Biometrics). Usage on jailbroken or rooted devices is strictly discouraged as it compromises the App's sandbox environment.</p>
+                    <h2>4. Technical Security & Storage</h2>
+                    <p class="legal-ref">[Directive (EU) 2022/2555 - NIS 2]</p>
+                    <p><span class="clause-number">4.1 Application Sandboxing:</span> The software complies with Android OS security standards. Data is stored in the directory `/data/user/0/com.vehicleman/databases/`, protected by SE Linux Policies and UID-based isolation.</p>
+                    <p><span class="clause-number">4.2 Encryption:</span> The application encourages the user to utilize the system's built-in encryption features (File-Based Encryption - FBE).</p>
+                    <p><span class="clause-number">4.3 Backup:</span> The responsibility for creating backups lies solely with the user (Local Export Feature).</p>
                 </div>
             </div>
-        </div>
 
-        <div class="section-header">
-            <h1>3. Όροι Παροχής Υπηρεσιών</h1>
-        </div>
-
-        <div class="legal-card">
             <div class="lang-grid">
                 <div>
-                    <h2>3.11. Συμμόρφωση – Απαγόρευση Κατάχρησης</h2>
-                    <p>Ο Χρήστης υποχρεούται να μην καταχράται τις υποδομές ή τους Premium μηχανισμούς. Η Εταιρεία δύναται να αναστείλει την πρόσβαση σε περίπτωση υποψίας απάτης ή κακόβουλης ενέργειας.</p>
-                    
-                    <h2>3.17. Εφαρμοστέο Δίκαιο & Δικαιοδοσία</h2>
-                    <p>Οι παρόντες Όροι διέπονται από το δίκαιο της Ελλάδας. Αρμόδια για την επίλυση διαφορών είναι τα δικαστήρια των Αθηνών.</p>
+                    <h2>5. Περιορισμός Ευθύνης & Δίκαιο Καταναλωτή</h2>
+                    <p class="legal-ref">[Οδηγία (ΕΕ) 2019/770]</p>
+                    <p><span class="clause-number">5.1</span> Η ModiCofactor S.S.A. παρέχει ψηφιακό περιεχόμενο "ως έχει". Σύμφωνα με την Οδηγία 2019/770, η εταιρεία εγγυάται τη συμμόρφωση του λογισμικού με τις προδιαγραφές κατά τον χρόνο παράδοσης.</p>
+                    <p><span class="clause-number">5.2</span> Δεν αναλαμβάνεται καμία ευθύνη για ζημίες (θετικές ή αποθετικές) που προκύπτουν από λανθασμένη εισαγωγή δεδομένων, απώλεια συσκευής, ή αστοχία του υλικού (hardware).</p>
                 </div>
                 <div>
-                    <h2>3.11. Compliance – Anti-Abuse</h2>
-                    <p>Users must not abuse infrastructures or Premium features. We reserve the right to suspend accounts suspected of fraudulent or malicious activity.</p>
-                    
-                    <h2>3.17. Governing Law & Jurisdiction</h2>
-                    <p>These terms are governed by Greek Law. Any disputes shall be resolved exclusively in the courts of Athens, Greece.</p>
+                    <h2>5. Liability & Consumer Law</h2>
+                    <p class="legal-ref">[Directive (EU) 2019/770]</p>
+                    <p><span class="clause-number">5.1</span> ModiCofactor S.S.A. provides digital content on an "as-is" basis. Pursuant to Directive 2019/770, the company guarantees software conformity with specifications at the time of delivery.</p>
+                    <p><span class="clause-number">5.2</span> No liability is assumed for damages (direct or consequential) arising from incorrect data entry, device loss, or hardware failure.</p>
                 </div>
             </div>
+
+            <div class="divider"></div>
+
+            <footer class="text-[10px] text-slate-600 uppercase tracking-widest text-center">
+                ModiCofactor S.S.A. Legal Department • Registered in Athens, Greece • Jurisdiction: Athens Courts
+            </footer>
         </div>
-            <h1> 4. Στοιχεία Έκδοσης</h1>
-        </div>
+    </div>
 
-        <div class="legal-card">
-            <div class="lang-grid">
-                <div>
-                    <h2> Ημερομηνία τελευταίας ενημέρωσης: 12/05/2026  </h2>
-                    <p> Έκδοση: [0001/20260512]</p>
-                </div>
-            </div>
-        </div>
-
-        <footer class="text-center py-20 opacity-40 text-[10px] uppercase tracking-[0.5em]">
-            Last Updated: May 2026 • ModiCofactor S.S.A. Compliance Unit • Athens, Greece
-        </footer>
-
-    </main>
-
-    <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        menuBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        document.addEventListener('click', (e) => {
-            if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
-                mobileMenu.classList.add('hidden');
-            }
-        });
-    </script>
 </body>
 </html>
