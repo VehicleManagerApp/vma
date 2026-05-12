@@ -3,104 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Industrial Compliance & Legal | Vehicle Man</title>
+    <title>Comprehensive Legal Framework | Vehicle Man</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap');
-        body { background-color: #1a1c20; color: #f1f5f9; font-family: 'Inter', sans-serif; margin: 0; line-height: 1.6; }
-        .main-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: url('Background_wall.jpg'); background-size: cover; background-position: center; z-index: -1; }
-        .main-bg::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 17, 20, 0.95); }
-        .nav-glass { background: rgba(26, 28, 32, 0.95); backdrop-filter: blur(15px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
-        .legal-card { background: rgba(30, 32, 36, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); padding: 3rem; margin-bottom: 3rem; border-radius: 4px; }
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body { 
+            background-color: #0f1113; 
+            color: #e2e8f0; 
+            font-family: 'Inter', sans-serif; 
+            margin: 0; 
+            line-height: 1.8;
+        }
+
+        .main-bg { 
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+            background-image: url('Background_wall.jpg'); 
+            background-size: cover; background-position: center; z-index: -1; 
+        }
+
+        .main-bg::after { 
+            content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+            background: linear-gradient(180deg, rgba(15,17,19,0.92) 0%, rgba(15,17,19,0.98) 100%); 
+        }
+
+        .nav-glass { 
+            background: rgba(20, 22, 25, 0.95); 
+            backdrop-filter: blur(20px); 
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03); 
+        }
+
+        .legal-container {
+            background: rgba(22, 24, 28, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 4rem;
+            margin-bottom: 4rem;
+        }
+
         .header-font { font-family: 'Orbitron', sans-serif; }
-        .section-title { color: #3b82f6; font-family: 'Orbitron', sans-serif; text-transform: uppercase; letter-spacing: 2px; font-size: 1.5rem; border-bottom: 1px solid rgba(59, 130, 246, 0.3); padding-bottom: 1rem; margin-bottom: 2rem; }
-        h3 { color: #fff; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; border-left: 3px solid #3b82f6; padding-left: 10px; }
-        p { color: #cbd5e1; font-size: 0.9rem; margin-bottom: 1.2rem; text-align: justify; }
-        .lang-switch { display: inline-block; padding: 4px 12px; background: #3b82f6; color: white; font-size: 0.7rem; font-weight: 900; text-transform: uppercase; border-radius: 2px; margin-bottom: 2rem; }
-        strong { color: #fff; }
+        
+        .section-number { color: #3b82f6; font-weight: 900; margin-right: 10px; font-family: 'Orbitron'; }
+        
+        h2.main-title { 
+            font-family: 'Orbitron'; color: #3b82f6; font-size: 1.8rem; 
+            border-bottom: 2px solid #3b82f6; padding-bottom: 1rem; margin-bottom: 3rem;
+            text-transform: uppercase; letter-spacing: 4px;
+        }
+
+        h3 { color: #fff; font-weight: 800; margin-top: 2.5rem; margin-bottom: 1.2rem; text-transform: uppercase; font-size: 1rem; letter-spacing: 1px; }
+        
+        p { color: #94a3b8; font-size: 0.95rem; margin-bottom: 1.5rem; text-align: justify; }
+        
+        .disclaimer-box {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            font-family: 'Inter';
+            font-weight: 700;
+            color: #f8fafc;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            margin: 2rem 0;
+        }
+
+        .lang-badge {
+            background: #3b82f6;
+            color: white;
+            padding: 5px 15px;
+            font-size: 0.7rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+
+        ul.legal-list { list-style: decimal inside; margin-bottom: 2rem; }
+        ul.legal-list li { color: #94a3b8; font-size: 0.9rem; margin-bottom: 0.8rem; padding-left: 10px; }
     </style>
 </head>
 <body>
     <div class="main-bg"></div>
 
     <nav class="nav-glass fixed w-full z-[200]">
-        <div class="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
-            <a href="index.html" class="header-font text-[10px] font-bold tracking-widest hover:text-blue-400 transition">
-                <i class="fas fa-arrow-left mr-2"></i> ΕΠΙΣΤΡΟΦΗ / BACK
+        <div class="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
+            <a href="index.html" class="header-font text-[11px] font-bold tracking-widest hover:text-blue-500 transition text-slate-400">
+                <i class="fas fa-long-arrow-alt-left mr-2"></i> RETURN TO TERMINAL
             </a>
-            <div class="header-font text-[10px] text-blue-500 font-bold uppercase tracking-[0.3em]">Legal Framework v2.1</div>
+            <div class="header-font text-[11px] text-blue-500 font-bold uppercase tracking-[0.4em]">Compliance Dept.</div>
         </div>
     </nav>
 
-    <main class="relative z-10 max-w-5xl mx-auto px-6 pt-32 pb-24">
+    <main class="relative z-10 max-w-6xl mx-auto px-6 pt-40 pb-32">
         
-        <div id="el-content">
-            <span class="lang-switch">Ελληνικά</span>
-            <div class="legal-card">
-                <h2 class="section-title">Όροι Χρήσης (Terms of Service)</h2>
+        <section id="greek-legal">
+            <span class="lang-badge">Ελληνική Δημοκρατία / EL</span>
+            
+            <div class="legal-container">
+                <h2 class="main-title">Όροι Χρήσης Εφαρμογής (ToS)</h2>
                 
-                <h3>1. Συμφωνία Χρήστη</h3>
-                <p>Η παρούσα αποτελεί νομικά δεσμευτική σύμβαση μεταξύ εσάς και της <strong>ModiCofactor S.S.A.</strong>. Η χρήση της εφαρμογής Vehicle Man και των υπηρεσιών μας προϋποθέτει την ανεπιφύλακτη αποδοχή των όρων. Εάν δεν συμφωνείτε, οφείλετε να διακόψετε τη χρήση των υπηρεσιών αμέσως.</p>
+                <h3>1. Συμφωνία μεταξύ Χρήστη και ModiCofactor S.S.A.</h3>
+                <p>Καλώς ήρθατε στο Vehicle Man. Η παρούσα εφαρμογή για smartphone (εφεξής "η Εφαρμογή") παρέχεται από την ModiCofactor S.S.A. (εφεξής "η Εταιρεία"). Η χρήση της Εφαρμογής συνιστά την πλήρη και ανεπιφύλακτη αποδοχή όλων των όρων, προϋποθέσεων και ειδοποιήσεων που περιέχονται στο παρόν. Εάν δεν συμφωνείτε με αυτούς τους Όρους, δεν επιτρέπεται να αποκτήσετε πρόσβαση ή να χρησιμοποιήσετε την Εφαρμογή.</p>
 
-                <h3>2. Ηλεκτρονική Επικοινωνία</h3>
-                <p>Η επίσκεψη στον ιστότοπο ή η αποστολή email αποτελεί ηλεκτρονική επικοινωνία. Συναινείτε στη λήψη ηλεκτρονικών επικοινωνιών και συμφωνείτε ότι όλες οι συμφωνίες, ειδοποιήσεις και αποποιήσεις που παρέχουμε ηλεκτρονικά ικανοποιούν κάθε νομική απαίτηση έγγραφης μορφής.</p>
+                <h3>2. Άδεια Χρήσης και Περιορισμοί</h3>
+                <p>Σας παραχωρείται μια περιορισμένη, μη αποκλειστική, μη μεταβιβάσιμη και ανακλητή άδεια πρόσβασης και χρήσης του Vehicle Man αυστηρά σύμφωνα με αυτούς τους όρους. Ως προϋπόθεση της χρήσης σας, εγγυάστε στην Εταιρεία ότι δεν θα χρησιμοποιήσετε την Εφαρμογή για οποιονδήποτε σκοπό που είναι παράνομος ή απαγορευμένος από αυτούς τους Όρους.</p>
+                <p>Απαγορεύεται ρητά:</p>
+                <ul class="legal-list">
+                    <li>Η αποσυμπίληση (decompilation), η αντίστροφη μηχανική (reverse engineering) ή η προσπάθεια εξαγωγής του πηγαίου κώδικα της Εφαρμογής.</li>
+                    <li>Η χρήση αυτοματοποιημένων συστημάτων (bots, spiders, scrapers) για την εξαγωγή δεδομένων.</li>
+                    <li>Η χρήση της Εφαρμογής για τη μετάδοση ιών, malware ή οποιουδήποτε άλλου κακόβουλου κώδικα.</li>
+                    <li>Η παράκαμψη οποιουδήποτε μέτρου ασφαλείας ή συστήματος ελέγχου πρόσβασης.</li>
+                </ul>
 
                 <h3>3. Πνευματική Ιδιοκτησία</h3>
-                <p>Όλο το περιεχόμενο που περιλαμβάνεται στην Υπηρεσία, όπως κείμενα, γραφικά, λογότυπα, εικόνες, καθώς και η σύνθεση αυτών και το λογισμικό που χρησιμοποιείται, είναι ιδιοκτησία της <strong>ModiCofactor S.S.A.</strong> και προστατεύεται από τους διεθνείς νόμους περί πνευματικής ιδιοκτησίας.</p>
+                <p>Όλο το περιεχόμενο που περιλαμβάνεται στην Εφαρμογή, όπως κείμενα, γραφικά, λογότυπα, εικόνες, εικονίδια, διεπαφές χρήστη (UI), ηχητικά κλιπ, ψηφιακές λήψεις, δομές δεδομένων και λογισμικό, αποτελεί ιδιοκτησία της ModiCofactor S.S.A. ή των προμηθευτών της και προστατεύεται από τους νόμους περί πνευματικής ιδιοκτησίας, εμπορικών σημάτων και λοιπών δικαιωμάτων ιδιοκτησίας. Συμφωνείτε να τηρείτε όλες τις ειδοποιήσεις περί πνευματικών δικαιωμάτων και να μην τροποποιείτε το περιεχόμενο με κανέναν τρόπο.</p>
 
-                <h3>4. Απαγορευμένη Χρήση</h3>
-                <p>Εγγυάστε ότι δεν θα χρησιμοποιήσετε την Υπηρεσία για οποιονδήποτε παράνομο σκοπό. Απαγορεύεται ρητά η χρήση της Υπηρεσίας με τρόπο που θα μπορούσε να βλάψει, να απενεργοποιήσει ή να υπερφορτώσει τις υποδομές μας. Απαγορεύεται το "crawling", "scraping" ή "spidering" οποιασδήποτε σελίδας των υπηρεσιών μας.</p>
+                <h3>4. Ηλεκτρονικές Επικοινωνίες</h3>
+                <p>Η χρήση της φόρμας επικοινωνίας εντός της Εφαρμογής ή η αποστολή email προς την Εταιρεία συνιστά ηλεκτρονική επικοινωνία. Συμφωνείτε ότι όλες οι συμφωνίες, ειδοποιήσεις, αποποιήσεις και άλλες επικοινωνίες που σας παρέχουμε ηλεκτρονικά ικανοποιούν οποιαδήποτε νομική απαίτηση οι εν λόγω επικοινωνίες να είναι γραπτές.</p>
 
-                <h3>5. Περιορισμός Ευθύνης (Disclaimer)</h3>
-                <p>ΟΙ ΠΛΗΡΟΦΟΡΙΕΣ ΚΑΙ ΤΟ ΛΟΓΙΣΜΙΚΟ ΠΑΡΕΧΟΝΤΑΙ "ΩΣ ΕΧΟΥΝ" ΧΩΡΙΣ ΚΑΜΙΑ ΕΓΓΥΗΣΗ. ΣΤΟ ΜΕΓΙΣΤΟ ΒΑΘΜΟ ΠΟΥ ΕΠΙΤΡΕΠΕΤΑΙ ΑΠΟ ΤΟ ΝΟΜΟ, Η MODICOFACTOR S.S.A. ΔΕΝ ΦΕΡΕΙ ΕΥΘΥΝΗ ΓΙΑ ΑΜΕΣΕΣ, ΕΜΜΕΣΕΣ, ΠΟΙΝΙΚΕΣ Ή ΠΑΡΕΠΟΜΕΝΕΣ ΖΗΜΙΕΣ, ΣΥΜΠΕΡΙΛΑΜΒΑΝΟΜΕΝΩΝ ΤΩΝ ΖΗΜΙΩΝ ΑΠΟ ΑΠΩΛΕΙΑ ΧΡΗΣΗΣ, ΔΕΔΟΜΕΝΩΝ Ή ΚΕΡΔΩΝ.</p>
+                <div class="disclaimer-box">
+                    ΑΠΟΠΟΙΗΣΗ ΕΥΘΥΝΗΣ: ΟΙ ΠΛΗΡΟΦΟΡΙΕΣ, ΤΟ ΛΟΓΙΣΜΙΚΟ ΚΑΙ ΟΙ ΥΠΗΡΕΣΙΕΣ ΠΟΥ ΠΕΡΙΛΑΜΒΑΝΟΝΤΑΙ ΣΤΗΝ ΕΦΑΡΜΟΓΗ ΕΝΔΕΧΕΤΑΙ ΝΑ ΠΕΡΙΕΧΟΥΝ ΑΝΑΚΡΙΒΕΙΕΣ Ή ΤΥΠΟΓΡΑΦΙΚΑ ΛΑΘΗ. Η MODICOFACTOR S.S.A. ΔΕΝ ΕΓΓΥΑΤΑΙ ΤΗΝ ΚΑΤΑΛΛΗΛΟΤΗΤΑ, ΑΞΙΟΠΙΣΤΙΑ ΚΑΙ ΑΚΡΙΒΕΙΑ ΤΩΝ ΠΛΗΡΟΦΟΡΙΩΝ ΓΙΑ ΟΠΟΙΟΝΔΗΠΟΤΕ ΣΚΟΠΟ. ΣΤΟ ΜΕΓΙΣΤΟ ΒΑΘΜΟ ΠΟΥ ΕΠΙΤΡΕΠΕΤΑΙ ΑΠΟ ΤΟ ΝΟΜΟ, Η ΕΦΑΡΜΟΓΗ ΠΑΡΕΧΕΤΑΙ "ΩΣ ΕΧΕΙ" ΧΩΡΙΣ ΚΑΜΙΑ ΕΓΓΥΗΣΗ.
+                </div>
+
+                <h3>5. Περιορισμός Ευθύνης</h3>
+                <p>Σε καμία περίπτωση η ModiCofactor S.S.A. ή οι προμηθευτές της δεν ευθύνονται για τυχόν άμεσες, έμμεσες, ποινικές, παρεπόμενες ή ειδικές ζημίες, συμπεριλαμβανομένων, ενδεικτικά, ζημιών για απώλεια χρήσης, δεδομένων ή κερδών, που προκύπτουν από ή συνδέονται με τη χρήση ή την απόδοση της Εφαρμογής, την καθυστέρηση ή την αδυναμία χρήσης αυτής, ή για οποιαδήποτε πληροφορία λαμβάνεται μέσω αυτής.</p>
+
+                <h3>6. Τερματισμός και Πρόσβαση</h3>
+                <p>Η Εταιρεία διατηρεί το δικαίωμα, κατά την απόλυτη διακριτική της ευχέρεια, να τερματίσει την πρόσβασή σας στην Εφαρμογή και τις σχετικές υπηρεσίες ή οποιοδήποτε μέρος αυτών ανά πάσα στιγμή, χωρίς προειδοποίηση, σε περίπτωση παραβίασης των παρόντων Όρων.</p>
             </div>
 
-            <div class="legal-card">
-                <h2 class="section-title">Πολιτική Απορρήτου</h2>
-                <h3>1. Συλλογή & Επεξεργασία</h3>
-                <p>Διενεργούμε επεξεργασία δεδομένων σύμφωνα με τον GDPR. Ενώ η εφαρμογή λειτουργεί offline για τα δεδομένα οχημάτων, η επικοινωνία μέσω των φορμών μας συνεπάγεται τη συλλογή στοιχείων ταυτοποίησης τα οποία προστατεύονται με κρυπτογράφηση υψηλού επιπέδου.</p>
-                <h3>2. Διαβίβαση σε Τρίτους</h3>
-                <p>Αναγνωρίζετε ότι για την παροχή ορισμένων λειτουργιών, ενδέχεται να κοινοποιήσουμε δεδομένα σε τρίτους παρόχους με τους οποίους έχουμε συμβατική σχέση, αποκλειστικά για την εκτέλεση της ζητούμενης υπηρεσίας.</p>
+            <div class="legal-container">
+                <h2 class="main-title">Πολιτική Απορρήτου (Privacy Policy)</h2>
+                <h3>1. Συλλογή Δεδομένων και Τοπική Αποθήκευση</h3>
+                <p>Το Vehicle Man έχει σχεδιαστεί με γνώμονα την προστασία της ιδιωτικότητας. Τα δεδομένα που καταχωρείτε σχετικά με τα οχήματά σας (αριθμοί κυκλοφορίας, αρχεία συντήρησης, έξοδα) αποθηκεύονται τοπικά στη μνήμη του smartphone σας και δεν διαβιβάζονται στους διακομιστές μας, εκτός εάν επιλέξετε ρητά τη λειτουργία συγχρονισμού (Cloud Sync) εφόσον αυτή είναι ενεργή.</p>
+                <h3>2. Προσωπικές Πληροφορίες μέσω Επικοινωνίας</h3>
+                <p>Όταν χρησιμοποιείτε τη φόρμα υποστήριξης, συλλέγουμε το ονοματεπώνυμο, τη διεύθυνση email και το περιεχόμενο του μηνύματός σας. Αυτά τα δεδομένα χρησιμοποιούνται αποκλειστικά για την παροχή τεχνικής υποστήριξης και την απάντηση στα αιτήματά σας.</p>
+                <h3>3. Ασφάλεια Δεδομένων</h3>
+                <p>Χρησιμοποιούμε βιομηχανικά πρότυπα κρυπτογράφησης και μέτρα ασφαλείας για την προστασία των πληροφοριών που διαβιβάζονται ηλεκτρονικά. Ωστόσο, καμία μέθοδος διαβίβασης μέσω διαδικτύου ή μέθοδος ηλεκτρονικής αποθήκευσης δεν είναι 100% ασφαλής και δεν μπορούμε να εγγυηθούμε την απόλυτη ασφάλεια.</p>
             </div>
-        </div>
+        </section>
 
-        <hr class="border-white/5 my-16">
-
-        <div id="en-content">
-            <span class="lang-switch">English</span>
-            <div class="legal-card">
-                <h2 class="section-title">Terms of Service</h2>
+        <section id="english-legal">
+            <span class="lang-badge">Global Standards / EN</span>
+            
+            <div class="legal-container">
+                <h2 class="main-title">Terms of Service (ToS)</h2>
                 
-                <h3>1. User Agreement</h3>
-                <p>This is a legally binding contract between you and <strong>ModiCofactor S.S.A.</strong>. Your use of Vehicle Man constitutes your agreement to all terms, conditions, and notices contained herein. If you do not agree, you may not use our Services.</p>
+                <h3>1. Agreement between User and ModiCofactor S.S.A.</h3>
+                <p>Welcome to Vehicle Man. This smartphone application (hereinafter "the App") is provided by ModiCofactor S.S.A. (hereinafter "the Company"). Use of the App constitutes your full agreement to all terms, conditions, and notices contained herein. If you do not agree to these Terms, you may not access or use the App. Please read these terms carefully and keep a copy for your reference.</p>
 
-                <h3>2. Electronic Communications</h3>
-                <p>Visiting our site or sending emails constitutes electronic communications. You consent to receive electronic communications and agree that all notices and disclosures provided electronically satisfy any legal requirement that such communications be in writing.</p>
+                <h3>2. License and Restrictions</h3>
+                <p>You are granted a limited, non-exclusive, non-transferable, and revocable license to access and use Vehicle Man strictly in accordance with these terms. As a condition of your use, you warrant to the Company that you will not use the App for any purpose that is unlawful or prohibited by these Terms.</p>
+                <p>Specifically, you agree not to:</p>
+                <ul class="legal-list">
+                    <li>Decompile, reverse engineer, or attempt to extract the source code of the App.</li>
+                    <li>Use automated systems (bots, spiders, scrapers) to extract data from the services.</li>
+                    <li>Use the App to transmit viruses, malware, or any other harmful computer code.</li>
+                    <li>Circumvent any security measures or access control systems implemented by the Company.</li>
+                </ul>
 
                 <h3>3. Intellectual Property</h3>
-                <p>All content included in the Service, such as text, graphics, logos, images, and software, is the property of <strong>ModiCofactor S.S.A.</strong> and protected by copyright and other laws that protect intellectual property and proprietary rights.</p>
+                <p>All content included as part of the Service, such as text, graphics, logos, images, icons, user interfaces (UI), audio clips, digital downloads, data structures, and software, is the property of ModiCofactor S.S.A. or its suppliers and is protected by copyright, trademark, and other proprietary laws. You agree to observe and abide by all copyright and other proprietary notices and will not make any changes thereto.</p>
 
-                <h3>4. Prohibited Use</h3>
-                <p>You warrant that you will not use the Site for any purpose that is unlawful or prohibited by these Terms. You may not use the Site in any manner which could damage, disable, overburden, or impair the Site. You agree not to "crawl," "scrape," or "spider" any page of the Services.</p>
+                <h3>4. Electronic Communications</h3>
+                <p>Using the contact form within the App or sending emails to the Company constitutes electronic communications. You consent to receive electronic communications and you agree that all agreements, notices, disclosures, and other communications that we provide to you electronically satisfy any legal requirement that such communications be in writing.</p>
 
-                <h3>5. Liability Disclaimer</h3>
-                <p>THE INFORMATION AND SOFTWARE ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL MODICOFACTOR S.S.A. BE LIABLE FOR ANY DIRECT, INDIRECT, PUNITIVE, INCIDENTAL, OR CONSEQUENTIAL DAMAGES INCLUDING LOSS OF USE, DATA, OR PROFITS.</p>
+                <div class="disclaimer-box">
+                    LIABILITY DISCLAIMER: THE INFORMATION, SOFTWARE, PRODUCTS, AND SERVICES INCLUDED IN OR AVAILABLE THROUGH THE APP MAY INCLUDE INACCURACIES OR TYPOGRAPHICAL ERRORS. MODICOFACTOR S.S.A. MAKES NO REPRESENTATIONS ABOUT THE SUITABILITY, RELIABILITY, AVAILABILITY, OR ACCURACY OF THE DATA. TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE APP IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND.
+                </div>
+
+                <h3>5. Limitation of Liability</h3>
+                <p>In no event shall ModiCofactor S.S.A. or its suppliers be liable for any direct, indirect, punitive, incidental, special, or consequential damages, including without limitation damages for loss of use, data, or profits, arising out of or in any way connected with the use or performance of the App, with the delay or inability to use the App, or for any information obtained through the App.</p>
+
+                <h3>6. Termination and Access Restriction</h3>
+                <p>The Company reserves the right, in its sole discretion, to terminate your access to the App and the related services or any portion thereof at any time, without notice, for any violation of these Terms or for conduct that the Company believes is harmful to other users or the business.</p>
             </div>
 
-            <div class="legal-card">
-                <h2 class="section-title">Privacy Policy</h2>
-                <h3>1. Data Collection</h3>
-                <p>We process information in compliance with international data protection standards. While vehicle data remains local, contact form submissions involve data processing protected via industry-standard encryption.</p>
-                <h3>2. Third-Party Integration</h3>
-                <p>You acknowledge and consent that we may share necessary data with third-party service providers under contract to perform specific functionalities on our behalf.</p>
+            <div class="legal-container">
+                <h2 class="main-title">Privacy Policy</h2>
+                <h3>1. Data Collection and Local Storage</h3>
+                <p>Vehicle Man is built on "Privacy by Design" principles. The data you enter regarding your vehicles (license plates, maintenance logs, expenses) is stored locally on your smartphone's storage and is not transmitted to our servers unless you explicitly opt-in for Cloud Sync features.</p>
+                <h3>2. Information Provided via Support Channels</h3>
+                <p>When you use our support form, we collect your name, email address, and message content. This data is used strictly for technical support and to improve user experience. We do not sell or rent this information to third-party advertisers.</p>
+                <h3>3. Security Measures</h3>
+                <p>We implement industry-standard encryption and security protocols to protect information transmitted through the App. However, no method of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
             </div>
-        </div>
+        </section>
 
     </main>
 
-    <footer class="py-12 text-center text-slate-600 text-[9px] font-bold uppercase tracking-[0.5em]">
-        © 2026 MODICOFACTOR S.S.A. • ALL RIGHTS RESERVED
+    <footer class="py-16 text-center text-slate-600 text-[10px] font-bold uppercase tracking-[0.5em] border-t border-white/5">
+        ModiCofactor S.S.A. • Industrial Compliance Hub • 2026
     </footer>
 </body>
 </html>
