@@ -34,28 +34,12 @@ body{
 /* =========================
 BACKGROUND
 ========================= */
-
-.main-bg{
-    position:fixed;
-    inset:0;
-    z-index:-5;
-    background:
-        linear-gradient(rgba(2,6,23,0.92), rgba(2,6,23,0.96)),
-        url('ModiCofactorSSAWIDE.png');
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-}
-
-.main-bg::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:
-        radial-gradient(circle at top right, rgba(59,130,246,0.15), transparent 30%),
-        radial-gradient(circle at bottom left, rgba(59,130,246,0.10), transparent 35%);
-}
-
+        /* ΣΤΑΘΕΡΟ BACKGROUND */
+        .main-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./ 'ModiCofactorSSAWIDE.png');
+            background-size: cover; background-position: center; z-index: -2;
 /* =========================
 WATERMARK
 ========================= */
@@ -554,9 +538,9 @@ IMPORTANT:
 
 <div class="legal-box">
 <div class="section-inner">
-<div class="lan<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
 <div class="legal-text">
-g-label"><i class="fas fa-language"></i> Ελληνικά</div>
 
  1.6. Άδεια Χρήσης – Επιτρεπτή Χρήση
 Η Εταιρεία παρέχει στον Χρήστη μια περιορισμένη, μη αποκλειστική, μη μεταβιβάσιμη, ανακλητή άδεια πρόσβασης και χρήσης της Εφαρμογής για προσωπική ή/και εσωτερική επαγγελματική χρήση, αποκλειστικά σύμφωνα με τους παρόντες Όρους.  
@@ -787,10 +771,18 @@ g-label"><i class="fas fa-language"></i> Ελληνικά</div>
 </div>
 </div>
 
-
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
 ---
 
  2. Πολιτική Ασφαλείας Πληροφοριών και Λειτουργίας («Vehicle Man»)
+</div>
+</div>
+</div>
+
 <div class="legal-box">
 <div class="section-inner">
 <div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
@@ -1000,10 +992,19 @@ g-label"><i class="fas fa-language"></i> Ελληνικά</div>
 </div>
 </div>
 
+<div class="legal-box">
+<div class="section-inner">
+<div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
+<h2 class="legal-title"><span>1.1.</span> Ταυτότητα Παρόχου – Επικοινωνία</h2>
+<div class="legal-text">
 
 ---
 
  3. Όροι Παροχής Υπηρεσιών (Terms of Service) για την «Vehicle Man»
+</div>
+</div>
+</div>
+
 <div class="legal-box">
 <div class="section-inner">
 <div class="lang-label"><i class="fas fa-language"></i> Ελληνικά</div>
@@ -1235,4 +1236,3 @@ mobileMenu.classList.add('hidden');
 </body>
 </html>
 
- 
