@@ -24,11 +24,8 @@ html{
 }
 
 body{
-    font-family:'Inter',sans-serif;
     background:#020617;
-    color:#cbd5e1;
-    overflow-x:hidden;
-    position:relative;
+    background-attachment:fixed;
 }
 
 /* =========================
@@ -41,21 +38,32 @@ BACKGROUND
     z-index:-5;
 
     background-image:
-        linear-gradient(rgba(2,6,23,0.82), rgba(2,6,23,0.90)),
+        linear-gradient(
+            rgba(2,6,23,0.45),
+            rgba(2,6,23,0.55)
+        ),
         url("./ModiCofactorSSAWIDE.png");
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 }
-
+    
 .main-bg::after{
     content:"";
     position:absolute;
     inset:0;
+
     background:
-        radial-gradient(circle at top right, rgba(59,130,246,0.15), transparent 30%),
-        radial-gradient(circle at bottom left, rgba(59,130,246,0.10), transparent 35%);
+        radial-gradient(circle at top right,
+        rgba(59,130,246,0.08),
+        transparent 28%),
+
+        radial-gradient(circle at bottom left,
+        rgba(59,130,246,0.05),
+        transparent 30%);
+
+    backdrop-filter: blur(1px);
 }
 
 /* =========================
@@ -137,14 +145,22 @@ LEGAL BOXES
 
 .legal-box{
     position:relative;
-    background:rgba(15,23,42,0.55);
-    backdrop-filter:blur(16px);
-    border:1px solid rgba(255,255,255,0.06);
+
+    background:rgba(15,23,42,0.22);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border:1px solid rgba(255,255,255,0.08);
+
     border-radius:28px;
+
     overflow:hidden;
+
     box-shadow:
-        0 10px 35px rgba(0,0,0,0.35),
-        inset 0 1px 0 rgba(255,255,255,0.03);
+        0 8px 32px rgba(0,0,0,0.28),
+        inset 0 1px 0 rgba(255,255,255,0.05);
+
     transition:0.35s ease;
 }
 
@@ -165,7 +181,22 @@ LEGAL BOXES
     height:3px;
     background:linear-gradient(to right,#3b82f6,transparent);
 }
+    
+.legal-box::after{
+    content:"";
 
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.08),
+            rgba(255,255,255,0.01)
+        );
+
+    pointer-events:none;
+}
 .section-inner{
     padding:2rem;
 }
@@ -1578,7 +1609,7 @@ The Company uses reasonable efforts to keep the App available but does not guara
                 English
             </div>
             <h2 class="legal-title">
-                <span>3..</span> Support </h2>
+                <span>3.4.</span> Support </h2>
             <div class="legal-text">
 The Company may provide support via email or other channels announced within the App.  
 Response times are not guaranteed unless otherwise agreed. Support may depend on account type (free/Premium).
