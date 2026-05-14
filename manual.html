@@ -10,6 +10,11 @@
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+<!-- ======================================================
+INDUSTRIAL STYLE UPGRADE
+ΑΝΤΙΚΑΤΑΣΤΗΣΕ ΜΟΝΟ ΤΟ <style>...</style>
+ΔΕΝ ΑΛΛΑΖΕΙ ΚΑΝΕΝΑ ΚΕΙΜΕΝΟ
+====================================================== -->
 
 <style>
 
@@ -27,8 +32,8 @@ html{
 
 body{
     font-family:'Inter',sans-serif;
-    background:#050505;
-    color:#e5e7eb;
+    background:#060606;
+    color:#f3f4f6;
     overflow-x:hidden;
 }
 
@@ -43,15 +48,30 @@ BACKGROUND
 
     background-image:
         linear-gradient(
-            rgba(0,0,0,0.78),
-            rgba(0,0,0,0.88)
+            rgba(0,0,0,0.82),
+            rgba(0,0,0,0.90)
         ),
-        url("Background_wall.jpg");
+        url("road.png");
 
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
     background-attachment:fixed;
+}
+
+.main-bg::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+        radial-gradient(circle at top center,
+        rgba(255,196,0,0.08),
+        transparent 35%),
+
+        radial-gradient(circle at bottom left,
+        rgba(255,196,0,0.05),
+        transparent 30%);
 }
 
 .main-bg::after{
@@ -60,34 +80,46 @@ BACKGROUND
     inset:0;
 
     background:
-        radial-gradient(circle at top right,
-        rgba(255,255,255,0.04),
-        transparent 30%),
-
         linear-gradient(
-        rgba(255,255,255,0.015),
-        rgba(255,255,255,0.03)
+            rgba(255,255,255,0.02),
+            rgba(255,255,255,0.01)
         );
 
     backdrop-filter:blur(2px);
 }
 
 /* ======================================================
-NAVIGATION
+NAVBAR
 ====================================================== */
 
 .nav-glass{
-    background:rgba(10,10,10,0.70);
-    backdrop-filter:blur(24px);
-    border-bottom:1px solid rgba(255,255,255,0.05);
+
+    background:
+    linear-gradient(
+        to bottom,
+        rgba(10,10,10,0.92),
+        rgba(10,10,10,0.72)
+    );
+
+    backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,0.07);
 
     box-shadow:
-        0 10px 40px rgba(0,0,0,0.55);
+        0 10px 45px rgba(0,0,0,0.60);
+
+    border-radius:24px;
+
+    width:calc(100% - 40px);
+    left:20px;
+    top:14px;
 }
 
 .deep-glass{
-    background:rgba(18,18,18,0.92);
+    background:rgba(14,14,14,0.96);
     backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,196,0,0.12);
 }
 
 .mobile-link{
@@ -102,7 +134,7 @@ NAVIGATION
     bottom:0;
     width:0%;
     height:1px;
-    background:#9ca3af;
+    background:#facc15;
     transition:0.3s ease;
 }
 
@@ -115,45 +147,57 @@ HEADER
 ====================================================== */
 
 .hero-title{
-    font-size:clamp(2.7rem,6vw,6rem);
+    font-size:clamp(3rem,7vw,7rem);
     font-weight:900;
-    line-height:0.95;
-    letter-spacing:-0.05em;
+    line-height:0.88;
+    letter-spacing:-0.06em;
     text-transform:uppercase;
     color:white;
+
+    text-shadow:
+        0 10px 35px rgba(0,0,0,0.65);
+}
+
+.hero-title span{
+    color:#facc15;
 }
 
 .hero-sub{
-    margin-top:18px;
-    color:#9ca3af;
+    margin-top:22px;
+    color:#facc15;
     font-size:11px;
-    font-weight:700;
+    font-weight:800;
     letter-spacing:0.45em;
     text-transform:uppercase;
 }
 
 /* ======================================================
-SECTION NAVIGATION
+QUICK NAV
 ====================================================== */
 
 .quick-nav{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-    gap:18px;
-    margin-top:70px;
+    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+    gap:22px;
+    margin-top:80px;
     margin-bottom:90px;
 }
 
 .quick-card{
     position:relative;
 
-    background:rgba(255,255,255,0.04);
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,0.06),
+        rgba(255,255,255,0.03)
+    );
 
-    border:1px solid rgba(255,255,255,0.07);
+    border:1px solid rgba(255,255,255,0.08);
 
-    border-radius:24px;
+    border-radius:28px;
 
-    padding:28px 20px;
+    padding:34px 22px;
 
     text-align:center;
 
@@ -161,31 +205,58 @@ SECTION NAVIGATION
 
     transition:0.35s ease;
 
-    backdrop-filter:blur(16px);
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.04),
+        0 10px 35px rgba(0,0,0,0.40);
+}
+
+.quick-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent,
+            rgba(255,255,255,0.04),
+            transparent
+        );
+
+    opacity:0;
+    transition:0.4s;
+}
+
+.quick-card:hover::before{
+    opacity:1;
 }
 
 .quick-card:hover{
-    transform:translateY(-5px);
+    transform:translateY(-8px);
 
-    background:rgba(255,255,255,0.06);
-
-    border-color:rgba(255,255,255,0.14);
+    border-color:rgba(250,204,21,0.25);
 
     box-shadow:
-        0 12px 40px rgba(0,0,0,0.45);
+        0 14px 45px rgba(0,0,0,0.55),
+        0 0 0 1px rgba(250,204,21,0.08);
 }
 
 .quick-card i{
-    font-size:28px;
+    font-size:30px;
     margin-bottom:18px;
-    color:#d1d5db;
+    color:#facc15;
+
+    text-shadow:
+        0 0 18px rgba(250,204,21,0.25);
 }
 
 .quick-card h3{
     font-size:12px;
-    letter-spacing:0.2em;
+    letter-spacing:0.20em;
     text-transform:uppercase;
-    font-weight:800;
+    font-weight:900;
     color:white;
 }
 
@@ -196,23 +267,28 @@ MANUAL SECTIONS
 .manual-section{
     position:relative;
 
-    background:rgba(255,255,255,0.035);
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,0.06),
+        rgba(255,255,255,0.025)
+    );
 
-    backdrop-filter:blur(18px);
+    backdrop-filter:blur(22px);
 
-    border:1px solid rgba(255,255,255,0.07);
+    border:1px solid rgba(255,255,255,0.08);
 
-    border-radius:34px;
+    border-radius:36px;
 
-    padding:50px;
+    padding:55px;
 
     margin-bottom:55px;
 
     overflow:hidden;
 
     box-shadow:
-        0 10px 35px rgba(0,0,0,0.45),
-        inset 0 1px 0 rgba(255,255,255,0.03);
+        0 15px 50px rgba(0,0,0,0.55),
+        inset 0 1px 0 rgba(255,255,255,0.04);
 }
 
 .manual-section::before{
@@ -224,32 +300,60 @@ MANUAL SECTIONS
     height:2px;
 
     background:
-        linear-gradient(to right,
-        rgba(255,255,255,0.30),
-        transparent);
+    linear-gradient(
+        to right,
+        #facc15,
+        transparent
+    );
+}
+
+.manual-section::after{
+    content:"";
+    position:absolute;
+    top:-100px;
+    right:-100px;
+    width:220px;
+    height:220px;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(250,204,21,0.08),
+        transparent 70%
+    );
+
+    pointer-events:none;
 }
 
 .section-number{
     display:inline-flex;
     align-items:center;
-    gap:10px;
+    gap:12px;
 
-    padding:8px 18px;
+    padding:10px 22px;
 
     border-radius:999px;
 
-    background:rgba(255,255,255,0.05);
+    background:
+    linear-gradient(
+        to right,
+        rgba(250,204,21,0.18),
+        rgba(250,204,21,0.06)
+    );
 
-    border:1px solid rgba(255,255,255,0.08);
+    border:1px solid rgba(250,204,21,0.20);
 
     font-size:11px;
-    font-weight:800;
+    font-weight:900;
     letter-spacing:0.18em;
     text-transform:uppercase;
 
-    color:#d1d5db;
+    color:#facc15;
 
     margin-bottom:28px;
+
+    box-shadow:
+        0 0 18px rgba(250,204,21,0.08);
 }
 
 .section-title{
@@ -257,113 +361,166 @@ MANUAL SECTIONS
     font-weight:900;
     line-height:1.05;
     color:white;
-    margin-bottom:22px;
+    margin-bottom:24px;
+
+    text-transform:uppercase;
 }
 
 .section-desc{
     font-size:1rem;
-    line-height:2;
-    color:#cbd5e1;
-    margin-bottom:35px;
+    line-height:2.05;
+    color:#d1d5db;
+    margin-bottom:40px;
 }
 
 /* ======================================================
-INFO BLOCKS
+INFO BOXES
 ====================================================== */
 
 .info-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:24px;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:28px;
     margin-top:35px;
 }
 
 .info-box{
-    background:rgba(0,0,0,0.30);
+    position:relative;
 
-    border:1px solid rgba(255,255,255,0.06);
+    background:
+    linear-gradient(
+        145deg,
+        rgba(0,0,0,0.52),
+        rgba(20,20,20,0.42)
+    );
 
-    border-radius:24px;
+    border:1px solid rgba(255,255,255,0.07);
 
-    padding:28px;
+    border-radius:28px;
+
+    padding:32px;
+
+    overflow:hidden;
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.03),
+        0 8px 28px rgba(0,0,0,0.35);
+}
+
+.info-box::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:4px;
+    height:100%;
+
+    background:
+    linear-gradient(
+        to bottom,
+        #facc15,
+        transparent
+    );
 }
 
 .info-box h4{
     font-size:13px;
     font-weight:900;
-    letter-spacing:0.18em;
+    letter-spacing:0.20em;
     text-transform:uppercase;
-    color:white;
-    margin-bottom:18px;
+    color:#facc15;
+    margin-bottom:22px;
 }
 
 .info-box p,
 .info-box li{
-    color:#cbd5e1;
-    font-size:0.95rem;
-    line-height:1.9;
+    color:#e5e7eb;
+    font-size:0.96rem;
+    line-height:2;
 }
 
 .info-box ul{
-    margin-top:12px;
+    margin-top:10px;
     padding-left:18px;
 }
 
 .info-box li{
-    margin-bottom:14px;
+    margin-bottom:16px;
+}
+
+.info-box strong{
+    color:#facc15;
 }
 
 /* ======================================================
-FLOW BLOCK
+FLOW BOX
 ====================================================== */
 
 .flow-box{
-    margin-top:35px;
+    margin-top:40px;
 
-    background:rgba(255,255,255,0.03);
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,196,0,0.08),
+        rgba(255,255,255,0.02)
+    );
 
-    border:1px dashed rgba(255,255,255,0.10);
+    border:1px dashed rgba(250,204,21,0.22);
 
-    border-radius:24px;
+    border-radius:28px;
 
-    padding:28px;
+    padding:30px;
 }
 
 .flow-box h5{
     font-size:12px;
     font-weight:900;
-    letter-spacing:0.2em;
+    letter-spacing:0.20em;
     text-transform:uppercase;
-    color:white;
+    color:#facc15;
     margin-bottom:18px;
 }
 
 .flow-box p{
-    line-height:2;
-    color:#d1d5db;
+    line-height:2.1;
+    color:#f3f4f6;
 }
 
 /* ======================================================
-FOOTER
+FOOTER BOX
 ====================================================== */
 
 .footer-box{
-    margin-top:80px;
+    margin-top:90px;
 
-    background:rgba(255,255,255,0.04);
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,0.06),
+        rgba(255,255,255,0.03)
+    );
 
-    border:1px solid rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.08);
 
-    border-radius:34px;
+    border-radius:36px;
 
-    padding:50px;
+    padding:55px;
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+        0 15px 50px rgba(0,0,0,0.50);
 }
 
 .footer-box h3{
     font-size:2rem;
     font-weight:900;
-    color:white;
-    margin-bottom:25px;
+    color:#facc15;
+    margin-bottom:30px;
+    text-transform:uppercase;
 }
 
 .footer-box ul{
@@ -371,9 +528,9 @@ FOOTER
 }
 
 .footer-box li{
-    margin-bottom:18px;
-    line-height:1.9;
-    color:#d1d5db;
+    margin-bottom:20px;
+    line-height:2;
+    color:#e5e7eb;
 }
 
 /* ======================================================
@@ -389,12 +546,28 @@ SCROLLBAR
 }
 
 ::-webkit-scrollbar-thumb{
-    background:#3f3f46;
+    background:#facc15;
     border-radius:20px;
 }
 
 ::-webkit-scrollbar-thumb:hover{
-    background:#71717a;
+    background:#fde047;
+}
+
+/* ======================================================
+NAV ACTIVE
+====================================================== */
+
+nav a{
+    transition:0.3s ease;
+}
+
+nav a:hover{
+    color:#facc15 !important;
+}
+
+nav .underline{
+    color:#facc15 !important;
 }
 
 /* ======================================================
@@ -403,22 +576,36 @@ RESPONSIVE
 
 @media(max-width:768px){
 
+    .nav-glass{
+        width:calc(100% - 20px);
+        left:10px;
+    }
+
     .manual-section{
-        padding:30px 24px;
+        padding:34px 24px;
+        border-radius:28px;
     }
 
     .hero-title{
-        line-height:1.05;
+        line-height:0.95;
     }
 
     .section-desc{
-        font-size:0.92rem;
-        line-height:1.9;
+        font-size:0.93rem;
+        line-height:1.95;
+    }
+
+    .info-box{
+        padding:26px;
     }
 
     .info-box p,
     .info-box li{
         font-size:0.88rem;
+    }
+
+    .quick-card{
+        padding:26px 18px;
     }
 }
 
