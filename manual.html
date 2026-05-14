@@ -570,6 +570,284 @@ nav .underline{
     color:#facc15 !important;
 }
 
+
+    /* ======================================================
+LEFT INDUSTRIAL QUICK NAV
+====================================================== */
+
+.side-nav-panel{
+
+    width:260px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(18,18,18,0.90),
+            rgba(8,8,8,0.95)
+        );
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:30px;
+
+    padding:22px 18px;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.60),
+        inset 0 1px 0 rgba(255,255,255,0.04);
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+/* LIGHT REFLECTION */
+
+.side-nav-panel::before{
+
+    content:"";
+
+    position:absolute;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:1px;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(255,196,0,0.55),
+            transparent
+        );
+}
+
+/* TITLE */
+
+.side-nav-title{
+
+    font-size:12px;
+    font-weight:900;
+
+    letter-spacing:0.16em;
+
+    color:#facc15;
+
+    margin-bottom:18px;
+
+    padding-left:6px;
+}
+
+/* ITEM */
+
+.side-nav-item{
+
+    display:flex;
+    align-items:center;
+    gap:16px;
+
+    width:100%;
+
+    padding:16px 14px;
+
+    margin-bottom:16px;
+
+    border-radius:22px;
+
+    text-decoration:none;
+
+    position:relative;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,0.03),
+            rgba(255,255,255,0.015)
+        );
+
+    border:1px solid rgba(255,255,255,0.06);
+
+    transition:0.35s ease;
+
+    overflow:hidden;
+}
+
+/* HOVER */
+
+.side-nav-item:hover{
+
+    transform:translateX(4px);
+
+    border-color:rgba(250,204,21,0.35);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(250,204,21,0.08),
+            rgba(255,255,255,0.02)
+        );
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.35);
+}
+
+/* ACTIVE */
+
+.active-side-nav{
+
+    border-color:rgba(250,204,21,0.45);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(250,204,21,0.10),
+            rgba(255,255,255,0.02)
+        );
+}
+
+/* ICON */
+
+.side-icon-wrap{
+
+    width:62px;
+    height:62px;
+
+    min-width:62px;
+
+    border-radius:18px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(15,15,15,0.95),
+            rgba(35,35,35,0.92)
+        );
+
+    border:1px solid rgba(250,204,21,0.25);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.04),
+        0 6px 20px rgba(0,0,0,0.35);
+
+    position:relative;
+}
+
+/* HEXAGON STYLE */
+
+.side-icon-wrap::before{
+
+    content:"";
+
+    position:absolute;
+    inset:6px;
+
+    border:1px solid rgba(250,204,21,0.12);
+
+    clip-path:polygon(
+        25% 6%,
+        75% 6%,
+        100% 50%,
+        75% 94%,
+        25% 94%,
+        0% 50%
+    );
+}
+
+/* ICON */
+
+.side-icon-wrap i{
+
+    color:#facc15;
+
+    font-size:24px;
+
+    z-index:2;
+}
+
+/* TEXT */
+
+.side-nav-text{
+
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+}
+
+.side-number{
+
+    font-size:11px;
+    font-weight:800;
+
+    letter-spacing:0.18em;
+
+    color:#facc15;
+}
+
+.side-label{
+
+    font-size:14px;
+    font-weight:800;
+
+    letter-spacing:0.03em;
+
+    color:#f3f4f6;
+}
+
+/* FOOTER */
+
+.side-nav-footer{
+
+    margin-top:8px;
+
+    padding:16px 12px;
+
+    border-top:1px solid rgba(255,255,255,0.06);
+
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+
+    color:#a1a1aa;
+
+    font-size:11px;
+    line-height:1.7;
+}
+
+.side-nav-footer i{
+
+    color:#facc15;
+
+    margin-top:2px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1400px){
+
+    .side-nav-panel{
+
+        width:230px;
+    }
+
+    .side-label{
+
+        font-size:12px;
+    }
+}
+
+@media(max-width:1280px){
+
+    .side-nav-panel{
+
+        display:none;
+    }
+}
 /* ======================================================
 RESPONSIVE
 ====================================================== */
@@ -1463,4 +1741,117 @@ document.addEventListener('click',(e)=>{
 </script>
 
 </body>
+    <!-- ======================================================
+LEFT FIXED QUICK NAVIGATION
+Βάλ’ το ΑΜΕΣΩΣ μετά το <body>
+====================================================== -->
+
+<div class="fixed left-5 top-1/2 -translate-y-1/2 z-[120] hidden xl:flex">
+
+    <div class="side-nav-panel">
+
+        <!-- TITLE -->
+        <div class="side-nav-title">
+            ΓΡΗΓΟΡΗ ΠΛΟΗΓΗΣΗ
+        </div>
+
+        <!-- ITEM 1 -->
+        <a href="#home-screen" class="side-nav-item active-side-nav">
+
+            <div class="side-icon-wrap">
+                <i class="fas fa-house"></i>
+            </div>
+
+            <div class="side-nav-text">
+                <span class="side-number">01</span>
+                <span class="side-label">HOMESCREEN</span>
+            </div>
+
+        </a>
+
+        <!-- ITEM 2 -->
+        <a href="#vehicle-screen" class="side-nav-item">
+
+            <div class="side-icon-wrap">
+                <i class="fas fa-car-side"></i>
+            </div>
+
+            <div class="side-nav-text">
+                <span class="side-number">02</span>
+                <span class="side-label">VEHICLE SCREEN</span>
+            </div>
+
+        </a>
+
+        <!-- ITEM 3 -->
+        <a href="#record-screen" class="side-nav-item">
+
+            <div class="side-icon-wrap">
+                <i class="fas fa-road"></i>
+            </div>
+
+            <div class="side-nav-text">
+                <span class="side-number">03</span>
+                <span class="side-label">RECORD SCREEN</span>
+            </div>
+
+        </a>
+
+        <!-- ITEM 4 -->
+        <a href="#entry-screen" class="side-nav-item">
+
+            <div class="side-icon-wrap">
+                <i class="fas fa-robot"></i>
+            </div>
+
+            <div class="side-nav-text">
+                <span class="side-number">04</span>
+                <span class="side-label">AI ENTRY SCREEN</span>
+            </div>
+
+        </a>
+
+        <!-- ITEM 5 -->
+        <a href="#statistics-screen" class="side-nav-item">
+
+            <div class="side-icon-wrap">
+                <i class="fas fa-chart-column"></i>
+            </div>
+
+            <div class="side-nav-text">
+                <span class="side-number">05</span>
+                <span class="side-label">STATISTICS SCREEN</span>
+            </div>
+
+        </a>
+
+        <!-- ITEM 6 -->
+        <a href="#settings-screen" class="side-nav-item">
+
+            <div class="side-icon-wrap">
+                <i class="fas fa-sliders"></i>
+            </div>
+
+            <div class="side-nav-text">
+                <span class="side-number">06</span>
+                <span class="side-label">SETTINGS SCREEN</span>
+            </div>
+
+        </a>
+
+        <!-- FOOTER INFO -->
+        <div class="side-nav-footer">
+
+            <i class="fas fa-circle-info"></i>
+
+            <span>
+                Χρησιμοποιήστε την πλοήγηση για γρήγορη μετάβαση
+                σε κάθε ενότητα.
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
 </html>
