@@ -8,16 +8,9 @@
 
 <script src="https://cdn.tailwindcss.com"></script>
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-<!-- ======================================================
-INDUSTRIAL STYLE UPGRADE
-ΑΝΤΙΚΑΤΑΣΤΗΣΕ ΜΟΝΟ ΤΟ <style>...</style>
-ΔΕΝ ΑΛΛΑΖΕΙ ΚΑΝΕΝΑ ΚΕΙΜΕΝΟ
-====================================================== -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
 <style>
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 *{
@@ -40,7 +33,6 @@ body{
 /* ======================================================
 BACKGROUND
 ====================================================== */
-
 .main-bg{
     position:fixed;
     inset:0;
@@ -91,9 +83,7 @@ BACKGROUND
 /* ======================================================
 NAVBAR
 ====================================================== */
-
 .nav-glass{
-
     background:
     linear-gradient(
         to bottom,
@@ -102,14 +92,9 @@ NAVBAR
     );
 
     backdrop-filter:blur(22px);
-
     border:1px solid rgba(255,255,255,0.07);
-
-    box-shadow:
-        0 10px 45px rgba(0,0,0,0.60);
-
+    box-shadow: 0 10px 45px rgba(0,0,0,0.60);
     border-radius:24px;
-
     width:calc(100% - 40px);
     left:20px;
     top:14px;
@@ -118,7 +103,6 @@ NAVBAR
 .deep-glass{
     background:rgba(14,14,14,0.96);
     backdrop-filter:blur(25px);
-
     border:1px solid rgba(37,137,189,0.20);
 }
 
@@ -145,7 +129,6 @@ NAVBAR
 /* ======================================================
 HEADER
 ====================================================== */
-
 .hero-title{
     font-size:clamp(3rem,7vw,7rem);
     font-weight:900;
@@ -153,9 +136,7 @@ HEADER
     letter-spacing:-0.06em;
     text-transform:uppercase;
     color:white;
-
-    text-shadow:
-        0 10px 35px rgba(0,0,0,0.65);
+    text-shadow: 0 10px 35px rgba(0,0,0,0.65);
 }
 
 .hero-title span{
@@ -174,7 +155,6 @@ HEADER
 /* ======================================================
 QUICK NAV
 ====================================================== */
-
 .quick-nav{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
@@ -185,28 +165,19 @@ QUICK NAV
 
 .quick-card{
     position:relative;
-
     background:
     linear-gradient(
         145deg,
         rgba(255,255,255,0.06),
         rgba(255,255,255,0.03)
     );
-
     border:1px solid rgba(255,255,255,0.08);
-
     border-radius:28px;
-
     padding:34px 22px;
-
     text-align:center;
-
     overflow:hidden;
-
     transition:0.35s ease;
-
     backdrop-filter:blur(20px);
-
     box-shadow:
         inset 0 1px 0 rgba(255,255,255,0.04),
         0 10px 35px rgba(0,0,0,0.40);
@@ -216,7 +187,6 @@ QUICK NAV
     content:"";
     position:absolute;
     inset:0;
-
     background:
         linear-gradient(
             120deg,
@@ -224,7 +194,6 @@ QUICK NAV
             rgba(255,255,255,0.04),
             transparent
         );
-
     opacity:0;
     transition:0.4s;
 }
@@ -235,9 +204,7 @@ QUICK NAV
 
 .quick-card:hover{
     transform:translateY(-8px);
-
     border-color:rgba(37,137,189,0.35);
-
     box-shadow:
         0 14px 45px rgba(0,0,0,0.55),
         0 0 0 1px rgba(37,137,189,0.15);
@@ -247,9 +214,7 @@ QUICK NAV
     font-size:30px;
     margin-bottom:18px;
     color:#2589bd;
-
-    text-shadow:
-        0 0 18px rgba(37,137,189,0.35);
+    text-shadow: 0 0 18px rgba(37,137,189,0.35);
 }
 
 .quick-card h3{
@@ -263,29 +228,20 @@ QUICK NAV
 /* ======================================================
 MANUAL SECTIONS
 ====================================================== */
-
 .manual-section{
     position:relative;
-
     background:
     linear-gradient(
         145deg,
         rgba(255,255,255,0.06),
         rgba(255,255,255,0.025)
     );
-
     backdrop-filter:blur(22px);
-
     border:1px solid rgba(255,255,255,0.08);
-
     border-radius:36px;
-
     padding:55px;
-
     margin-bottom:55px;
-
     overflow:hidden;
-
     box-shadow:
         0 15px 50px rgba(0,0,0,0.55),
         inset 0 1px 0 rgba(255,255,255,0.04);
@@ -298,7 +254,6 @@ MANUAL SECTIONS
     left:0;
     width:100%;
     height:2px;
-
     background:
     linear-gradient(
         to right,
@@ -314,14 +269,12 @@ MANUAL SECTIONS
     right:-100px;
     width:220px;
     height:220px;
-
     background:
     radial-gradient(
         circle,
         rgba(37,137,189,0.12),
         transparent 70%
     );
-
     pointer-events:none;
 }
 
@@ -329,31 +282,22 @@ MANUAL SECTIONS
     display:inline-flex;
     align-items:center;
     gap:12px;
-
     padding:10px 22px;
-
     border-radius:999px;
-
     background:
     linear-gradient(
         to right,
         rgba(37,137,189,0.22),
         rgba(37,137,189,0.08)
     );
-
     border:1px solid rgba(37,137,189,0.30);
-
     font-size:11px;
     font-weight:900;
     letter-spacing:0.18em;
     text-transform:uppercase;
-
     color:#2589bd;
-
     margin-bottom:28px;
-
-    box-shadow:
-        0 0 18px rgba(37,137,189,0.12);
+    box-shadow: 0 0 18px rgba(37,137,189,0.12);
 }
 
 .section-title{
@@ -362,7 +306,6 @@ MANUAL SECTIONS
     line-height:1.05;
     color:white;
     margin-bottom:24px;
-
     text-transform:uppercase;
 }
 
@@ -376,7 +319,6 @@ MANUAL SECTIONS
 /* ======================================================
 INFO BOXES
 ====================================================== */
-
 .info-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
@@ -386,24 +328,17 @@ INFO BOXES
 
 .info-box{
     position:relative;
-
     background:
     linear-gradient(
         145deg,
         rgba(0,0,0,0.52),
         rgba(20,20,20,0.42)
     );
-
     border:1px solid rgba(255,255,255,0.07);
-
     border-radius:28px;
-
     padding:32px;
-
     overflow:hidden;
-
     backdrop-filter:blur(20px);
-
     box-shadow:
         inset 0 1px 0 rgba(255,255,255,0.03),
         0 8px 28px rgba(0,0,0,0.35);
@@ -416,7 +351,6 @@ INFO BOXES
     left:0;
     width:4px;
     height:100%;
-
     background:
     linear-gradient(
         to bottom,
@@ -457,21 +391,16 @@ INFO BOXES
 /* ======================================================
 FLOW BOX
 ====================================================== */
-
 .flow-box{
     margin-top:40px;
-
     background:
     linear-gradient(
         145deg,
         rgba(37,137,189,0.12),
         rgba(255,255,255,0.02)
     );
-
     border:1px dashed rgba(37,137,189,0.35);
-
     border-radius:28px;
-
     padding:30px;
 }
 
@@ -492,27 +421,19 @@ FLOW BOX
 /* ======================================================
 FOOTER BOX
 ====================================================== */
-
 .footer-box{
     margin-top:90px;
-
     background:
     linear-gradient(
         145deg,
         rgba(255,255,255,0.06),
         rgba(255,255,255,0.03)
     );
-
     border:1px solid rgba(255,255,255,0.08);
-
     border-radius:36px;
-
     padding:55px;
-
     backdrop-filter:blur(20px);
-
-    box-shadow:
-        0 15px 50px rgba(0,0,0,0.50);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.50);
 }
 
 .footer-box h3{
@@ -536,7 +457,6 @@ FOOTER BOX
 /* ======================================================
 SCROLLBAR
 ====================================================== */
-
 ::-webkit-scrollbar{
     width:10px;
 }
@@ -557,7 +477,6 @@ SCROLLBAR
 /* ======================================================
 NAV ACTIVE
 ====================================================== */
-
 nav a{
     transition:0.3s ease;
 }
@@ -570,52 +489,35 @@ nav .underline{
     color:#2589bd !important;
 }
 
-
 /* ======================================================
 LEFT INDUSTRIAL QUICK NAV
 ====================================================== */
-
 .side-nav-panel{
-
     width:260px;
-
     background:
         linear-gradient(
             180deg,
             rgba(18,18,18,0.90),
             rgba(8,8,8,0.95)
         );
-
     backdrop-filter:blur(18px);
-
     border:1px solid rgba(255,255,255,0.08);
-
     border-radius:30px;
-
     padding:22px 18px;
-
     box-shadow:
         0 20px 60px rgba(0,0,0,0.60),
         inset 0 1px 0 rgba(255,255,255,0.04);
-
     position:relative;
-
     overflow:hidden;
 }
 
-/* LIGHT REFLECTION */
-
 .side-nav-panel::before{
-
     content:"";
-
     position:absolute;
     top:0;
     left:0;
-
     width:100%;
     height:1px;
-
     background:
         linear-gradient(
             to right,
@@ -624,81 +526,50 @@ LEFT INDUSTRIAL QUICK NAV
         );
 }
 
-/* TITLE */
-
 .side-nav-title{
-
     font-size:12px;
     font-weight:900;
-
     letter-spacing:0.16em;
-
     color:#2589bd;
-
     margin-bottom:18px;
-
     padding-left:6px;
 }
 
-/* ITEM */
-
 .side-nav-item{
-
     display:flex;
     align-items:center;
     gap:16px;
-
     width:100%;
-
-    padding:16px 14px;
-
-    margin-bottom:16px;
-
+    padding:10px 14px;
+    margin-bottom:10px;
     border-radius:22px;
-
     text-decoration:none;
-
     position:relative;
-
     background:
         linear-gradient(
             180deg,
             rgba(255,255,255,0.03),
             rgba(255,255,255,0.015)
         );
-
     border:1px solid rgba(255,255,255,0.06);
-
     transition:0.35s ease;
-
     overflow:hidden;
 }
 
-/* HOVER */
-
 .side-nav-item:hover{
-
     transform:translateX(4px);
-
     border-color:rgba(37,137,189,0.45);
-
     background:
         linear-gradient(
             180deg,
             rgba(37,137,189,0.12),
             rgba(255,255,255,0.02)
         );
-
-    box-shadow:
-        0 10px 30px rgba(0,0,0,0.35);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
 }
 
-/* ACTIVE */
-
 .active-side-nav{
-
     border-color:rgba(37,137,189,0.55);
-
     background:
         linear-gradient(
             180deg,
@@ -707,186 +578,77 @@ LEFT INDUSTRIAL QUICK NAV
         );
 }
 
-/* ICON */
-
 .side-icon-wrap{
-
-    width:62px;
-    height:62px;
-
-    min-width:62px;
-
-    border-radius:18px;
-
+    width:42px;
+    height:42px;
+    min-width:42px;
+    border-radius:12px;
     display:flex;
     align-items:center;
     justify-content:center;
-
     background:
         linear-gradient(
             145deg,
             rgba(15,15,15,0.95),
             rgba(35,35,35,0.92)
         );
-
     border:1px solid rgba(37,137,189,0.35);
-
-    box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.04),
-        0 6px 20px rgba(0,0,0,0.35);
-
     position:relative;
 }
 
-/* HEXAGON STYLE */
-
-.side-icon-wrap::before{
-
-    content:"";
-
-    position:absolute;
-    inset:6px;
-
-    border:1px solid rgba(37,137,189,0.18);
-
-    clip-path:polygon(
-        25% 6%,
-        75% 6%,
-        100% 50%,
-        75% 94%,
-        25% 94%,
-        0% 50%
-    );
-}
-
-/* ICON */
-
 .side-icon-wrap i{
-
     color:#2589bd;
-
-    font-size:24px;
-
+    font-size:16px;
     z-index:2;
 }
 
-/* TEXT */
-
 .side-nav-text{
-
     display:flex;
     flex-direction:column;
-    gap:4px;
+    gap:2px;
 }
 
 .side-number{
-
-    font-size:11px;
+    font-size:10px;
     font-weight:800;
-
-    letter-spacing:0.18em;
-
+    letter-spacing:0.12em;
     color:#2589bd;
 }
 
 .side-label{
-
-    font-size:14px;
+    font-size:12px;
     font-weight:800;
-
     letter-spacing:0.03em;
-
     color:#f3f4f6;
 }
 
-/* FOOTER */
-
-.side-nav-footer{
-
-    margin-top:8px;
-
-    padding:16px 12px;
-
-    border-top:1px solid rgba(255,255,255,0.06);
-
-    display:flex;
-    align-items:flex-start;
-    gap:12px;
-
-    color:#a1a1aa;
-
-    font-size:11px;
-    line-height:1.7;
-}
-
-.side-nav-footer i{
-
-    color:#2589bd;
-
-    margin-top:2px;
-}
-
 /* RESPONSIVE */
-
 @media(max-width:1400px){
-
-    .side-nav-panel{
-
-        width:230px;
-    }
-
-    .side-label{
-
-        font-size:12px;
-    }
+    .side-nav-panel{ width:230px; }
+    .side-label{ font-size:11px; }
 }
-
 @media(max-width:1280px){
-
-    .side-nav-panel{
-
-        display:none;
-    }
+    .side-nav-panel{ display:none; }
 }
-/* ======================================================
-RESPONSIVE
-====================================================== */
 
 @media(max-width:768px){
-
     .nav-glass{
         width:calc(100% - 20px);
         left:10px;
     }
-
     .manual-section{
         padding:34px 24px;
         border-radius:28px;
     }
-
-    .hero-title{
-        line-height:0.95;
-    }
-
+    .hero-title{ line-height:0.95; }
     .section-desc{
         font-size:0.93rem;
         line-height:1.95;
     }
-
-    .info-box{
-        padding:26px;
-    }
-
-    .info-box p,
-    .info-box li{
-        font-size:0.88rem;
-    }
-
-    .quick-card{
-        padding:26px 18px;
-    }
+    .info-box{ padding:26px; }
+    .info-box p,.info-box li{ font-size:0.88rem; }
+    .quick-card{ padding:26px 18px; }
 }
-
 </style>
 </head>
 
@@ -894,964 +656,444 @@ RESPONSIVE
 
 <div class="main-bg"></div>
 
-<!-- ======================================================
-NAVBAR
-====================================================== -->
+<div class="fixed left-5 top-1/2 -translate-y-1/2 z-[120] hidden xl:flex">
+    <div class="side-nav-panel">
+        <div class="side-nav-title">ΓΡΗΓΟΡΗ ΠΛΟΗΓΗΣΗ</div>
+        
+        <a href="#home-screen" class="side-nav-item active-side-nav">
+            <div class="side-icon-wrap"><i class="fas fa-house"></i></div>
+            <div class="side-nav-text"><span class="side-number">01</span><span class="side-label">HomeScreen</span></div>
+        </a>
+        <a href="#vehicle-screen" class="side-nav-item">
+            <div class="side-icon-wrap"><i class="fas fa-car-side"></i></div>
+            <div class="side-nav-text"><span class="side-number">02</span><span class="side-label">Add/Edit Vehicle</span></div>
+        </a>
+        <a href="#record-screen" class="side-nav-item">
+            <div class="side-icon-wrap"><i class="fas fa-road"></i></div>
+            <div class="side-nav-text"><span class="side-number">03</span><span class="side-label">Record Timeline</span></div>
+        </a>
+        <a href="#entry-screen" class="side-nav-item">
+            <div class="side-icon-wrap"><i class="fas fa-robot"></i></div>
+            <div class="side-nav-text"><span class="side-number">04</span><span class="side-label">AI Smart Entry</span></div>
+        </a>
+        <a href="#statistics-screen" class="side-nav-item">
+            <div class="side-icon-wrap"><i class="fas fa-chart-column"></i></div>
+            <div class="side-nav-text"><span class="side-number">05</span><span class="side-label">Statistics Dashboard</span></div>
+        </a>
+        <a href="#settings-screen" class="side-nav-item">
+            <div class="side-icon-wrap"><i class="fas fa-sliders"></i></div>
+            <div class="side-nav-text"><span class="side-number">06</span><span class="side-label">Preferences</span></div>
+        </a>
+        <a href="#app-preview" class="side-nav-item border-dashed border-[#2589bd]/40">
+            <div class="side-icon-wrap"><i class="fas fa-mobile-screen-button"></i></div>
+            <div class="side-nav-text"><span class="side-number">07</span><span class="side-label">App Screenshots</span></div>
+        </a>
+    </div>
+</div>
 
 <nav class="nav-glass fixed w-full z-[200]">
-
 <div class="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
-
     <div class="flex items-center gap-4">
-
-        <button id="menu-btn"
-        class="block md:hidden text-white focus:outline-none">
-
+        <button id="menu-btn" class="block md:hidden text-white focus:outline-none">
             <i class="fas fa-bars text-2xl"></i>
-
         </button>
-
-        <a href="index.html#home"
-        class="flex items-center transition hover:opacity-80">
-
-            <img src="Vehicle_man_logo.jpg"
-            class="h-9 md:h-10 rounded-lg object-contain"
-            alt="Vehicle Man Logo">
-
+        <a href="index.html#home" class="flex items-center transition hover:opacity-80">
+            <img src="Vehicle_man_logo.jpg" class="h-9 md:h-10 rounded-lg object-contain" alt="Vehicle Man Logo">
         </a>
-
     </div>
-
     <div class="hidden md:flex items-center space-x-8 text-[11px] font-bold uppercase tracking-[0.22em]">
-
-        <a href="index.html#home"
-        class="text-slate-300 hover:text-white transition">
-            Αρχική
-        </a>
-
-        <a href="company.html"
-        class="text-slate-300 hover:text-white transition">
-            Η Εταιρεία
-        </a>
-
-        <a href="legal.html"
-        class="text-slate-300 hover:text-white transition">
-            Legal Notes
-        </a>
-
-        <a href="manual.html"
-        class="text-white underline decoration-2 underline-offset-8">
-            Εγχειρίδιο Χρήσης
-        </a>
-
-        <a href="contact.html"
-        class="text-slate-300 hover:text-white transition">
-            Επικοινωνία
-        </a>
-
+        <a href="index.html#home" class="text-slate-300 hover:text-white transition">Αρχική</a>
+        <a href="company.html" class="text-slate-300 hover:text-white transition">Η Εταιρεία</a>
+        <a href="legal.html" class="text-slate-300 hover:text-white transition">Legal Notes</a>
+        <a href="manual.html" class="text-white underline decoration-2 underline-offset-8">Εγχειρίδιο Χρήσης</a>
+        <a href="contact.html" class="text-slate-300 hover:text-white transition">Επικοινωνία</a>
     </div>
-
 </div>
 
-<!-- MOBILE MENU -->
-
-<div id="mobile-menu"
-class="hidden absolute top-[75px] left-4 right-4 deep-glass rounded-[2rem] border border-white/10 shadow-2xl">
-
+<div id="mobile-menu" class="hidden absolute top-[75px] left-4 right-4 deep-glass rounded-[2rem] border border-white/10 shadow-2xl">
     <div class="flex flex-col p-8 space-y-6 text-sm font-bold uppercase tracking-[0.18em]">
-
-        <a href="index.html#home" class="mobile-link">
-            Αρχική
-        </a>
-
-        <a href="company.html" class="mobile-link">
-            Η Εταιρεία
-        </a>
-
-        <a href="legal.html" class="mobile-link">
-            Legal Notes
-        </a>
-
-        <a href="manual.html" class="mobile-link text-white">
-            Εγχειρίδιο Χρήσης
-        </a>
-
-        <a href="contact.html" class="mobile-link">
-            Επικοινωνία
-        </a>
-
+        <a href="index.html#home" class="mobile-link">Αρχική</a>
+        <a href="company.html" class="mobile-link">Η Εταιρεία</a>
+        <a href="legal.html" class="mobile-link">Legal Notes</a>
+        <a href="manual.html" class="mobile-link text-white">Εγχειρίδιο Χρήσης</a>
+        <a href="contact.html" class="mobile-link">Επικοινωνία</a>
     </div>
-
 </div>
-
 </nav>
 
-<!-- ======================================================
-MAIN CONTENT
-====================================================== -->
-
 <main class="max-w-7xl mx-auto px-5 md:px-8 pt-40 pb-24">
-
 <header class="text-center">
-
-    <h1 class="hero-title">
-        Vehicle Man App <br>
-        User Manual<br><br><br>
-    </h1>
-
-    <div class="hero-sub">
-        Industrial Vehicle Management Platform
-    </div>
-
+    <h1 class="hero-title">Vehicle Man App <br>User Manual<br><br><br></h1>
+    <div class="hero-sub">Industrial Vehicle Management Platform</div>
 </header>
 
-<!-- ======================================================
-QUICK NAV
-====================================================== --
-
-<div class="quick-nav"
-
-<a href="#home-screen" class="quick-card">
-    <i class="fas fa-house"></i>
-    <h3>HomeScreen</h3>
-</a>
-
-<a href="#vehicle-screen" class="quick-card">
-    <i class="fas fa-car-side"></i>
-    <h3>Vehicle Screen</h3>
-</a>
-
-<a href="#record-screen" class="quick-card">
-    <i class="fas fa-road"></i>
-    <h3>RecordScreen</h3>
-</a>
-
-<a href="#entry-screen" class="quick-card">
-    <i class="fas fa-robot"></i>
-    <h3>AI Entry</h3>
-</a>
-
-<a href="#statistics-screen" class="quick-card">
-    <i class="fas fa-chart-column"></i>
-    <h3>Statistics</h3>
-</a>
-
-<a href="#settings-screen" class="quick-card">
-    <i class="fas fa-sliders"></i>
-    <h3>Settings</h3>
-</a>
-
-</div>
-
-<!-- ======================================================
-SECTION 1
-====================================================== -->
-
 <section id="home-screen" class="manual-section">
-
-<div class="section-number">
-    <i class="fas fa-house"></i>
-    Screen 01
-</div>
-
-<h2 class="section-title">
-    HomeScreen — Το Κεντρικό Κέντρο Ελέγχου
-</h2>
-
+<div class="section-number"><i class="fas fa-house"></i> Screen 01</div>
+<h2 class="section-title">HomeScreen — Το Κεντρικό Κέντρο Ελέγχου</h2>
 <p class="section-desc">
-
 Η HomeScreen αποτελεί την βασική οθόνη της εφαρμογής και λειτουργεί ως το κέντρο διαχείρισης όλων των οχημάτων σας. 
 Σε αυτή την οθόνη εμφανίζονται οι Vehicle Cards, δηλαδή οι κάρτες των οχημάτων που έχετε αποθηκεύσει στην εφαρμογή. 
 Κάθε κάρτα λειτουργεί σαν “πύλη” προς όλες τις λειτουργίες που σχετίζονται με το συγκεκριμένο όχημα.
-
 Ο σχεδιασμός της οθόνης έχει δημιουργηθεί με industrial glass αισθητική ώστε να παρέχει καθαρή εικόνα του στόλου, 
 γρήγορη πρόσβαση στις λειτουργίες και ταυτόχρονα αίσθηση επαγγελματικού εργαλείου διαχείρισης.
-
 Η HomeScreen δεν είναι απλώς μια λίστα οχημάτων. Είναι το σημείο εκκίνησης για ολόκληρη την εμπειρία πλοήγησης του χρήστη μέσα στο Vehicle Man AI.
-
 </p>
 
 <div class="info-grid">
-
-<div class="info-box">
-
-<h4>Δυνατότητες Οθόνης</h4>
-
-<ul>
-<li>
-Προβολή όλων των οχημάτων σε μορφή δυναμικών καρτών με βασικές πληροφορίες όπως μάρκα, μοντέλο και πινακίδα.
-</li>
-
-<li>
-Γρήγορη προσθήκη νέου οχήματος μέσω Floating Action Button (+).
-</li>
-
-<li>
-Άμεση πρόσβαση στο ιστορικό εξόδων και υπενθυμίσεων κάθε οχήματος.
-</li>
-
-<li>
-Υποστήριξη gesture navigation για πολύ πιο γρήγορη χρήση χωρίς συνεχόμενα menu transitions.
-</li>
-
-</ul>
-
+    <div class="info-box">
+        <h4>Δυνατότητες Οθόνης</h4>
+        <ul>
+            <li>Προβολή όλων των οχημάτων σε μορφή δυναμικών καρτών με βασικές πληροφορίες όπως μάρκα, μοντέλο και πινακίδα.</li>
+            <li>Γρήγορη προσθήκη νέου οχήματος μέσω Floating Action Button (+).</li>
+            <li>Άμεση πρόσβαση στο ιστορικό εξόδων και υπενθυμίσεων κάθε οχήματος.</li>
+            <li>Υποστήριξη gesture navigation για πολύ πιο γρήγορη χρήση χωρίς συνεχόμενα menu transitions.</li>
+        </ul>
+    </div>
+    <div class="info-box">
+        <h4>Gestures & Navigation</h4>
+        <ul>
+            <li><strong>Single Tap:</strong> Μεταφέρει τον χρήστη στην οθόνη RecordScreen για να εμφανιστούν όλες οι εγγραφές του συγκεκριμένου οχήματος.</li>
+            <li><strong>Double Tap:</strong> Ενεργοποιεί Quick Entry λειτουργία και ανοίγει κατευθείαν την AddEditRecordScreen ώστε ο χρήστης να εισάγει άμεσα ένα νέο έξοδο ή υπενθύμιση.</li>
+            <li><strong>Long Press:</strong> Εμφανίζει τα εργαλεία διαχείρισης της κάρτας οχήματος όπως επεξεργασία ή διαγραφή.</li>
+            <li><strong>Swipe Left:</strong> Μετάβαση στην StatisticsScreen.</li>
+            <li><strong>Swipe Right:</strong> Μετάβαση στην PreferencesScreen.</li>
+        </ul>
+    </div>
 </div>
-
-<div class="info-box">
-
-<h4>Gestures & Navigation</h4>
-
-<ul>
-
-<li>
-<strong>Single Tap:</strong>
-Μεταφέρει τον χρήστη στην οθόνη RecordScreen για να εμφανιστούν όλες οι εγγραφές του συγκεκριμένου οχήματος.
-</li>
-
-<li>
-<strong>Double Tap:</strong>
-Ενεργοποιεί Quick Entry λειτουργία και ανοίγει κατευθείαν την AddEditRecordScreen ώστε ο χρήστης να εισάγει άμεσα ένα νέο έξοδο ή υπενθύμιση.
-</li>
-
-<li>
-<strong>Long Press:</strong>
-Εμφανίζει τα εργαλεία διαχείρισης της κάρτας οχήματος όπως επεξεργασία ή διαγραφή.
-</li>
-
-<li>
-<strong>Swipe Left:</strong>
-Μετάβαση στην StatisticsScreen.
-</li>
-
-<li>
-<strong>Swipe Right:</strong>
-Μετάβαση στην PreferencesScreen.
-</li>
-
-</ul>
-
-</div>
-
-</div>
-
 <div class="flow-box">
-
-<h5>Ροή Πλοήγησης</h5>
-
-<p>
-
-HomeScreen ➜ Tap σε όχημα ➜ RecordScreen<br><br>
-
-HomeScreen ➜ Double Tap ➜ AddEditRecordScreen<br><br>
-
-HomeScreen ➜ Long Press ➜ Edit/Delete Vehicle<br><br>
-
-HomeScreen ➜ Swipe Left ➜ StatisticsScreen<br><br>
-
-HomeScreen ➜ Swipe Right ➜ PreferencesScreen
-
-</p>
-
+    <h5>Ροή Πλοήγησης</h5>
+    <p>
+        HomeScreen ➜ Tap σε όχημα ➜ RecordScreen<br><br>
+        HomeScreen ➜ Double Tap ➜ AddEditRecordScreen<br><br>
+        HomeScreen ➜ Long Press ➜ Edit/Delete Vehicle<br><br>
+        HomeScreen ➜ Swipe Left ➜ StatisticsScreen<br><br>
+        HomeScreen ➜ Swipe Right ➜ PreferencesScreen
+    </p>
 </div>
-
 </section>
-
-<!-- ======================================================
-SECTION 2
-====================================================== -->
 
 <section id="vehicle-screen" class="manual-section">
-
-<div class="section-number">
-    <i class="fas fa-car-side"></i>
-    Screen 02
-</div>
-
-<h2 class="section-title">
-    AddEditVehicleScreen — Διαχείριση Οχήματος
-</h2>
-
+<div class="section-number"><i class="fas fa-car-side"></i> Screen 02</div>
+<h2 class="section-title">AddEditVehicleScreen — Διαχείριση Οχήματος</h2>
 <p class="section-desc">
-
 Η συγκεκριμένη οθόνη είναι υπεύθυνη για την δημιουργία αλλά και την επεξεργασία ενός οχήματος.
 Εδώ ο χρήστης εισάγει την “ταυτότητα” του οχήματος καθώς και τις παραμέτρους που χρησιμοποιεί το σύστημα AI για τους αυτοματισμούς συντήρησης.
-
 Η λογική της εφαρμογής βασίζεται στο ότι κάθε όχημα διαθέτει το δικό του προφίλ, τις δικές του ρυθμίσεις συντήρησης και το δικό του ιστορικό δεδομένων.
-
 Το Vehicle Profile αποτελεί τον πυρήνα του οικοσυστήματος Vehicle Man AI και επηρεάζει άμεσα την λειτουργία των υπενθυμίσεων, των στατιστικών και της αυτόματης ανάλυσης δεδομένων.
-
 </p>
 
 <div class="info-grid">
-
-<div class="info-box">
-
-<h4>Βασικά Στοιχεία</h4>
-
-<ul>
-
-<li>
-Καταχώρηση Μάρκας, Μοντέλου και Πινακίδας.
-</li>
-
-<li>
-Ορισμός τρεχόντων χιλιομέτρων.
-</li>
-
-<li>
-Καθορισμός βασικών τεχνικών χαρακτηριστικών του οχήματος.
-</li>
-
-<li>
-Ενημέρωση στοιχείων σε πραγματικό χρόνο χωρίς να χάνεται το ιστορικό εγγραφών.
-</li>
-
-</ul>
-
+    <div class="info-box">
+        <h4>Βασικά Στοιχεία</h4>
+        <ul>
+            <li>Καταχώρηση Μάρκας, Μοντέλου και Πινακίδας.</li>
+            <li>Ορισμός τρεχόντων χιλιομέτρων.</li>
+            <li>Καθορισμός βασικών τεχνικών χαρακτηριστικών του οχήματος.</li>
+            <li>Ενημέρωση στοιχείων σε πραγματικό χρόνο χωρίς να χάνεται το ιστορικό εγγραφών.</li>
+        </ul>
+    </div>
+    <div class="info-box">
+        <h4>Maintenance & Automation</h4>
+        <ul>
+            <li>Ρύθμιση αλλαγής λαδιών βάσει χιλιομέτρων ή χρονικού διαστήματος.</li>
+            <li>Ρύθμιση αλλαγής ελαστικών και δημιουργία αυτόματων reminders.</li>
+            <li>Το AI παρακολουθεί το ιστορικό και δημιουργεί αυτόματα μελλοντικές υπενθυμίσεις.</li>
+            <li>Το σύστημα χρησιμοποιεί τα δεδομένα του οχήματος για να παράγει στατιστικά κατανάλωσης και service analysis.</li>
+        </ul>
+    </div>
 </div>
-
-<div class="info-box">
-
-<h4>Maintenance & Automation</h4>
-
-<ul>
-
-<li>
-Ρύθμιση αλλαγής λαδιών βάσει χιλιομέτρων ή χρονικού διαστήματος.
-</li>
-
-<li>
-Ρύθμιση αλλαγής ελαστικών και δημιουργία αυτόματων reminders.
-</li>
-
-<li>
-Το AI παρακολουθεί το ιστορικό και δημιουργεί αυτόματα μελλοντικές υπενθυμίσεις.
-</li>
-
-<li>
-Το σύστημα χρησιμοποιεί τα δεδομένα του οχήματος για να παράγει στατιστικά κατανάλωσης και service analysis.
-</li>
-
-</ul>
-
-</div>
-
-</div>
-
 <div class="flow-box">
-
-<h5>Ροή Πλοήγησης</h5>
-
-<p>
-
-HomeScreen ➜ Tap στο (+) ➜ AddEditVehicleScreen<br><br>
-
-HomeScreen ➜ Long Press ➜ Edit Vehicle ➜ AddEditVehicleScreen<br><br>
-
-Save ➜ Επιστροφή στην HomeScreen
-
-</p>
-
+    <h5>Ροή Πλοήγησης</h5>
+    <p>
+        HomeScreen ➜ Tap στο (+) ➜ AddEditVehicleScreen<br><br>
+        HomeScreen ➜ Long Press ➜ Edit Vehicle ➜ AddEditVehicleScreen<br><br>
+        Save ➜ Επιστροφή στην HomeScreen
+    </p>
 </div>
-
 </section>
-
-<!-- ======================================================
-SECTION 3
-====================================================== -->
 
 <section id="record-screen" class="manual-section">
-
-<div class="section-number">
-    <i class="fas fa-road"></i>
-    Screen 03
-</div>
-
-<h2 class="section-title">
-    RecordScreen — Timeline & Vehicle History
-</h2>
-
+<div class="section-number"><i class="fas fa-road"></i> Screen 03</div>
+<h2 class="section-title">RecordScreen — Timeline & Vehicle History</h2>
 <p class="section-desc">
-
 Η RecordScreen είναι η οθόνη ιστορικού του οχήματος και παρουσιάζει όλες τις εγγραφές εξόδων, service και υπενθυμίσεων με μορφή timeline.
-
 Η συγκεκριμένη οθόνη αποτελεί το “ζωντανό ημερολόγιο” του οχήματος και είναι σχεδιασμένη ώστε ο χρήστης να μπορεί να βλέπει εύκολα την πλήρη ιστορία συντήρησης και χρήσης.
-
 Το animated road background δημιουργεί την αίσθηση συνεχούς κίνησης, μετατρέποντας το timeline σε μια εμπειρία που θυμίζει πραγματική διαδρομή.
-
 </p>
 
 <div class="info-grid">
-
-<div class="info-box">
-
-<h4>Record Management</h4>
-
-<ul>
-
-<li>
-Προβολή όλων των εγγραφών ταξινομημένων χρονολογικά.
-</li>
-
-<li>
-Εμφάνιση Sticky Reminder στην κορυφή όταν υπάρχει υποχρέωση εντός 90 ημερών.
-</li>
-
-<li>
-Το κουμπί “Ολοκλήρωση” μετατρέπει αυτόματα μια υπενθύμιση σε κανονικό ιστορικό έξοδο.
-</li>
-
-<li>
-Άμεση εναλλαγή μεταξύ οχημάτων μέσω top dropdown menu.
-</li>
-
-</ul>
-
+    <div class="info-box">
+        <h4>Record Management</h4>
+        <ul>
+            <li>Προβολή όλων των εγγραφών ταξινομημένων χρονολογικά.</li>
+            <li>Εμφάνιση Sticky Reminder στην κορυφή όταν υπάρχει υποχρέωση εντός 90 ημερών.</li>
+            <li>Το κουμπί “Ολοκλήρωση” μετατρέπει αυτόματα μια υπενθύμιση σε κανονικό ιστορικό έξοδο.</li>
+            <li>Άμεση εναλλαγή μεταξύ οχημάτων μέσω top dropdown menu.</li>
+        </ul>
+    </div>
+    <div class="info-box">
+        <h4>Gestures & Editing</h4>
+        <ul>
+            <li>Swipe Left ➜ Διαγραφή εγγραφής με δυνατότητα Undo.</li>
+            <li>Swipe Right ➜ Άμεση επεξεργασία εγγραφής.</li>
+            <li>Tap σε εγγραφή ➜ Άνοιγμα AddEditRecordScreen.</li>
+            <li>Tap στο Floating Button (+) ➜ Δημιουργία νέας εγγραφής.</li>
+        </ul>
+    </div>
 </div>
-
-<div class="info-box">
-
-<h4>Gestures & Editing</h4>
-
-<ul>
-
-<li>
-Swipe Left ➜ Διαγραφή εγγραφής με δυνατότητα Undo.
-</li>
-
-<li>
-Swipe Right ➜ Άμεση επεξεργασία εγγραφής.
-</li>
-
-<li>
-Tap σε εγγραφή ➜ Άνοιγμα AddEditRecordScreen.
-</li>
-
-<li>
-Tap στο Floating Button (+) ➜ Δημιουργία νέας εγγραφής.
-</li>
-
-</ul>
-
-</div>
-
-</div>
-
 <div class="flow-box">
-
-<h5>Ροή Πλοήγησης</h5>
-
-<p>
-
-HomeScreen ➜ Tap Vehicle ➜ RecordScreen<br><br>
-
-RecordScreen ➜ Tap Record ➜ AddEditRecordScreen<br><br>
-
-RecordScreen ➜ Swipe Left ➜ StatisticsScreen<br><br>
-
-RecordScreen ➜ Swipe Right ➜ PreferencesScreen
-
-</p>
-
+    <h5>Ροή Πλοήγησης</h5>
+    <p>
+        HomeScreen ➜ Tap Vehicle ➜ RecordScreen<br><br>
+        RecordScreen ➜ Tap Record ➜ AddEditRecordScreen<br><br>
+        RecordScreen ➜ Swipe Left ➜ StatisticsScreen<br><br>
+        RecordScreen ➜ Swipe Right ➜ PreferencesScreen
+    </p>
 </div>
-
 </section>
-
-<!-- ======================================================
-SECTION 4
-====================================================== -->
 
 <section id="entry-screen" class="manual-section">
-
-<div class="section-number">
-    <i class="fas fa-robot"></i>
-    Screen 04
-</div>
-
-<h2 class="section-title">
-    AddEditRecordScreen — Η Έξυπνη Φόρμα AI
-</h2>
-
+<div class="section-number"><i class="fas fa-robot"></i> Screen 04</div>
+<h2 class="section-title">AddEditRecordScreen — Η Έξυπνη Φόρμα AI</h2>
 <p class="section-desc">
-
 Η AddEditRecordScreen αποτελεί την “καρδιά” του Vehicle Man AI.
 Εδώ η εφαρμογή χρησιμοποιεί τεχνητή νοημοσύνη για να βοηθήσει τον χρήστη να καταχωρεί δεδομένα πολύ πιο γρήγορα και με λιγότερα λάθη.
-
 Το σύστημα AI αναγνωρίζει λέξεις, συνώνυμα, Greeklish, ποσά, καύσιμα και ημερομηνίες ώστε να συμπληρώνει αυτόματα μεγάλο μέρος της φόρμας.
-
 Η οθόνη έχει σχεδιαστεί ώστε ακόμη και μια πολύ μικρή καταχώρηση να ολοκληρώνεται μέσα σε λίγα δευτερόλεπτα.
-
 </p>
 
 <div class="info-grid">
-
-<div class="info-box">
-
-<h4>AI Smart Entry</h4>
-
-<ul>
-
-<li>
-Smart Suggestions καθώς ο χρήστης πληκτρολογεί.
-</li>
-
-<li>
-Υποστήριξη Greeklish και αυτόματη μετάφραση τίτλων.
-</li>
-
-<li>
-Αναγνώριση ποσών, λίτρων και τύπων καυσίμου.
-</li>
-
-<li>
-Αυτόματη συμπλήρωση πεδίων βάσει προηγούμενου ιστορικού.
-</li>
-
-</ul>
-
+    <div class="info-box">
+        <h4>AI Smart Entry</h4>
+        <ul>
+            <li>Smart Suggestions καθώς ο χρήστης πληκτρολογεί.</li>
+            <li>Υποστήριξη Greeklish και αυτόματη μετάφραση τίτλων.</li>
+            <li>Αναγνώριση ποσών, λίτρων και τύπων καυσίμου.</li>
+            <li>Αυτόματη συμπλήρωση πεδίων βάσει προηγούμενου ιστορικού.</li>
+        </ul>
+    </div>
+    <div class="info-box">
+        <h4>Reminder Intelligence</h4>
+        <ul>
+            <li>Μελλοντική ημερομηνία ➜ Αυτόματη μετατροπή σε Reminder.</li>
+            <li>Σημερινή ή παλαιότερη ημερομηνία ➜ Καταχώρηση ως Expense Record.</li>
+            <li>Η φόρμα επιστρέφει πάντα στην προηγούμενη οθόνη ώστε η ροή εργασίας να παραμένει φυσική.</li>
+            <li>Η AI λογική βελτιώνεται όσο αυξάνεται το ιστορικό του οχήματος.</li>
+        </ul>
+    </div>
 </div>
-
-<div class="info-box">
-
-<h4>Reminder Intelligence</h4>
-
-<ul>
-
-<li>
-Μελλοντική ημερομηνία ➜ Αυτόματη μετατροπή σε Reminder.
-</li>
-
-<li>
-Σημερινή ή παλαιότερη ημερομηνία ➜ Καταχώρηση ως Expense Record.
-</li>
-
-<li>
-Η φόρμα επιστρέφει πάντα στην προηγούμενη οθόνη ώστε η ροή εργασίας να παραμένει φυσική.
-</li>
-
-<li>
-Η AI λογική βελτιώνεται όσο αυξάνεται το ιστορικό του οχήματος.
-</li>
-
-</ul>
-
-</div>
-
-</div>
-
 <div class="flow-box">
-
-<h5>Ροή Πλοήγησης</h5>
-
-<p>
-
-HomeScreen ➜ Double Tap ➜ AddEditRecordScreen<br><br>
-
-RecordScreen ➜ Tap στο (+) ➜ AddEditRecordScreen<br><br>
-
-RecordScreen ➜ Tap σε υπάρχουσα εγγραφή ➜ AddEditRecordScreen<br><br>
-
-Save ➜ Επιστροφή στην προηγούμενη οθόνη
-
-</p>
-
+    <h5>Ροή Πλοήγησης</h5>
+    <p>
+        HomeScreen ➜ Double Tap ➜ AddEditRecordScreen<br><br>
+        RecordScreen ➜ Tap στο (+) ➜ AddEditRecordScreen<br><br>
+        RecordScreen ➜ Tap σε υπάρχουσα εγγραφή ➜ AddEditRecordScreen<br><br>
+        Save ➜ Επιστροφή στην προηγούμενη οθόνη
+    </p>
 </div>
-
 </section>
-
-<!-- ======================================================
-SECTION 5
-====================================================== -->
 
 <section id="statistics-screen" class="manual-section">
-
-<div class="section-number">
-    <i class="fas fa-chart-column"></i>
-    Screen 05
-</div>
-
-<h2 class="section-title">
-    StatisticsScreen — Ανάλυση & Στατιστικά
-</h2>
-
+<div class="section-number"><i class="fas fa-chart-column"></i> Screen 05</div>
+<h2 class="section-title">StatisticsScreen — Ανάλυση & Στατιστικά</h2>
 <p class="section-desc">
-
 Η StatisticsScreen μετατρέπει τα δεδομένα του οχήματος σε χρήσιμες πληροφορίες και οικονομική ανάλυση.
-
 Η εφαρμογή αναλύει τα έξοδα, τις καταναλώσεις, τα service και τα επαναλαμβανόμενα κόστη ώστε ο χρήστης να μπορεί να κατανοήσει καλύτερα την συνολική εικόνα του οχήματος.
-
 Η οθόνη έχει σχεδιαστεί ώστε να λειτουργεί σαν επαγγελματικό dashboard παρακολούθησης στόλου.
-
 </p>
 
 <div class="info-grid">
-
-<div class="info-box">
-
-<h4>Vehicle Statistics</h4>
-
-<ul>
-
-<li>
-Μέση κατανάλωση καυσίμου.
-</li>
-
-<li>
-Συνολικά έξοδα ανά μήνα και έτος.
-</li>
-
-<li>
-Κατανομή κόστους ανά κατηγορία.
-</li>
-
-<li>
-Συγκριτική εικόνα service και καυσίμων.
-</li>
-
-</ul>
-
+    <div class="info-box">
+        <h4>Vehicle Statistics</h4>
+        <ul>
+            <li>Μέση κατανάλωση καυσίμου.</li>
+            <li>Συνολικά έξοδα ανά μήνα και έτος.</li>
+            <li>Κατανομή κόστους ανά κατηγορία.</li>
+            <li>Συγκριτική εικόνα service και καυσίμων.</li>
+        </ul>
+    </div>
+    <div class="info-box">
+        <h4>Live Updating</h4>
+        <ul>
+            <li>Τα στατιστικά ενημερώνονται αυτόματα μετά από κάθε νέα εγγραφή.</li>
+            <li>Η εφαρμογή δημιουργεί δυναμικά charts και cost summaries.</li>
+            <li>Η οθόνη είναι άμεσα προσβάσιμη μέσω swipe gestures.</li>
+            <li>Δυνατότητα γρήγορης επιστροφής στην προηγούμενη οθόνη.</li>
+        </ul>
+    </div>
 </div>
-
-<div class="info-box">
-
-<h4>Live Updating</h4>
-
-<ul>
-
-<li>
-Τα στατιστικά ενημερώνονται αυτόματα μετά από κάθε νέα εγγραφή.
-</li>
-
-<li>
-Η εφαρμογή δημιουργεί δυναμικά charts και cost summaries.
-</li>
-
-<li>
-Η οθόνη είναι άμεσα προσβάσιμη μέσω swipe gestures.
-</li>
-
-<li>
-Δυνατότητα γρήγορης επιστροφής στην προηγούμενη οθόνη.
-</li>
-
-</ul>
-
-</div>
-
-</div>
-
 <div class="flow-box">
-
-<h5>Ροή Πλοήγησης</h5>
-
-<p>
-
-HomeScreen ➜ Swipe Left ➜ StatisticsScreen<br><br>
-
-RecordScreen ➜ Swipe Left ➜ StatisticsScreen<br><br>
-
-Swipe Right ➜ Επιστροφή στην προηγούμενη οθόνη
-
-</p>
-
+    <h5>Ροή Πλοήγησης</h5>
+    <p>
+        HomeScreen ➜ Swipe Left ➜ StatisticsScreen<br><br>
+        RecordScreen ➜ Swipe Left ➜ StatisticsScreen<br><br>
+        Swipe Right ➜ Επιστροφή στην προηγούμενη οθόνη
+    </p>
 </div>
-
 </section>
-
-<!-- ======================================================
-SECTION 6
-====================================================== -->
 
 <section id="settings-screen" class="manual-section">
-
-<div class="section-number">
-    <i class="fas fa-sliders"></i>
-    Screen 06
-</div>
-
-<h2 class="section-title">
-    PreferencesScreen — Ρυθμίσεις & Προσαρμογή
-</h2>
-
+<div class="section-number"><i class="fas fa-sliders"></i> Screen 06</div>
+<h2 class="section-title">PreferencesScreen — Ρυθμίσεις & Προσαρμογή</h2>
 <p class="section-desc">
-
 Η PreferencesScreen επιτρέπει στον χρήστη να προσαρμόσει την εφαρμογή στις δικές του ανάγκες.
-
 Η συγκεκριμένη οθόνη περιλαμβάνει όλες τις ρυθμίσεις που σχετίζονται με το περιβάλλον χρήσης, τις λειτουργίες AI, την εμφάνιση, τις μεταφράσεις και την συμπεριφορά των αυτοματισμών.
-
 Ο στόχος της οθόνης είναι να δώσει πλήρη έλεγχο στον χρήστη χωρίς να καταστρέφεται η απλότητα της εμπειρίας χρήσης.
-
 </p>
 
 <div class="info-grid">
-
-<div class="info-box">
-
-<h4>General Settings</h4>
-
-<ul>
-
-<li>
-Night Mode και εναλλαγή εμφάνισης.
-</li>
-
-<li>
-Ενεργοποίηση ή απενεργοποίηση Auto Reminders.
-</li>
-
-<li>
-Ρύθμιση συμπεριφοράς μετάφρασης Greeklish.
-</li>
-
-<li>
-Ρύθμιση εμφάνισης και ταξινόμησης λίστας οχημάτων.
-</li>
-
-</ul>
-
+    <div class="info-box">
+        <h4>General Settings</h4>
+        <ul>
+            <li>Night Mode και εναλλαγή εμφάνισης.</li>
+            <li>Ενεργοποίηση ή απενεργοποίηση Auto Reminders.</li>
+            <li>Ρύθμιση συμπεριφοράς μετάφρασης Greeklish.</li>
+            <li>Ρύθμιση εμφάνισης και ταξινόμησης λίστας οχημάτων.</li>
+        </ul>
+    </div>
+    <div class="info-box">
+        <h4>Data Management</h4>
+        <ul>
+            <li>Backup και Restore δεδομένων.</li>
+            <li>Εισαγωγή και εξαγωγή αρχείων.</li>
+            <li>Πρόσβαση στις πληροφορίες εφαρμογής και Legal Notes.</li>
+        </ul>
+    </div>
 </div>
-
-<div class="info-box">
-
-<h4>Data Management</h4>
-
-<ul>
-
-<li>
-Τοπική αποθήκευση δεδομένων.
-</li>
-
-<li>
-Backup και Restore δεδομένων.
-</li>
-
-<li>
-Εισαγωγή και εξαγωγή αρχείων.
-</li>
-
-<li>
-Πρόσβαση στις πληροφορίες εφαρμογής και Legal Notes.
-</li>
-
-</ul>
-
-</div>
-
-</div>
-
 <div class="flow-box">
-
-<h5>Ροή Πλοήγησης</h5>
-
-<p>
-
-HomeScreen ➜ Swipe Right ➜ PreferencesScreen<br><br>
-
-RecordScreen ➜ Swipe Right ➜ PreferencesScreen<br><br>
-
-Swipe Left ➜ Επιστροφή στην προηγούμενη οθόνη
-
-</p>
-
+    <h5>Ροή Πλοήγησης</h5>
+    <p>
+        HomeScreen ➜ Swipe Right ➜ PreferencesScreen<br><br>
+        RecordScreen ➜ Swipe Right ➜ PreferencesScreen<br><br>
+        Swipe Left ➜ Επιστροφή στην προηγούμενη οθόνη
+    </p>
 </div>
-
 </section>
 
-<!-- ======================================================
-FINAL TIPS
-====================================================== -->
+<section id="app-preview" class="manual-section">
+<div class="section-number">
+    <i class="fas fa-mobile-screen-button"></i> Preview
+</div>
+<h2 class="section-title">Προεπισκόπηση UI & Οθονών Κινητού</h2>
+<p class="section-desc">
+    Δείτε την native industrial glass εμπειρία χρήσης του Vehicle Man AI απευθείας στη συσκευή σας. Παρακάτω παρουσιάζονται τα βασικά interfaces και τα high-end mockups της εφαρμογής.
+</p>
 
-<div class="footer-box">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-8">
+    
+    <div class="group bg-black/40 border border-white/5 rounded-[2.5rem] p-4 transition-all duration-300 hover:border-[#2589bd]/40 hover:shadow-[0_0_30px_rgba(37,137,189,0.15)] flex flex-col items-center">
+        <div class="relative w-full aspect-[9/19] bg-zinc-950 border-4 border-zinc-900 rounded-[2rem] shadow-2xl overflow-hidden">
+            <div class="absolute top-2 left-1/2 -translate-x-1/2 w-20 h-4 bg-zinc-900 rounded-full z-10 border border-white/5"></div>
+            <img src="screenshot_home.png" alt="HomeScreen Preview" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-102" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="hidden absolute inset-0 flex flex-col items-center justify-center p-6 text-center bg-gradient-to-b from-zinc-900 via-zinc-950 to-black text-zinc-500">
+                <i class="fas fa-house text-4xl text-[#2589bd]/30 mb-4 animate-pulse"></i>
+                <span class="text-xs font-black tracking-widest text-zinc-400 uppercase">HomeScreen</span>
+                <span class="text-[10px] text-zinc-600 mt-2 font-mono">[screenshot_home.png]</span>
+            </div>
+        </div>
+        <span class="mt-4 text-[11px] font-black tracking-widest uppercase text-zinc-400 group-hover:text-[#2589bd] transition">01 // Κεντρικό Dashboard</span>
+    </div>
 
-<h3>
-    Συμβουλές Χρήσης & Best Practices
-</h3>
+    <div class="group bg-black/40 border border-white/5 rounded-[2.5rem] p-4 transition-all duration-300 hover:border-[#2589bd]/40 hover:shadow-[0_0_30px_rgba(37,137,189,0.15)] flex flex-col items-center">
+        <div class="relative w-full aspect-[9/19] bg-zinc-950 border-4 border-zinc-900 rounded-[2rem] shadow-2xl overflow-hidden">
+            <div class="absolute top-2 left-1/2 -translate-x-1/2 w-20 h-4 bg-zinc-900 rounded-full z-10 border border-white/5"></div>
+            <img src="screenshot_vehicle.png" alt="AddEditVehicle Preview" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-102" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="hidden absolute inset-0 flex flex-col items-center justify-center p-6 text-center bg-gradient-to-b from-zinc-900 via-zinc-950 to-black text-zinc-500">
+                <i class="fas fa-car-side text-4xl text-[#2589bd]/30 mb-4 animate-pulse"></i>
+                <span class="text-xs font-black tracking-widest text-zinc-400 uppercase">Vehicle Profile</span>
+                <span class="text-[10px] text-zinc-600 mt-2 font-mono">[screenshot_vehicle.png]</span>
+            </div>
+        </div>
+        <span class="mt-4 text-[11px] font-black tracking-widest uppercase text-zinc-400 group-hover:text-[#2589bd] transition">02 // Διαχείριση Προφίλ</span>
+    </div>
 
-<ul>
+    <div class="group bg-black/40 border border-white/5 rounded-[2.5rem] p-4 transition-all duration-300 hover:border-[#2589bd]/40 hover:shadow-[0_0_30px_rgba(37,137,189,0.15)] flex flex-col items-center">
+        <div class="relative w-full aspect-[9/19] bg-zinc-950 border-4 border-zinc-900 rounded-[2rem] shadow-2xl overflow-hidden">
+            <div class="absolute top-2 left-1/2 -translate-x-1/2 w-20 h-4 bg-zinc-900 rounded-full z-10 border border-white/5"></div>
+            <img src="screenshot_timeline.png" alt="RecordScreen Preview" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-102" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="hidden absolute inset-0 flex flex-col items-center justify-center p-6 text-center bg-gradient-to-b from-zinc-900 via-zinc-950 to-black text-zinc-500">
+                <i class="fas fa-road text-4xl text-[#2589bd]/30 mb-4 animate-pulse"></i>
+                <span class="text-xs font-black tracking-widest text-zinc-400 uppercase">Record Timeline</span>
+                <span class="text-[10px] text-zinc-600 mt-2 font-mono">[screenshot_timeline.png]</span>
+            </div>
+        </div>
+        <span class="mt-4 text-[11px] font-black tracking-widest uppercase text-zinc-400 group-hover:text-[#2589bd] transition">03 // Ημερολόγιο & Service</span>
+    </div>
 
-<li>
-Χρησιμοποιείτε πάντα το κουμπί “Ολοκλήρωση” στις υπενθυμίσεις ώστε το ιστορικό του οχήματος να παραμένει σωστό και πλήρες.
-</li>
+    <div class="group bg-black/40 border border-white/5 rounded-[2.5rem] p-4 transition-all duration-300 hover:border-[#2589bd]/40 hover:shadow-[0_0_30px_rgba(37,137,189,0.15)] flex flex-col items-center">
+        <div class="relative w-full aspect-[9/19] bg-zinc-950 border-4 border-zinc-900 rounded-[2rem] shadow-2xl overflow-hidden">
+            <div class="absolute top-2 left-1/2 -translate-x-1/2 w-20 h-4 bg-zinc-900 rounded-full z-10 border border-white/5"></div>
+            <img src="screenshot_ai.png" alt="AddEditRecord Preview" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-102" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="hidden absolute inset-0 flex flex-col items-center justify-center p-6 text-center bg-gradient-to-b from-zinc-900 via-zinc-950 to-black text-zinc-500">
+                <i class="fas fa-robot text-4xl text-[#2589bd]/30 mb-4 animate-pulse"></i>
+                <span class="text-xs font-black tracking-widest text-zinc-400 uppercase">AI Smart Form</span>
+                <span class="text-[10px] text-zinc-600 mt-2 font-mono">[screenshot_ai.png]</span>
+            </div>
+        </div>
+        <span class="mt-4 text-[11px] font-black tracking-widest uppercase text-zinc-400 group-hover:text-[#2589bd] transition">04 // Έξυπνη Καταχώρηση AI</span>
+    </div>
 
-<li>
-Αποφεύγετε την χειροκίνητη διαγραφή service records καθώς επηρεάζουν την ακρίβεια των στατιστικών και της AI ανάλυσης.
-</li>
+    <div class="group bg-black/40 border border-white/5 rounded-[2.5rem] p-4 transition-all duration-300 hover:border-[#2589bd]/40 hover:shadow-[0_0_30px_rgba(37,137,189,0.15)] flex flex-col items-center">
+        <div class="relative w-full aspect-[9/19] bg-zinc-950 border-4 border-zinc-900 rounded-[2rem] shadow-2xl overflow-hidden">
+            <div class="absolute top-2 left-1/2 -translate-x-1/2 w-20 h-4 bg-zinc-900 rounded-full z-10 border border-white/5"></div>
+            <img src="screenshot_stats.png" alt="StatisticsScreen Preview" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-102" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="hidden absolute inset-0 flex flex-col items-center justify-center p-6 text-center bg-gradient-to-b from-zinc-900 via-zinc-950 to-black text-zinc-500">
+                <i class="fas fa-chart-column text-4xl text-[#2589bd]/30 mb-4 animate-pulse"></i>
+                <span class="text-xs font-black tracking-widest text-zinc-400 uppercase">Analytics Dashboard</span>
+                <span class="text-[10px] text-zinc-600 mt-2 font-mono">[screenshot_stats.png]</span>
+            </div>
+        </div>
+        <span class="mt-4 text-[11px] font-black tracking-widest uppercase text-zinc-400 group-hover:text-[#2589bd] transition">05 // Analytics & Charts</span>
+    </div>
 
-<li>
-Χρησιμοποιήστε σύντομες λέξεις ή Greeklish κατά την καταχώρηση. Το σύστημα AI έχει εκπαιδευτεί να αναγνωρίζει συνώνυμα και παραλλαγές λέξεων.
-</li>
-
-<li>
-Η εφαρμογή λειτουργεί με Local First λογική, πράγμα που σημαίνει ότι τα δεδομένα παραμένουν κυρίως αποθηκευμένα στην συσκευή σας.
-</li>
-
-<li>
-Εκμεταλλευτείτε τα gestures navigation ώστε να μετακινείστε μεταξύ των οθονών πολύ πιο γρήγορα.
-</li>
-
-<li>
-Η συνεχής χρήση της εφαρμογής βελτιώνει την συμπεριφορά του AI καθώς δημιουργείται μεγαλύτερο ιστορικό δεδομένων.
-</li>
-
-</ul>
+    <div class="group bg-black/40 border border-white/5 rounded-[2.5rem] p-4 transition-all duration-300 hover:border-[#2589bd]/40 hover:shadow-[0_0_30px_rgba(37,137,189,0.15)] flex flex-col items-center">
+        <div class="relative w-full aspect-[9/19] bg-zinc-950 border-4 border-zinc-900 rounded-[2rem] shadow-2xl overflow-hidden">
+            <div class="absolute top-2 left-1/2 -translate-x-1/2 w-20 h-4 bg-zinc-900 rounded-full z-10 border border-white/5"></div>
+            <img src="screenshot_settings.png" alt="PreferencesScreen Preview" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-102" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="hidden absolute inset-0 flex flex-col items-center justify-center p-6 text-center bg-gradient-to-b from-zinc-900 via-zinc-950 to-black text-zinc-500">
+                <i class="fas fa-sliders text-4xl text-[#2589bd]/30 mb-4 animate-pulse"></i>
+                <span class="text-xs font-black tracking-widest text-zinc-400 uppercase">Preferences</span>
+                <span class="text-[10px] text-zinc-600 mt-2 font-mono">[screenshot_settings.png]</span>
+            </div>
+        </div>
+        <span class="mt-4 text-[11px] font-black tracking-widest uppercase text-zinc-400 group-hover:text-[#2589bd] transition">06 // Παραμετροποίηση</span>
+    </div>
 
 </div>
+</section>
 
+<div class="footer-box">
+    <h3>Συμβουλές Χρήσης & Best Practices</h3>
+    <ul>
+        <li>Χρησιμοποιείτε πάντα το κουμπί “Ολοκλήρωση” στις υπενθυμίσεις ώστε το ιστορικό του οχήματος να παραμένει σωστό και πλήρες.</li>
+        <li>Αποφεύγετε την χειροκίνητη διαγραφή service records καθώς επηρεάζουν την ακρίβεια των στατιστικών και της AI ανάλυσης.</li>
+        <li>Χρησιμοποιήστε σύντομες λέξεις ή Greeklish κατά την καταχώρηση. Το σύστημα AI έχει εκπαιδευτεί να αναγνωρίζει συνώνυμα και παραλλαγές λέξεων.</li>
+        <li>Η εφαρμογή λειτουργεί με Local First λογική, πράγμα που σημαίνει ότι τα δεδομένα παραμένουν κυρίως αποθηκευμένα στην συσκευή σας.</li>
+        <li>Εκμεταλλευτείτε τα gestures navigation ώστε να μετακινείστε μεταξύ των οθονών πολύ πιο γρήγορα.</li>
+        <li>Η συνεχής χρήση της εφαρμογής βελτιώνει την συμπεριφορά του AI καθώς δημιουργείται μεγαλύτερο ιστορικό δεδομένων.</li>
+    </ul>
+</div>
 </main>
 
-<!-- ======================================================
-FOOTER
-====================================================== -->
-
 <footer class="py-14 text-center text-[10px] uppercase tracking-[0.4em] text-zinc-600">
-
-© 2026 Vehicle Man AI — Engineering for Drivers
-
+    © 2026 Vehicle Man AI — Engineering for Drivers
 </footer>
 
-<!-- ======================================================
-SCRIPT
-====================================================== -->
-
 <script>
-
 const menuBtn = document.getElementById('menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
 
 menuBtn.addEventListener('click',(e)=>{
-
     e.stopPropagation();
     mobileMenu.classList.toggle('hidden');
-
 });
 
 document.addEventListener('click',(e)=>{
-
-    if(
-        !mobileMenu.contains(e.target)
-        &&
-        !menuBtn.contains(e.target)
-    ){
+    if(!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)){
         mobileMenu.classList.add('hidden');
     }
-
 });
-
 </script>
 
 </body>
-    <!-- ======================================================
-LEFT FIXED QUICK NAVIGATION
-Βάλ’ το ΑΜΕΣΩΣ μετά το <body>
-====================================================== -->
-
-<div class="fixed left-5 top-1/2 -translate-y-1/2 z-[120] hidden xl:flex">
-
-    <div class="side-nav-panel">
-
-        <!-- TITLE -->
-        <div class="side-nav-title">
-            ΓΡΗΓΟΡΗ ΠΛΟΗΓΗΣΗ
-        </div>
-
-        <!-- ITEM 1 -->
-        <a href="#home-screen" class="side-nav-item active-side-nav">
-
-            <div class="side-icon-wrap">
-                <i class="fas fa-house"></i>
-            </div>
-
-            <div class="side-nav-text">
-                <span class="side-number">01</span>
-                <span class="side-label">HOMESCREEN</span>
-            </div>
-
-        </a>
-
-        <!-- ITEM 2 -->
-        <a href="#vehicle-screen" class="side-nav-item">
-
-            <div class="side-icon-wrap">
-                <i class="fas fa-car-side"></i>
-            </div>
-
-            <div class="side-nav-text">
-                <span class="side-number">02</span>
-                <span class="side-label">VEHICLE SCREEN</span>
-            </div>
-
-        </a>
-
-        <!-- ITEM 3 -->
-        <a href="#record-screen" class="side-nav-item">
-
-            <div class="side-icon-wrap">
-                <i class="fas fa-road"></i>
-            </div>
-
-            <div class="side-nav-text">
-                <span class="side-number">03</span>
-                <span class="side-label">RECORD SCREEN</span>
-            </div>
-
-        </a>
-
-        <!-- ITEM 4 -->
-        <a href="#entry-screen" class="side-nav-item">
-
-            <div class="side-icon-wrap">
-                <i class="fas fa-robot"></i>
-            </div>
-
-            <div class="side-nav-text">
-                <span class="side-number">04</span>
-                <span class="side-label">AI ENTRY SCREEN</span>
-            </div>
-
-        </a>
-
-        <!-- ITEM 5 -->
-        <a href="#statistics-screen" class="side-nav-item">
-
-            <div class="side-icon-wrap">
-                <i class="fas fa-chart-column"></i>
-            </div>
-
-            <div class="side-nav-text">
-                <span class="side-number">05</span>
-                <span class="side-label">STATISTICS SCREEN</span>
-            </div>
-
-        </a>
-
-        <!-- ITEM 6 -->
-        <a href="#settings-screen" class="side-nav-item">
-
-            <div class="side-icon-wrap">
-                <i class="fas fa-sliders"></i>
-            </div>
-
-            <div class="side-nav-text">
-                <span class="side-number">06</span>
-                <span class="side-label">SETTINGS SCREEN</span>
-            </div>
-
-        </a>
-
-        <!-- FOOTER INFO -->
-        <div class="side-nav-footer">
-
-            <i class="fas fa-circle-info"></i>
-
-            <span>
-                Χρησιμοποιήστε την πλοήγηση για γρήγορη μετάβαση
-                σε κάθε ενότητα.
-            </span>
-
-        </div>
-
-    </div>
-
-</div>
 </html>
