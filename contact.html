@@ -38,10 +38,28 @@
             background: radial-gradient(circle at 50% 30%, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%);
         }
 
+        /* ΑΡΧΙΚΑ 100% ΔΙΑΦΑΝΕΣ ΜΕΝΟΥ */
         .nav-glass {
-            background: rgba(26, 28, 32, 0.8);
+            background: rgba(0, 0, 0, 0);
+            border-bottom: 1px solid rgba(255, 255, 255, 0);
+            transition: all 0.4s ease-in-out;
+        }
+
+        /* Η ΚΛΑΣΗ ΠΟΥ ΘΑ ΜΠΑΙΝΕΙ ΑΥΤΟΜΑΤΑ ΣΤΟ SCROLL */
+        .nav-scrolled {
+            background: rgba(26, 28, 32, 0.85) !important;
             backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 0.75rem !important;
+            padding-bottom: 0.75rem !important;
+        }
+
+        /* ΗΜΙΔΙΑΦΑΝΕΣ MOBILE MENU ΜΕ BLUR ΓΙΑ ΕΥΑΝΑΓΝΩΣΙΑ */
+        .deep-glass {
+            background: rgba(26, 28, 32, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
         }
 
         .industrial-card {
@@ -89,32 +107,32 @@
 <body>
     <div class="main-bg"></div>
 
-    <nav class="nav-glass fixed w-full z-[200]">
-<div class="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between gap-4">
-    <div class="flex items-center shrink-0">
-        <button id="menu-btn" class="block md:hidden text-white focus:outline-none p-2 mr-4">
-            <i class="fas fa-bars text-2xl"></i>
-        </button>
-    </div>
-    
-    <div class="hidden md:flex flex-grow justify-center items-center space-x-6 lg:space-x-8 text-[10px] lg:text-xs font-bold uppercase tracking-widest whitespace-nowrap">
-        <a href="index.html#home" class="hover:text-blue-400 transition">Αρχική</a>
-        <a href="company.html" class="hover:text-blue-400 transition">Η Εταιρεία μας</a>
-        <a href="legal.html" class="hover:text-blue-400 transition">Legal Notes</a>
-        <a href="promode.html" class="hover:text-blue-400 transition">Pro Mode</a>
-        <a href="manual.html" class="text-yellow-500 hover:text-yellow-400 transition">ΕΓΧΕΙΡΙΔΙΟ ΧΡΗΣΗΣ</a>
-        <a href="contact.html" class="text-blue-400 transition underline decoration-2 underline-offset-8">Επικοινωνία</a>
-        <a href="preview.html" class="hover:text-blue-400 transition">Preview</a>
-    </div>
-    <div class="hidden md:block w-10"></div>
-</div>
-                <div id="mobile-menu" class="hidden absolute top-[75px] left-4 right-4 md:right-auto md:w-[300px] deep-glass border-2 border-yellow-500/50 shadow-2xl z-[210] rounded-[2rem] animate-in fade-in zoom-in duration-300">
+    <nav id="navbar" class="nav-glass fixed top-0 left-0 w-full z-[200] py-5">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between md:justify-end gap-4">
+            
+            <button id="menu-btn" class="block md:hidden text-white focus:outline-none p-2">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            
+            <div class="hidden md:flex flex-grow justify-center items-center space-x-6 lg:space-x-8 text-[10px] lg:text-xs font-bold uppercase tracking-widest whitespace-nowrap">
+                <a href="index.html#home" class="hover:text-blue-400 transition">Αρχική</a>
+                <a href="company.html" class="hover:text-blue-400 transition">Η Εταιρεία μας</a>
+                <a href="legal.html" class="hover:text-blue-400 transition">Legal Notes</a>
+                <a href="promode.html" class="hover:text-blue-400 transition">Pro Mode</a>
+                <a href="manual.html" class="text-yellow-500 hover:text-yellow-400 transition">ΕΓΧΕΙΡΙΔΙΟ ΧΡΗΣΗΣ</a>
+                <a href="contact.html" class="text-blue-400 transition underline decoration-2 underline-offset-8">Επικοινωνία</a>
+                <a href="preview.html" class="hover:text-blue-400 transition">Preview</a>
+            </div>
+            <div class="hidden md:block w-10"></div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden absolute top-[75px] left-4 right-4 deep-glass border-2 border-yellow-500/50 shadow-2xl z-[210] rounded-[2rem] animate-in fade-in zoom-in duration-300">
             <div class="flex flex-col p-8 space-y-6 text-[13px] font-bold uppercase tracking-[0.15em] text-white">
                 <a href="index.html#home" class="mobile-link flex items-center gap-3 hover:text-blue-400 transition-colors">
                     <i class="fas fa-home w-5 text-blue-500"></i> Αρχική
                 </a>
                 <a href="company.html" class="mobile-link flex items-center gap-3 hover:text-blue-400 transition-colors">
-                    <i class="fas fa-building w-5"></i> Η Εταιρεία μας
+                    <i class="fas fa-building w-5 text-blue-500"></i> Η Εταιρεία μας
                 </a>
                 <a href="legal.html" class="mobile-link flex items-center gap-3 hover:text-blue-400 transition-colors">
                     <i class="fas fa-file-contract w-5 text-blue-500"></i> Legal Notes
@@ -125,11 +143,12 @@
                 <a href="manual.html" class="mobile-link flex items-center gap-3 text-yellow-500 hover:text-yellow-400 transition-colors">
                     <i class="fas fa-book w-5"></i> ΕΓΧΕΙΡΙΔΙΟ ΧΡΗΣΗΣ
                 </a>
-                <a href="contact.html" class="mobile-link flex items-center gap-3 text-blue-400 hover:text-white transition-colors">
-                    <i class="fas fa-envelope w-5"></i> Επικοινωνία
+                <a href="contact.html" class="mobile-link flex items-center gap-3 text-blue-400 font-bold transition-colors">
+                    <i class="fas fa-envelope w-5 text-yellow-500"></i> Επικοινωνία
                 </a>
                 <a href="preview.html" class="mobile-link flex items-center gap-3 hover:text-blue-400 transition-colors">
                     <i class="fas fa-images w-5 text-blue-500"></i> Preview
+                </a>
             </div>
         </div>
     </nav>
@@ -197,7 +216,8 @@
                 </div>
             </div>
         </div>
-<div class="mt-12 text-center">
+
+        <div class="mt-12 text-center">
             <p class="text-[9px] text-slate-600 uppercase tracking-[0.5em] font-bold">
                 MODICOFACTOR S.S.A. <span class="mx-2">•</span> Secure Communications <span class="mx-2">•</span> 2026
             </p>
@@ -205,11 +225,38 @@
     </main>
 
     <script>
+        const navbar = document.getElementById('navbar');
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
 
-        menuBtn.addEventListener('click', () => {
+        // Scroll Effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+
+        // Toggle Mobile Menu
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
             mobileMenu.classList.toggle('hidden');
+        });
+
+        // Κλείσιμο όταν πατηθεί link
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Κλείσιμο αν πατηθεί έξω από το μενού
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.classList.contains('hidden') && !mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
         });
     </script>
 </body>
