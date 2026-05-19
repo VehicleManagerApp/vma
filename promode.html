@@ -58,8 +58,9 @@
             padding-bottom: 0.75rem !important;
         }
 
+        /* ΗΜΙΔΙΑΦΑΝΕΣ MOBILE MENU ΜΕ BLUR ΓΙΑ ΕΥΑΝΑΓΝΩΣΙΑ */
         .deep-glass {
-            background: rgba(26, 28, 32, 0.95);
+            background: rgba(26, 28, 32, 0.85);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
         }
@@ -92,7 +93,7 @@
     <div class="main-bg"></div>
 
     <nav id="navbar" class="nav-glass fixed top-0 left-0 w-full z-[200] py-5">
-        <div class="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between md:justify-end">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between md:justify-end">
             
             <button id="menu-btn" class="block md:hidden text-white focus:outline-none p-2">
                 <i class="fas fa-bars text-2xl"></i>
@@ -109,27 +110,27 @@
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden absolute top-[70px] left-4 right-4 deep-glass rounded-[2rem] border border-white/10 shadow-2xl z-[210]">
-            <div class="flex flex-col p-8 space-y-6 text-sm font-bold uppercase tracking-[0.18em]">
-                <a href="index.html#home" class="mobile-link flex items-center gap-3 text-slate-300 hover:text-white">
+        <div id="mobile-menu" class="hidden absolute top-[75px] left-4 right-4 deep-glass rounded-[2rem] border-2 border-yellow-500/50 shadow-2xl z-[210] animate-in fade-in zoom-in duration-300">
+            <div class="flex flex-col p-8 space-y-6 text-[13px] font-bold uppercase tracking-[0.15em] text-white">
+                <a href="index.html#home" class="mobile-link flex items-center gap-3 text-slate-300 hover:text-blue-400 transition-colors">
                     <i class="fas fa-home w-5 text-blue-500"></i> Αρχική
                 </a>
-                <a href="company.html" class="mobile-link flex items-center gap-3 text-slate-300 hover:text-white">
-                    <i class="fas fa-building w-5 text-blue-500"></i> Η Εταιρεία
+                <a href="company.html" class="mobile-link flex items-center gap-3 text-slate-300 hover:text-blue-400 transition-colors">
+                    <i class="fas fa-building w-5 text-blue-500"></i> Η Εταιρεία μας
                 </a>
-                <a href="legal.html" class="mobile-link flex items-center gap-3 text-slate-300 hover:text-white">
+                <a href="legal.html" class="mobile-link flex items-center gap-3 text-slate-300 hover:text-blue-400 transition-colors">
                     <i class="fas fa-file-contract w-5 text-blue-500"></i> Legal Notes
                 </a>
-                <a href="promode.html" class="mobile-link flex items-center gap-3 text-white">
+                <a href="promode.html" class="mobile-link flex items-center gap-3 text-blue-400 font-bold transition-colors">
                     <i class="fas fa-crown w-5 text-yellow-500"></i> Pro Mode
                 </a>
-                <a href="manual.html" class="mobile-link flex items-center gap-3 text-slate-300 hover:text-white">
-                    <i class="fas fa-book w-5 text-blue-500"></i> Εγχειρίδιο Χρήσης
+                <a href="manual.html" class="mobile-link flex items-center gap-3 text-yellow-500 hover:text-yellow-400 transition-colors">
+                    <i class="fas fa-book w-5"></i> ΕΓΧΕΙΡΙΔΙΟ ΧΡΗΣΗΣ
                 </a>
-                <a href="contact.html" class="mobile-link flex items-center gap-3 text-slate-300 hover:text-white">
+                <a href="contact.html" class="mobile-link flex items-center gap-3 text-slate-300 hover:text-blue-400 transition-colors">
                     <i class="fas fa-envelope w-5 text-blue-500"></i> Επικοινωνία
                 </a>
-                <a href="preview.html" class="mobile-link flex items-center gap-3 text-slate-300 hover:text-white">
+                <a href="preview.html" class="mobile-link flex items-center gap-3 text-slate-300 hover:text-blue-400 transition-colors">
                     <i class="fas fa-images w-5 text-blue-500"></i> Preview
                 </a>
             </div>
@@ -271,7 +272,6 @@
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-link');
 
-        // Εφέ αλλαγής της μπάρας στο Scroll
         window.addEventListener('scroll', () => {
             if (window.scrollY > 20) {
                 navbar.classList.add('nav-scrolled');
@@ -280,20 +280,17 @@
             }
         });
 
-        // Toggle Mobile Menu
         menuBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Κλείσιμο όταν πατηθεί κάποιο link
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
         });
 
-        // Κλείσιμο αν πατηθεί οτιδήποτε εκτός μενού
         document.addEventListener('click', (e) => {
             if (!mobileMenu.classList.contains('hidden') && !mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
                 mobileMenu.classList.add('hidden');
