@@ -34,6 +34,13 @@
             backdrop-filter: blur(25px) saturate(180%) !important; 
             -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
         }
+
+        /* ΣΤΥΛ ΓΙΑ ΤΟ LIGHTBOX OVERLAY */
+        .lightbox-overlay {
+            background: rgba(10, 15, 26, 0.95);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+        }
     </style>
 </head>
 <body class="text-white font-sans antialiased">
@@ -108,31 +115,31 @@
             </div>
             
             <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-                <div class="group bg-slate-900/40 rounded-2xl p-2 border border-white/5 hover:border-blue-500/30 transition-all">
-                    <img src="./screenshot_home.png" alt="Home" class="w-full rounded-xl object-cover group-hover:scale-[1.02] transition-transform duration-300">
+                <div class="group bg-slate-900/40 rounded-2xl p-2 border border-white/5 hover:border-blue-500/30 transition-all cursor-pointer gallery-item">
+                    <img src="./screenshot_home.png" alt="Home Screen" class="w-full rounded-xl object-cover group-hover:scale-[1.02] transition-transform duration-300">
                     <p class="text-[11px] font-bold uppercase tracking-wider text-center mt-3 text-gray-400">Home Screen</p>
                 </div>
-                <div class="group bg-slate-900/40 rounded-2xl p-2 border border-white/5 hover:border-blue-500/30 transition-all">
-                    <img src="./screenshot_home_del_edit.png" alt="Home Del Edit" class="w-full rounded-xl object-cover group-hover:scale-[1.02] transition-transform duration-300">
+                <div class="group bg-slate-900/40 rounded-2xl p-2 border border-white/5 hover:border-blue-500/30 transition-all cursor-pointer gallery-item">
+                    <img src="./screenshot_home_del_edit.png" alt="Home Screen / Long Tap" class="w-full rounded-xl object-cover group-hover:scale-[1.02] transition-transform duration-300">
                     <p class="text-[11px] font-bold uppercase tracking-wider text-center mt-3 text-gray-400">Home Screen/Long Tap</p>
                 </div>
-                <div class="group bg-slate-900/40 rounded-2xl p-2 border border-white/5 hover:border-blue-500/30 transition-all">
-                    <img src="./screenshot_vehicle.png" alt="Vehicle" class="w-full rounded-xl object-cover group-hover:scale-[1.02] transition-transform duration-300">
+                <div class="group bg-slate-900/40 rounded-2xl p-2 border border-white/5 hover:border-blue-500/30 transition-all cursor-pointer gallery-item">
+                    <img src="./screenshot_vehicle.png" alt="Vehicle Profile" class="w-full rounded-xl object-cover group-hover:scale-[1.02] transition-transform duration-300">
                     <p class="text-[11px] font-bold uppercase tracking-wider text-center mt-3 text-gray-400">Vehicle Profile</p>
                 </div>
-                <div class="group bg-slate-900/40 rounded-2xl p-2 border border-white/5 hover:border-blue-500/30 transition-all">
+                <div class="group bg-slate-900/40 rounded-2xl p-2 border border-white/5 hover:border-blue-500/30 transition-all cursor-pointer gallery-item">
                     <img src="./screenshot_timeline.png" alt="Timeline" class="w-full rounded-xl object-cover group-hover:scale-[1.02] transition-transform duration-300">
                     <p class="text-[11px] font-bold uppercase tracking-wider text-center mt-3 text-gray-400">Timeline</p>
                 </div>
-                <div class="group bg-slate-900/40 rounded-2xl p-2 border border-white/5 hover:border-blue-500/30 transition-all">
-                    <img src="./screenshot_ai.png" alt="AI Features" class="w-full rounded-xl object-cover group-hover:scale-[1.02] transition-transform duration-300">
+                <div class="group bg-slate-900/40 rounded-2xl p-2 border border-white/5 hover:border-blue-500/30 transition-all cursor-pointer gallery-item">
+                    <img src="./screenshot_ai.png" alt="AI Autofill" class="w-full rounded-xl object-cover group-hover:scale-[1.02] transition-transform duration-300">
                     <p class="text-[11px] font-bold uppercase tracking-wider text-center mt-3 text-gray-400">AI Autofill</p>
                 </div>
-                <div class="group bg-slate-900/40 rounded-2xl p-2 border border-white/5 hover:border-blue-500/30 transition-all">
+                <div class="group bg-slate-900/40 rounded-2xl p-2 border border-white/5 hover:border-blue-500/30 transition-all cursor-pointer gallery-item">
                     <img src="./screenshot_stats.png" alt="Vehicle Statistics" class="w-full rounded-xl object-cover group-hover:scale-[1.02] transition-transform duration-300">
                     <p class="text-[11px] font-bold uppercase tracking-wider text-center mt-3 text-gray-400">Vehicle Statistics</p>
                 </div>
-                <div class="group bg-slate-900/40 rounded-2xl p-2 border border-white/5 hover:border-blue-500/30 transition-all">
+                <div class="group bg-slate-900/40 rounded-2xl p-2 border border-white/5 hover:border-blue-500/30 transition-all cursor-pointer gallery-item">
                     <img src="./screenshot_settings.png" alt="Settings" class="w-full rounded-xl object-cover group-hover:scale-[1.02] transition-transform duration-300">
                     <p class="text-[11px] font-bold uppercase tracking-wider text-center mt-3 text-gray-400">Settings</p>
                 </div>
@@ -146,36 +153,35 @@
             </div>
             
             <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-                <div class="group bg-slate-950/60 rounded-2xl p-2 border border-white/5 hover:border-indigo-500/30 transition-all">
+                <div class="group bg-slate-950/60 rounded-2xl p-2 border border-white/5 hover:border-indigo-500/30 transition-all cursor-pointer gallery-item">
                     <img src="./screenshot_home_black.png" alt="Home Night Mode" class="w-full rounded-xl object-cover group-hover:scale-[1.02] transition-transform duration-300">
                     <p class="text-[11px] font-bold uppercase tracking-wider text-center mt-3 text-gray-400">Home Night Mode</p>
                 </div>
-                <div class="group bg-slate-950/60 rounded-2xl p-2 border border-white/5 hover:border-indigo-500/30 transition-all">
-                    <img src="./screenshot_home__del_black.png" alt="Home Night Mode Del Edit" class="w-full rounded-xl object-cover group-hover:scale-[1.02] transition-transform duration-300">
+                <div class="group bg-slate-950/60 rounded-2xl p-2 border border-white/5 hover:border-indigo-500/30 transition-all cursor-pointer gallery-item">
+                    <img src="./screenshot_home__del_black.png" alt="Home Night Mode / Long Tap" class="w-full rounded-xl object-cover group-hover:scale-[1.02] transition-transform duration-300">
                     <p class="text-[11px] font-bold uppercase tracking-wider text-center mt-3 text-gray-400">Home Night Mode / Long Tap</p>
                 </div>
-                <div class="group bg-slate-950/60 rounded-2xl p-2 border border-white/5 hover:border-indigo-500/30 transition-all">
+                <div class="group bg-slate-950/60 rounded-2xl p-2 border border-white/5 hover:border-indigo-500/30 transition-all cursor-pointer gallery-item">
                     <img src="./screenshot_vehicle_black.png" alt="Vehicle Night Mode" class="w-full rounded-xl object-cover group-hover:scale-[1.02] transition-transform duration-300">
                     <p class="text-[11px] font-bold uppercase tracking-wider text-center mt-3 text-gray-400">Vehicle Night Mode</p>
                 </div>
-                <div class="group bg-slate-950/60 rounded-2xl p-2 border border-white/5 hover:border-indigo-500/30 transition-all">
+                <div class="group bg-slate-950/60 rounded-2xl p-2 border border-white/5 hover:border-indigo-500/30 transition-all cursor-pointer gallery-item">
                     <img src="./screenshot_timeline_black.png" alt="Timeline Night Mode" class="w-full rounded-xl object-cover group-hover:scale-[1.02] transition-transform duration-300">
                     <p class="text-[11px] font-bold uppercase tracking-wider text-center mt-3 text-gray-400">Timeline Night Mode</p>
                 </div>
-                <div class="group bg-slate-950/60 rounded-2xl p-2 border border-white/5 hover:border-indigo-500/30 transition-all">
-                    <img src="./screenshot_ai_black.png" alt="AI Night Mode" class="w-full rounded-xl object-cover group-hover:scale-[1.02] transition-transform duration-300">
+                <div class="group bg-slate-950/60 rounded-2xl p-2 border border-white/5 hover:border-indigo-500/30 transition-all cursor-pointer gallery-item">
+                    <img src="./screenshot_ai_black.png" alt="AI Autofill Night Mode" class="w-full rounded-xl object-cover group-hover:scale-[1.02] transition-transform duration-300">
                     <p class="text-[11px] font-bold uppercase tracking-wider text-center mt-3 text-gray-400">AI Autofill Night Mode</p>
                 </div>
-                <div class="group bg-slate-950/60 rounded-2xl p-2 border border-white/5 hover:border-indigo-500/30 transition-all">
+                <div class="group bg-slate-950/60 rounded-2xl p-2 border border-white/5 hover:border-indigo-500/30 transition-all cursor-pointer gallery-item">
                     <img src="./screenshot_stats_black.png" alt="Statistics Night Mode" class="w-full rounded-xl object-cover group-hover:scale-[1.02] transition-transform duration-300">
                     <p class="text-[11px] font-bold uppercase tracking-wider text-center mt-3 text-gray-400">Statistics Night Mode</p>
                 </div>
-                <div class="group bg-slate-950/60 rounded-2xl p-2 border border-white/5 hover:border-indigo-500/30 transition-all">
+                <div class="group bg-slate-950/60 rounded-2xl p-2 border border-white/5 hover:border-indigo-500/30 transition-all cursor-pointer gallery-item">
                     <img src="./screenshot_settings_black.png" alt="Settings Night Mode" class="w-full rounded-xl object-cover group-hover:scale-[1.02] transition-transform duration-300">
                     <p class="text-[11px] font-bold uppercase tracking-wider text-center mt-3 text-gray-400">Settings Night Mode</p>
                 </div>
             </div>
-
         </section>
 
         <section class="glass-card p-8 md:p-12 text-center relative overflow-hidden">
@@ -205,7 +211,27 @@
         © 2026 Vehicle Manager App • Built for the Fast Lane
     </footer>
 
+    <div id="lightbox" class="hidden fixed inset-0 z-[300] lightbox-overlay flex flex-col items-center justify-center p-4 select-none">
+        <button id="lightbox-close" class="absolute top-6 right-6 text-white/70 hover:text-white text-3xl p-2 transition z-50">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <button id="lightbox-prev" class="absolute left-4 md:left-8 text-white/50 hover:text-white text-4xl p-4 transition z-50">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <div class="max-w-4xl max-h-[80vh] flex flex-col items-center justify-center">
+            <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[72vh] md:max-h-[75vh] object-contain rounded-lg shadow-2xl animate-in fade-in zoom-in-95 duration-200">
+            <p id="lightbox-caption" class="text-sm md:text-base font-bold uppercase tracking-widest text-center mt-4 text-gray-300 header-font"></p>
+        </div>
+
+        <button id="lightbox-next" class="absolute right-4 md:right-8 text-white/50 hover:text-white text-4xl p-4 transition z-50">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+
     <script>
+        // --- MOBILE MENU LOGIC ---
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-link');
@@ -232,6 +258,86 @@
             if (!mobileMenu.classList.contains('hidden') && !isClickInsideMenu && !isClickOnButton) {
                 mobileMenu.classList.add('hidden');
             }
+        });
+
+
+        // --- LIGHTBOX GALLERY LOGIC ---
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const closeBtn = document.getElementById('lightbox-close');
+        const prevBtn = document.getElementById('lightbox-prev');
+        const nextBtn = document.getElementById('lightbox-next');
+
+        let currentIndex = 0;
+        const imagesData = [];
+
+        // Συλλογή δεδομένων από όλα τα screenshot στοιχεία της σελίδας
+        galleryItems.forEach((item, index) => {
+            const img = item.querySelector('img');
+            const caption = item.querySelector('p').innerText;
+            imagesData.push({
+                src: img.src,
+                alt: img.alt,
+                caption: caption
+            });
+
+            // Event listener για το άνοιγμα
+            item.addEventListener('click', () => {
+                openLightbox(index);
+            });
+        });
+
+        // Συναρτήσεις Lightbox
+        function openLightbox(index) {
+            currentIndex = index;
+            updateLightboxContent();
+            lightbox.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Κλειδώνει το scrolling της σελίδας
+        }
+
+        function closeLightbox() {
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = ''; // Ξεκλειδώνει το scrolling
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % imagesData.length;
+            updateLightboxContent();
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + imagesData.length) % imagesData.length;
+            updateLightboxContent();
+        }
+
+        function updateLightboxContent() {
+            const currentItem = imagesData[currentIndex];
+            lightboxImg.src = currentItem.src;
+            lightboxImg.alt = currentItem.alt;
+            lightboxCaption.innerText = currentItem.caption;
+        }
+
+        // Event Listeners για τα κουμπιά πλοήγησης
+        closeBtn.addEventListener('click', closeLightbox);
+        nextBtn.addEventListener('click', (e) => { e.stopPropagation(); nextImage(); });
+        prevBtn.addEventListener('click', (e) => { e.stopPropagation(); prevImage(); });
+        
+        // Κλείσιμο με κλικ οπουδήποτε στο background έξω από την εικόνα/κουμπιά
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // Πλοήγηση με το Πληκτρολόγιο
+        document.addEventListener('keydown', (e) => {
+            if (lightbox.classList.contains('hidden')) return;
+            
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') nextImage();
+            if (e.key === 'ArrowLeft') prevImage();
         });
     </script>
 </body>
