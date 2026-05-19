@@ -41,18 +41,25 @@
             background: radial-gradient(circle at 50% 30%, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 100%);
         }
 
-        /* GLASS STYLES ΓΙΑ ΤΟ ΜΕΝΟΥ */
-        /* ΤΕΛΕΙΩΣ ΔΙΑΦΑΝΕΣ ΜΕΝΟΥ ΜΕ Subtle Blur */
+        /* ΑΡΧΙΚΑ 100% ΔΙΑΦΑΝΕΣ ΜΕΝΟΥ */
         .nav-glass {
-            background: rgba(0, 0, 0, 0); /* 100% διάφανo */
-            backdrop-filter: blur(5px);   /* Ελαφρύ θόλωμα για να διαβάζονται τα γράμματα */
-            -webkit-backdrop-filter: blur(5px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Μια πολύ διακριτική γραμμή στο κάτω μέρος */
-}
+            background: rgba(0, 0, 0, 0);
+            border-bottom: 1px solid rgba(255, 255, 255, 0);
+            transition: all 0.4s ease-in-out;
+        }
+
+        /* Η ΚΛΑΣΗ ΠΟΥ ΘΑ ΜΠΑΙΝΕΙ ΑΥΤΟΜΑΤΑ ΣΤΟ SCROLL */
+        .nav-scrolled {
+            background: rgba(26, 28, 32, 0.85) !important;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 0.75rem !important;
+            padding-bottom: 0.75rem !important;
         }
 
         .deep-glass {
-            background: rgba(26, 28, 32, 0.9);
+            background: rgba(26, 28, 32, 0.95);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
         }
@@ -84,8 +91,8 @@
 
     <div class="main-bg"></div>
 
-    <nav class="nav-glass fixed top-0 left-0 w-full z-[200]">
-        <div class="max-w-7xl mx-auto px-4 md:px-8 py-5 flex items-center justify-between md:justify-end">
+    <nav id="navbar" class="nav-glass fixed top-0 left-0 w-full z-[200] py-5">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between md:justify-end">
             
             <button id="menu-btn" class="block md:hidden text-white focus:outline-none p-2">
                 <i class="fas fa-bars text-2xl"></i>
@@ -259,11 +266,21 @@
     </main>
 
     <script>
+        const navbar = document.getElementById('navbar');
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-link');
 
-        // Toggle Menu
+        // Εφέ αλλαγής της μπάρας στο Scroll
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+
+        // Toggle Mobile Menu
         menuBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             mobileMenu.classList.toggle('hidden');
