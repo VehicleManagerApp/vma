@@ -183,28 +183,48 @@
                 </div>
             </div>
         </section>
-
-        <section class="glass-card p-8 md:p-12 text-center relative overflow-hidden">
+<section class="glass-card p-8 md:p-12 text-center relative overflow-hidden">
             <div class="absolute -right-10 -bottom-10 opacity-5 pointer-events-none">
                 <i class="fa-solid fa-video text-9xl text-white"></i>
             </div>
             
-            <div class="flex items-center justify-center gap-3 mb-6 border-b border-white/10 pb-4 max-w-sm mx-auto">
+            <div class="flex items-center justify-center gap-3 mb-10 border-b border-white/10 pb-4 max-w-sm mx-auto">
                 <i class="fa-solid fa-clapperboard text-blue-500 text-2xl"></i>
                 <h2 class="text-2xl font-black uppercase tracking-wide text-white">Video Walkthroughs</h2>
             </div>
 
-            <div class="py-16 px-4 max-w-md mx-auto">
-                <div class="w-16 h-16 bg-blue-600/10 border border-blue-500/30 rounded-2xl flex items-center justify-center mx-auto mb-6 animate-pulse">
-                    <i class="fa-solid fa-cloud-arrow-up text-blue-400 text-2xl"></i>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto items-start">
+                
+                <div class="bg-slate-900/40 rounded-3xl p-3 border border-white/5 flex flex-col items-center">
+                    <div class="w-full aspect-[9/16] max-w-[280px] bg-black rounded-2xl overflow-hidden shadow-xl border border-white/10">
+                        <video class="w-full h-full object-cover" controls preload="metadata">
+                            <source src="./screen_recording_home_subs.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <h3 class="text-xs font-bold uppercase tracking-wider mt-4 text-gray-300">App Presentation Greek subtitles</h3>
                 </div>
-                <h3 class="text-lg font-bold uppercase tracking-wider mb-2">Uploading Soon</h3>
-                <p class="text-gray-400 text-xs font-light leading-relaxed">
-                    Ετοιμάζουμε αναλυτικά βίντεο-οδηγούς και animations που θα δείχνουν το AI Autofill και τα Fast Gestures σε δράση. Μείνετε συντονισμένοι!
-                </p>
+
+                <div class="bg-slate-950/60 rounded-3xl p-3 border border-white/5 flex flex-col items-center">
+                    <div class="w-full aspect-[9/16] max-w-[280px] bg-black rounded-2xl overflow-hidden shadow-xl border border-white/10">
+                        <video class="w-full h-full object-cover" controls preload="metadata">
+                            <source src="./screen_recording_home_black.webm" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <h3 class="text-xs font-bold uppercase tracking-wider mt-4 text-gray-400">Night Mode Walkthrough</h3>
+                </div>
+            	 <div class="py-16 px-4 max-w-md mx-auto">
+                	<div class="w-16 h-16 bg-blue-600/10 border border-blue-500/30 rounded-2xl flex items-center justify-center mx-auto mb-6 animate-pulse">
+                    	<i class="fa-solid fa-cloud-arrow-up text-blue-400 text-2xl"></i>
+                	</div>
+                	<h3 class="text-lg font-bold uppercase tracking-wider mb-2">Uploading Soon</h3>
+                	<p class="text-gray-400 text-xs font-light leading-relaxed">
+                    	Ετοιμάζουμε αναλυτικά βίντεο-οδηγούς και animations που θα δείχνουν το AI Autofill και τα Fast Gestures σε δράση. Μείνετε συντονισμένοι!
+               		</p>
+            	</div>
             </div>
         </section>
-
     </main>
 
     <footer class="py-10 text-center text-gray-600 text-[10px] uppercase tracking-[0.5em] border-t border-white/5 relative z-10">
